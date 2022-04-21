@@ -29,7 +29,8 @@
 
     /* Attribute color variables */
     --background: var(--light);
-    --heading: var(--metallic-seaweed);
+    --heading-color: var(--link);
+    --subtitle-color: var(--success);
 
     /* Defining Primary Fonts */
     --heading-font: 'Fira Code', monospace;
@@ -62,7 +63,19 @@ body {
 
 .hdr__title {
     font-family: var(--heading-font);
-    color: var(--heading);
+    color: var(--heading-color);
     font-weight: 100;
-    font-size: 50px;
+    font-size: 52.5px;
+    padding-left: 2px;
+}
+
+.hdr__subtitle {
+    font-family: var(--body-font);
+    color: var(--subtitle-color);
+    font-weight: 100;
+    font-size: 13.1px;
+}
+
+.hdr__portrait {
+    width: 100%;
 }
