@@ -1,81 +1,175 @@
 /* Import CSS dependencies */
-@import "../node_modules/normalize.css";
-
-/* Import the initial variables */
-@import "../node_modules/bulma/sass/utilities/initial-variables";
+@import "../node_modules/normalize.css/normalize.css";
 
 /* // Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Nunito+Sans&family=Open+Sans&display=swap');
 
 /* Defining Variables */
 :root {
-    /* Custom Colors */
-    --cosmic-latte: #fffaea;
-    --midnight-green-eagle-green: #254d56ff;
-    --metallic-seaweed: #278094ff;
-    --middle-blue-purple: #7d82b8ff;
-    --tomato: #e65f5cff;
-    --pink: #f7b2adff;
-    --dark-coral: #cc7974ff; 
+    /* Custom Colors (with lightness separated)*/
+    --light: hsl(46, 100%, 96%);
+
+    --dark-green: 191, 40%;
+    --dark-green-l: 24%;
+
+    --blue: 191, 58%;
+    --blue-l: 37%;
+
+    --purple: 235, 29%;
+    --purple-l: 61%;
+
+    --red: 1, 73%;
+    --red-l: 63%;
+
+    --pink: 4, 82%;
+    --pink-l: 82%;
+
+    --dark-coral: 3, 46%;
+    --dark-coral-l: 63%; 
 
     /* Main color variables */
-    --light: var(--cosmic-latte);
-    --primary: var(--middle-blue-purple);
-    --link: var(--metallic-seaweed);
-    --info: var(--pink);
-    --danger: var(--tomato);
-    --success: var(--midnight-green-eagle-green);
-    --warning: var(--dark-coral);
+    --primary: hsl(var(--purple),var(--purple-l));
+    --danger: hsl(var(--dark-coral),var(--dark-coral-l));
+    --info: hsl(var(--blue),var(--blue-l));
+    --link: hsl(var(--red),var(--red-l));
+    --success: hsl(var(--dark-green),var(--dark-green-l));
+    --warning: hsl(var(--pink),var(--pink-l));
 
     /* Attribute color variables */
     --background: var(--light);
-    --heading-color: var(--link);
+    --heading-color: var(--info);
     --subtitle-color: var(--success);
+    --button-color: var(--link);
+
 
     /* Defining Primary Fonts */
     --heading-font: 'Fira Code', monospace;
     --body-font: 'Nunito Sans', sans-serif;
+
+    /* Layout-related variables */
+    --content-width: 70rem;
+    --profile-width: 54%;
+    --remaining-width: calc(100% - var(--profile-width));
+    /* --image-height:  */
 }
 
 /* // Assign Font Families */
 /* Import fonts */
 
 body {
+    font-size: 100%;
     font-family: var(--body-font);
+    color: var(--primary);
     background-color: var(--background);
     margin-left: 30px;
-    margin-right: 30px;
+    margin-right: 20px;
     margin-top: 50px;
+}
+
+a {
+    color: var(--link)
 }
 
 .content {
     margin: auto;
-    max-width: 60rem;
+    max-width: var(--content-width);
 }
 
-/* .hdr {
+.hdr {
+    display: grid;
+    grid-template-columns: 
+        calc( var(--remaining-width) / 2 ) 
+        calc( var(--remaining-width) / 2 ) 
+        var(--profile-width);
+
     
-} */
+    grid-template-rows: repeat(5,10em);
+}
 
 .hdr__logo {
-    width: 100px;
+    /* layout */
+    grid-row: 1;
+    grid-column: 1;
+    /* appearance */
+    height: 100%;
 }
 
 .hdr__title {
+    /* layout */
+    grid-row: 2;
+    grid-column: 1 / 3;
+    /* appearance */
     font-family: var(--heading-font);
     color: var(--heading-color);
     font-weight: 100;
-    font-size: 52.5px;
+    font-size: calc(var(--content-width) / 15);
     padding-left: 2px;
 }
 
 .hdr__subtitle {
+    /* layout */
+    grid-row: 3;
+    grid-column: 1 / 3;
+    /* appearance */
     font-family: var(--body-font);
     color: var(--subtitle-color);
-    font-weight: 100;
-    font-size: 13.1px;
+    font-weight: 50;
+    font-size: calc(var(--content-width) / 55);
 }
 
-.hdr__portrait {
-    /* width: 100%; */
+.portrait {
+    /* layout */
+    grid-row: 1 / 6;
+    grid-column: 3;
+    overflow-y: hidden;
+}
+
+.portrait__img {
+    /* appearance */
+    width: 100%;
+    height: auto;
+}
+
+.hdr__btn {
+    /* layout */
+    width: 80%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    height: fit-content;
+    /* appearance */
+    font-family: var(--heading-font);
+    font-size: calc(var(--content-width) / 55);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.hdr__btn--main {
+    /* layout */
+    grid-row: 4;
+    grid-column: 1;
+    background-color: var(--button-color);
+    color: var(--background);
+}
+
+.hdr__btn--second {
+    /* layout */
+    grid-row: 4;
+    grid-column: 2;
+    color: var(--button-color);
+    border: solid 1px;
+}
+
+.hdr__background {
+    width: 100vw;
+}
+
+.hdr__background--lower  {
+    grid-row: 5;
+    z-index: -1;
+    --temp: calc(99vw - var(--content-width));
+    --temp2: calc(var(--temp) / -2);
+    margin-left: var(--temp2);
+    grid-column: 1 / 4;
+    background: linear-gradient(90deg, #7d82b8, #8a83bb, #b293c3, #cda8c1, #d8bcbc, #e1d6cb, #e4dfd1) center;
 }
