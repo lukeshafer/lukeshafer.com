@@ -3,6 +3,7 @@
 
 /* // Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Nunito+Sans&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
 
 /* Defining Variables */
 :root {
@@ -29,17 +30,36 @@
 
     /* Main color variables */
     --primary: hsl(var(--purple),var(--purple-l));
-    --danger: hsl(var(--dark-coral),var(--dark-coral-l));
-    --info: hsl(var(--blue),var(--blue-l));
-    --link: hsl(var(--red),var(--red-l));
-    --success: hsl(var(--dark-green),var(--dark-green-l));
-    --warning: hsl(var(--pink),var(--pink-l));
+    --primary-lighten: hsl(var(--purple),calc(var(--purple-l) + 10%));
+    --primary-darken: hsl(var(--purple),calc(var(--purple-l) - 10%));
 
+    --danger: hsl(var(--dark-coral),var(--dark-coral-l));
+    --danger-lighten: hsl(var(--dark-coral),calc(var(--dark-coral-l) + 10%));
+    --danger-darken: hsl(var(--dark-coral),calc(var(--dark-coral-l) - 10%));
+
+    --info: hsl(var(--blue),var(--blue-l));
+    --info-lighten: hsl(var(--blue),calc(var(--blue-l) + 10%));
+    --info-darken: hsl(var(--blue),calc(var(--blue-l) - 10%));
+
+    --link: hsl(var(--red),var(--red-l));
+    --link-lighten: hsl(var(--red),calc(var(--red-l) + 10%));
+    --link-darken: hsl(var(--red),calc(var(--red-l) - 10%));
+
+    --success: hsl(var(--dark-green),var(--dark-green-l));
+    --success-lighten: hsl(var(--dark-green),calc(var(--dark-green-l) + 10%));
+    --success-darken: hsl(var(--dark-green),calc(var(--dark-green-l) - 10%));
+
+    --warning: hsl(var(--pink),var(--pink-l));
+    --warning-lighten: hsl(var(--pink),calc(var(--pink-l) + 10%));
+    --warning-darken: hsl(var(--pink),calc(var(--pink-l) - 10%));
+
+    
     /* Attribute color variables */
     --background: var(--light);
     --heading-color: var(--info);
     --subtitle-color: var(--success);
     --button-color: var(--link);
+    --button-hover: var(--link-lighten);
 
 
     /* Defining Primary Fonts */
@@ -53,6 +73,7 @@
     /* --image-height:  */
 }
 
+
 /* // Assign Font Families */
 /* Import fonts */
 
@@ -64,18 +85,16 @@ body {
     margin-left: 30px;
     margin-right: 20px;
     margin-top: 50px;
+    background: linear-gradient(90deg, #fffaea, #fbf6e6, #f7f2e3, #f3eedf, #f0eadc, #ece7d8, #e8e3d5, #e4dfd1);
 }
 
 a {
     color: var(--link)
 }
 
-.content {
+.hdr {
     margin: auto;
     max-width: var(--content-width);
-}
-
-.hdr {
     display: grid;
     grid-template-columns: 
         calc( var(--remaining-width) / 2 ) 
@@ -152,6 +171,11 @@ a {
     color: var(--background);
 }
 
+.hdr__btn--main:hover {
+    background-color: var(--button-hover);
+    color: var(--background);
+}
+
 .hdr__btn--second {
     /* layout */
     grid-row: 4;
@@ -167,9 +191,10 @@ a {
 .hdr__background--lower  {
     grid-row: 5;
     z-index: -1;
-    --temp: calc(99vw - var(--content-width));
+    --temp: calc(101vw - var(--content-width));
     --temp2: calc(var(--temp) / -2);
     margin-left: var(--temp2);
+    margin-right: var(--temp2);
     grid-column: 1 / 4;
     background: linear-gradient(90deg, #7d82b8, #8a83bb, #b293c3, #cda8c1, #d8bcbc, #e1d6cb, #e4dfd1) center;
 }
