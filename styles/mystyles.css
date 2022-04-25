@@ -8,59 +8,43 @@
 /* Defining Variables */
 :root {
     /* Custom Colors (with lightness separated)*/
-    --light: hsl(46, 100%, 96%);
+    --light: #fffaeb;
 
-    --dark-green: 191, 40%;
-    --dark-green-l: 24%;
+    --dark-green: #254d56;
 
-    --blue: 191, 58%;
-    --blue-l: 37%;
+    --blue: #288195;
 
-    --purple: 235, 29%;
-    --purple-l: 61%;
+    --purple: #7f84b8;
 
-    --red: 1, 73%;
-    --red-l: 63%;
+    --red: #e65e5c;
 
-    --pink: 4, 82%;
-    --pink-l: 82%;
+    --pink: #f7b0ab;
 
-    --dark-coral: 3, 46%;
-    --dark-coral-l: 63%; 
+    --dark-coral: #cc7a75;
 
     /* Main color variables */
-    --primary: hsl(var(--purple),var(--purple-l));
-    --primary-lighten: hsl(var(--purple),calc(var(--purple-l) + 10%));
-    --primary-darken: hsl(var(--purple),calc(var(--purple-l) - 10%));
-
-    --danger: hsl(var(--dark-coral),var(--dark-coral-l));
-    --danger-lighten: hsl(var(--dark-coral),calc(var(--dark-coral-l) + 10%));
-    --danger-darken: hsl(var(--dark-coral),calc(var(--dark-coral-l) - 10%));
-
-    --info: hsl(var(--blue),var(--blue-l));
-    --info-lighten: hsl(var(--blue),calc(var(--blue-l) + 10%));
-    --info-darken: hsl(var(--blue),calc(var(--blue-l) - 10%));
-
-    --link: hsl(var(--red),var(--red-l));
-    --link-lighten: hsl(var(--red),calc(var(--red-l) + 10%));
-    --link-darken: hsl(var(--red),calc(var(--red-l) - 10%));
-
-    --success: hsl(var(--dark-green),var(--dark-green-l));
-    --success-lighten: hsl(var(--dark-green),calc(var(--dark-green-l) + 10%));
-    --success-darken: hsl(var(--dark-green),calc(var(--dark-green-l) - 10%));
-
-    --warning: hsl(var(--pink),var(--pink-l));
-    --warning-lighten: hsl(var(--pink),calc(var(--pink-l) + 10%));
-    --warning-darken: hsl(var(--pink),calc(var(--pink-l) - 10%));
-
+    --primary: var(--purple);
+    --danger: var(--dark-coral);
+    --info: var(--blue);
+    --link: var(--red);
+    --success: var(--dark-green);
+    --warning: var(--pink);
     
     /* Attribute color variables */
     --background: var(--light);
     --heading-color: var(--info);
     --subtitle-color: var(--success);
     --button-color: var(--link);
-    --button-hover: var(--link-lighten);
 
+    --background-gradient: linear-gradient(100deg, #7d82b8, #8a83bb, #b293c3, #cda8c1, #d8bcbc, #e1d6cb, #e4dfd1) left bottom no-repeat,
+        linear-gradient(100deg, #ffffff, #fffcf1, #fffaea, #f1ecdd, #e4dfd1) left top no-repeat;
+
+    /* Dark mode differences */
+    --background-dark: black;
+    --heading-color-dark: var(--light);
+    --subtitle-color-dark: var(--light);
+    --background-gradient-dark: linear-gradient(100deg, #7d82b8, #1b202e) left bottom no-repeat,
+        linear-gradient(100deg, #000000, #00030e, #000515, #0e1322, #1b202e) left top no-repeat;
 
     /* Defining Primary Fonts */
     --heading-font: 'Fira Code', monospace;
@@ -73,21 +57,49 @@
     /* --image-height:  */
 }
 
+/* Keyframe Animations */
+@keyframes hdr__btn--hover {
+    from {
+        filter: brightness(100%);
+    }
+    to {
+        filter: brightness(120%);
+    }
+}
+
+@keyframes body__background--animate {
+    0%{
+        background-position:0% 100%, 100% 50%;
+    }
+    50%{
+        background-position:100% 100%, 0% 50%;
+    }
+    100%{
+        background-position:0% 100%, 100% 50%;
+    }
+}
 
 /* // Assign Font Families */
 /* Import fonts */
+
 
 body {
     font-size: 100%;
     font-family: var(--body-font);
     color: var(--primary);
-    /* background-color: var(--background); */
+    background-color: var(--background);
     margin-left: 30px;
     margin-right: 20px;
     margin-top: 50px;
-    background: linear-gradient(90deg, #7d82b8, #8a83bb, #b293c3, #cda8c1, #d8bcbc, #e1d6cb, #e4dfd1) left bottom no-repeat,
+    /* background: linear-gradient(90deg, #7d82b8, #8a83bb, #b293c3, #cda8c1, #d8bcbc, #e1d6cb, #e4dfd1) left bottom no-repeat,
         linear-gradient(90deg, #fffaea, #fbf6e6, #f7f2e3, #f3eedf, #f0eadc, #ece7d8, #e8e3d5, #e4dfd1) left top no-repeat;
-    background-size: 100% 20vh, auto;
+    background-size: 100% 20vh, auto; */
+    background: var(--background-gradient);
+    animation-name: body__background--animate;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    background-repeat: no-repeat;
+    background-size: 400% 20vh, 200% auto; 
 }
 
 a {
@@ -103,7 +115,8 @@ a {
         calc( var(--remaining-width) / 2 ) 
         var(--profile-width);
 
-    grid-template-rows: repeat(5,calc(20vh - 10px));
+    /* grid-template-rows: repeat(5,calc(20vh - 10px)); */
+    grid-template-rows: repeat(5,10rem);
 }
 
 .hdr__logo {
@@ -116,19 +129,19 @@ a {
 
 .title {
     /* layout */
-    position: relative;
+    /* position: relative; */
     grid-row: 2;
     grid-column: 1 / 3;
 }
 
 .title__text {
     /* layout */
-    position: absolute;
-    bottom: 0;
+    /* position: absolute;
+    bottom: 0; */
     /* appearance */
     font-family: var(--heading-font);
     color: var(--heading-color);
-    font-weight: 100;
+    font-weight: 400;
     font-size: calc(var(--content-width) / 15);
     padding-left: 2px;
 }
@@ -147,7 +160,7 @@ a {
     /* appearance */
     font-family: var(--body-font);
     color: var(--subtitle-color);
-    font-weight: 50;
+    font-weight: 300;
     font-size: calc(var(--content-width) / 55);
 }
 
@@ -161,9 +174,9 @@ a {
 
 .portrait__img {
     /* layout */
-    position: absolute;
+    /* position: absolute;
     bottom: 0;
-    left:0;
+    left:0; */
     /* appearance */
     width: 100%;
     height: auto;
@@ -192,8 +205,10 @@ a {
 }
 
 .hdr__btn--main:hover {
-    background-color: var(--button-hover);
-    color: var(--background);
+    /* filter: brightness(120%); */
+    animation-name: hdr__btn--hover;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
 }
 
 .hdr__btn--second {
@@ -220,11 +235,42 @@ a {
     /* background: linear-gradient(90deg, #7d82b8, #8a83bb, #b293c3, #cda8c1, #d8bcbc, #e1d6cb, #e4dfd1) left; */
 }
 
-@media screen and ( max-width: 1200px ) and ( min-width: 820px ) {
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: var(--background-gradient-dark);
+        animation-name: body__background--animate;
+        animation-duration: 60s;
+        animation-iteration-count: infinite;
+        background-repeat: no-repeat;
+        background-size: 400% 20vh, 200% auto; 
+    }
+    .title__text {
+        color: var(--heading-color-dark);
+    }
+    .subtitle__text {
+        color: var(--subtitle-color-dark);
+    }
+}
+
+@media ( max-width: 1200px ) and ( min-width: 820px ) {
     .title__text {
         font-size: 6vw;
     }
     .subtitle__text, .hdr__btn {
         font-size: 2vw;
+    }
+    .portrait {
+        /* layout */
+        /* position: relative; */
+        /* grid-row: 2 / 6;
+        grid-column: 3;
+        overflow-y: hidden; */
+    }
+    .portrait__img {
+        /* layout */
+        /* appearance */
+        /* width: auto;
+        height: 100%; */
     }
 }
