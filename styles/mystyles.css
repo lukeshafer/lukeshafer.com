@@ -88,18 +88,6 @@ body {
     font-family: var(--body-font);
     color: var(--primary);
     background-color: var(--background);
-    margin-left: 30px;
-    margin-right: 20px;
-    margin-top: 50px;
-    /* background: linear-gradient(90deg, #7d82b8, #8a83bb, #b293c3, #cda8c1, #d8bcbc, #e1d6cb, #e4dfd1) left bottom no-repeat,
-        linear-gradient(90deg, #fffaea, #fbf6e6, #f7f2e3, #f3eedf, #f0eadc, #ece7d8, #e8e3d5, #e4dfd1) left top no-repeat;
-    background-size: 100% 20vh, auto; */
-    background: var(--background-gradient);
-    animation-name: body__background--animate;
-    animation-duration: 60s;
-    animation-iteration-count: infinite;
-    background-repeat: no-repeat;
-    background-size: 400% 20vh, 200% auto; 
 }
 
 a {
@@ -107,6 +95,18 @@ a {
 }
 
 .hdr {
+    padding-left: 30px;
+    padding-right: 20px;
+    padding-top: 50px;
+    background: var(--background-gradient);
+    animation-name: body__background--animate;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    background-repeat: no-repeat;
+    background-size: 400% 20vh, 200% auto;
+}
+
+.hdr__grid {
     margin: auto;
     max-width: var(--content-width);
     display: grid;
@@ -125,6 +125,12 @@ a {
     grid-column: 1;
     /* appearance */
     height: 100%;
+}
+
+.switch{
+    grid-row: 1;
+    grid-column: 3;
+    z-index: 1;
 }
 
 .title {
@@ -235,9 +241,14 @@ a {
     /* background: linear-gradient(90deg, #7d82b8, #8a83bb, #b293c3, #cda8c1, #d8bcbc, #e1d6cb, #e4dfd1) left; */
 }
 
+.aboutMe {
+    max-width: var(--content-width);
+    margin: auto;
+}
+
 /* Dark Mode */
 @media (prefers-color-scheme: dark) {
-    body {
+    .hdr {
         background: var(--background-gradient-dark);
         animation-name: body__background--animate;
         animation-duration: 60s;
@@ -274,3 +285,65 @@ a {
         height: 100%; */
     }
 }
+
+/* Uncomment when adding the dark mode switch
+
+.switch {
+    position: relative;
+}
+  
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch__slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.switch__wrapper{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 34px;
+}
+
+.switch__slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    content: "l";
+    margin: auto;
+}
+
+input:checked + .switch__slider {
+    background-color: #2196F3;
+}
+
+input:focus + .switch__slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .switch__slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    content: "d";
+} */
