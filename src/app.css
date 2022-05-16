@@ -1,0 +1,36 @@
+@font-face {
+    font-family: Archive;
+    src: url(fonts/Archive/Archive-Regular.otf);
+    src: url(fonts/Archive/Archive-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Bebas Neue";
+    src: url(fonts/BebasNeue/BebasNeue-Book.otf)
+}
+
+:root {
+    font-family: Arimo, sans-serif;
+    --heading-font: Archive;
+    --link-font: "Bebas Neue";
+    --primary-color: #278094;
+    --secondary-color: #7d82b8;
+    --accent-color: #e65f5c;
+    --text-color: #254d56;
+    font-size: 100%;
+}
+
+body {
+    background-color: #cbd5ff;
+    background-image: url('background.png');
+}
+
+h1,
+h2 {
+    font-family: var(--heading-font), "Arial Black", sans-serif;
+}
+
+a {
+    font-family: var(--link-font), Arial, sans-serif;
+    text-decoration: none;
+}
