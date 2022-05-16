@@ -16,21 +16,27 @@
     --primary-color: #278094;
     --secondary-color: #7d82b8;
     --accent-color: #e65f5c;
+    --secondary-accent: #cc7974;
     --text-color: #254d56;
+    --text-shadow: #254d5680;
+    --secondary-text: #fffaea;
     font-size: 100%;
 }
 
 body {
     background-color: #cbd5ff;
     background-image: url('background.png');
+    color: var(--text-color);
 }
 
 h1,
 h2 {
     font-family: var(--heading-font), "Arial Black", sans-serif;
+    text-transform: uppercase;
 }
 
 a {
     font-family: var(--link-font), Arial, sans-serif;
     text-decoration: none;
+    text-transform: uppercase;
 }

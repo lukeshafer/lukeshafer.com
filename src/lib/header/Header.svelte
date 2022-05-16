@@ -30,15 +30,15 @@
 <style>
 	header {
 		background-color: hsla(0, 0%, 100%, 52%);
-        --height: 10rem;
+        --height: 10em;
         height: var(--height);
         display: grid;
         grid-template-columns: auto 1fr;
-        grid-template-rows: 10rem;
+        grid-template-rows: 10em;
         align-items: center;
-        justify-content: space-between;
-        --padding-x: 3rem;
+        --padding-x: 5em;
         padding-right: var(--padding-x);
+        font-size: 1rem;
     }
 
     a.logo-container {
@@ -47,13 +47,13 @@
         align-items: center;
         text-align: center;
         justify-content: center;
-        gap: 2rem;
-        --padding-y: 1rem;
+        gap: 2em;
+        --padding-y: 1em;
         padding-top: var(--padding-y);
         padding-bottom: var(--padding-y);
-        padding-right: 10em;
+        padding-right: 9em;
         padding-left: var(--padding-x);
-        font-size: min(65%, 2vw);
+        font-size: min(0.65em, 2vw);
         background-image: url(./brush-stroke.svg);
         background-size: auto 10.5em;
         background-repeat: no-repeat;
@@ -84,7 +84,7 @@
         color: var(--text-color);
         font-size: 4em;
         line-height: 0.9em;
-        padding-bottom: 1rem;
+        padding-bottom: 0.25em;
         white-space: nowrap;
     }
 
@@ -93,16 +93,17 @@
         display: flex;
         justify-content: space-around;
         flex-flow: row nowrap;
-        font-size: 100%;
+        font-size: 1em;
+        gap: 1em;
+        max-width: 50em;
+        margin: auto;
     }
 
     li {
-        font-size: 2em;
+        font-size: 1.8em;
         font-weight: lighter;
         text-shadow: 0.03em 0.03em hsla(191, 40%, 24%, 0.4);
-        --padding-x: 0.5em;
-        padding-left: var(--padding-x);
-        padding-right: var(--padding-x);
+        padding: 0.3em 0.5em;
     }
 
     li:hover {
