@@ -1,11 +1,38 @@
 <script lang="ts">
-	// TODO: check if the flex container wrapped to move the triangle to the top    
+	import { onMount } from 'svelte';
+
+	// TODO: check if the flex container wrapped to move the triangle to the top
+
+	let flexWrapper: HTMLElement;
+	let headshot: HTMLElement;
+	let textBubble: HTMLElement;
+	let wrapped = "not-wrapped";
+
+	const setWrappedClass = (elements:HTMLElement[]): string => {
+		let isWrapped = elements.reduce( (accum, curEl, index, arr) => {
+			if (index === 0) return false;
+			let prevEl = arr[index-1];
+			if (curEl.offsetTop > (prevEl.offsetTop+prevEl.clientHeight)) return true;
+			else return false;
+		}, false);
+		return isWrapped ? "wrapped" : "not-wrapped";
+	};
+
+	onMount(() => {
+		const myObserver = new ResizeObserver((entries) => {
+			entries.forEach( (entry) => {
+				let children:HTMLElement[] = Array.from(entry.target.children) as HTMLElement[];
+				wrapped = setWrappedClass(children);
+			});
+		});
+		myObserver.observe(flexWrapper);
+	});
 </script>
 
-<div class="flex-wrapper">
-	<img src="images/headshot.png" alt="Luke's Headshot" />
+<div class="flex-wrapper" bind:this={flexWrapper}>
+	<img src="images/headshot.png" alt="Luke's Headshot" bind:this={headshot} />
 
-	<div class="text-bubble">
+	<div class="text-bubble {wrapped}" bind:this={textBubble}>
 		<h2>Hi! I'm Luke!</h2>
 
 		<p>
@@ -36,6 +63,8 @@
 		height: 30em;
 		gap: 5em;
 		margin: 2em 2em;
+
+		font-size: min(1rem,3.3vw);
 	}
 
 	img {
@@ -47,15 +76,34 @@
 	div.text-bubble::before {
 		content: '';
 		position: absolute;
-		top: calc(50% - var(--triangle-height) / 2);
-		--triangle-height: 4rem;
-		--triangle-width: calc(var(--triangle-height) / 1.732);
-		left: calc(-1 * var(--triangle-height));
 		width: 0;
 		height: 0;
-		border-top: var(--triangle-width) solid transparent;
-		border-bottom: var(--triangle-width) solid transparent;
-		border-right: var(--triangle-height) solid var(--background);
+		--triangle-height: 3em;
+		--triangle-width: calc(var(--triangle-height) / 1.732);
+		--triangle-center-position: calc(50% - var(--triangle-height) / 2);
+		--triangle-top-position: calc(-1 * var(--triangle-height) + 1px); 
+		/* above +1px prevents visible gaps due to rounding  */
+		--triangle-base-half: var(--triangle-width) solid transparent;
+		--triangle-main-shape: var(--triangle-height) solid var(--background);
+	}
+	
+
+	div.text-bubble.not-wrapped::before {
+		/* Arrow on left when not wrapped */
+		top: var(--triangle-center-position);
+		left: var(--triangle-top-position);
+		border-top: var(--triangle-base-half);
+		border-bottom: var(--triangle-base-half);
+		border-right: var(--triangle-main-shape);
+	}
+
+	div.text-bubble.wrapped::before {
+		/* Arrow on top when wrapped */
+		left: var(--triangle-center-position);
+		top: var(--triangle-top-position);
+		border-left: var(--triangle-base-half);
+		border-right: var(--triangle-base-half);
+		border-bottom: var(--triangle-main-shape);
 	}
 
 	div.text-bubble {
@@ -83,7 +131,7 @@
 	strong {
 		color: var(--accent-color);
 	}
-	
+
 	a {
 		display: inline-block;
 		padding: 0.5em 1em;
@@ -92,11 +140,10 @@
 		background: var(--secondary-accent);
 		border-radius: 1em;
 		font-size: 1.2em;
-		vertical-align:bottom;
+		vertical-align: bottom;
 		left: 0;
 		right: 0;
 		width: fit-content;
 		margin: auto;
 	}
-
 </style>

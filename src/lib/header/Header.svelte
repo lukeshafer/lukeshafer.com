@@ -38,7 +38,8 @@
         align-items: center;
         --padding-x: 5em;
         padding-right: var(--padding-x);
-        font-size: 1rem;
+        /* font-size: min(1rem, 1.4vw); */
+        font-size: clamp(min(2.6vw, 0.7rem), 1.4vw, 1rem);
     }
 
     a.logo-container {
@@ -53,13 +54,13 @@
         padding-bottom: var(--padding-y);
         padding-right: 9em;
         padding-left: var(--padding-x);
-        font-size: min(0.65em, 2vw);
         background-image: url(./brush-stroke.svg);
         background-size: auto 10.5em;
         background-repeat: no-repeat;
         background-position: right;
         --brightness: 100%;
-        filter: brightness(var(--brightness))
+        filter: brightness(var(--brightness));
+        font-size: .65em;
     }
 
     a.logo-container:hover {
@@ -114,6 +115,12 @@
 
     li a {
         color: var(--text-color);
+    }
+
+    @media screen and (max-width: 810px) {
+        nav {
+            display: none;
+        }
     }
     
 </style>
