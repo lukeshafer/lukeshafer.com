@@ -146,20 +146,23 @@
         
     } */
 
+    nav {
+        padding-left: 10vw;
+    }
+
 	ul {
 		list-style: none;
 		display: flex;
-		justify-content: space-around;
+		justify-content: space-between;
 		flex-flow: row nowrap;
 		font-size: 1em;
 		gap: 1em;
-		max-width: 50em;
 		margin: 0;
         padding-left: 0;
 	}
 
 	li {
-		font-size: 1.8em;
+		font-size: 2em;
 		font-weight: lighter;
 		text-shadow: 0.03em 0.03em var(--text-shadow);
 		padding: 0.3em 0.5em;
@@ -197,7 +200,7 @@
             right: calc(-1 * var(--width));
             top: calc(var(--height) / var(--font-size));
             background: inherit;
-            height: calc(100vh - var(--height));
+            height: calc(100vh - (var(--height) / var(--font-size)));
             transition: transform 400ms, width 400ms;
         }
 
