@@ -132,7 +132,7 @@
 		color: var(--accent-color);
 	}
 
-	a {
+	a.btn {
 		display: inline-block;
 		padding: 0.5em 1em;
 		position: absolute;
@@ -141,6 +141,7 @@
 		border-radius: 1em;
 		font-size: 1.2em;
 		vertical-align: bottom;
+		text-shadow: 0.03em 0.03em var(--text-shadow);
 		left: 0;
 		right: 0;
 		width: fit-content;

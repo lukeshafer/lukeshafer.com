@@ -20,11 +20,12 @@
     --text-color: #254d56;
     --text-shadow: #254d5680;
     --secondary-text: #fffaea;
+    --header-background: hsla(0, 0%, 100%, 52%);
     font-size: 100%;
 }
 
 body {
-    background-color: #cbd5ff;
+    background-color: var(--secondary-color);
     background-image: url('background.png');
     color: var(--text-color);
 }
