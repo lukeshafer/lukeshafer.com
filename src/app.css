@@ -38,6 +38,13 @@ h2 {
     text-transform: uppercase;
 }
 
+h2 {
+    font-weight: 1;
+    letter-spacing: 0.01em;
+    text-align: center;
+}
+
+
 a {
     font-family: var(--link-font), Arial, sans-serif;
     text-decoration: none;

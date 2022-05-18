@@ -117,9 +117,6 @@
 	}
 
 	h2 {
-		font-weight: 1;
-		letter-spacing: 0.01em;
-		text-align: center;
 		margin: 0;
 		font-size: 2em;
 	}
