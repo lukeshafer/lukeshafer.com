@@ -26,11 +26,8 @@
 
 	<nav class={menuButtonActive ? 'active' : 'not-active'}>
 		<ul>
-			<li class:active={$page.url.pathname === '/'}>
-				<a sveltekit:prefetch href="/">Portfolio</a>
-			</li>
-			<li class:active={$page.url.pathname === '/experience'}>
-				<a sveltekit:prefetch href="/experience">Experience</a>
+			<li class:active={$page.url.pathname === '/work'}>
+				<a sveltekit:prefetch href="/work">Work</a>
 			</li>
 			<li class:active={$page.url.pathname === '/contact'}>
 				<a sveltekit:prefetch href="/contact">Contact</a>

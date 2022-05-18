@@ -15,9 +15,11 @@
     --link-font: "Bebas Neue";
     --primary-color: #278094;
     --secondary-color: #7d82b8;
+    --tertiary-color: #254d56;
     --accent-color: #e65f5c;
     --secondary-accent: #cc7974;
-    --text-color: #254d56;
+    --tertiary-accent: #ffc4bf;
+    --text-color: var(--tertiary-color);
     --text-shadow: #254d5680;
     --secondary-text: #fffaea;
     --header-background: hsla(0, 0%, 100%, 52%);
