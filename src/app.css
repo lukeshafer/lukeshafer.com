@@ -23,6 +23,7 @@
     --text-shadow: #254d5680;
     --secondary-text: #fffaea;
     --header-background: hsla(0, 0%, 100%, 52%);
+    --image-overlay-background: hsla(0, 0%, 100%, 85%);
     font-size: 100%;
 }
 

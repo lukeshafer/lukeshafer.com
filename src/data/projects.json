@@ -5,6 +5,16 @@
             "partner" : "Guardians of Heart",
             "url": "https://guardiansofheart.org",
             "logo" : "guardiansofheart.png",
+            "imageFile" : "goh.org.png",
+            "description" : "Describing something",
+            "repo" : ""
+        },
+        {
+            "title" : "Ono Turo-Turo",
+            "partner" : "Ono Turo-Turo Food Truck",
+            "url": "https://musical-lamington-c71476.netlify.app/",
+            "logo" : "onoturoturologo.png",
+            "imageFile" : "onoturoturo.com.jpeg",
             "description" : "Describing something",
             "repo" : ""
         }
