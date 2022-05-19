@@ -1,0 +1,14 @@
+{
+    "jobs" : [
+        {
+            "jobTitle" : "Implementation Specialist",
+            "employer" : "TrueCommerce, Inc",
+            "website": "https://truecommerce.com",
+            "dates" : "Jan 2021 - Present",
+            "description" : "I was responsible for implementing things for customers",
+            "skills" : [
+                "EDI","Microsoft Dynamics"
+            ]
+        }
+    ]
+}
