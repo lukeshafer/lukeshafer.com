@@ -1,0 +1,1 @@
+<!-- TODO: move the brush-stroke.svg file here so the color is dynamic -->

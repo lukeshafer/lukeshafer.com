@@ -1,0 +1,1 @@
+<!-- TODO: move the logo.svg file here so the color is dynamic -->

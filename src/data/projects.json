@@ -1,0 +1,12 @@
+{
+    "projects" : [
+        {
+            "title" : "Guardians of Heart",
+            "partner" : "Guardians of Heart",
+            "url": "https://guardiansofheart.org",
+            "logo" : "guardiansofheart.png",
+            "description" : "Describing something",
+            "repo" : ""
+        }
+    ]
+}

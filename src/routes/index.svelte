@@ -1,8 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-
-	// TODO: check if the flex container wrapped to move the triangle to the top
-
+	
 	let flexWrapper: HTMLElement;
 	let headshot: HTMLElement;
 	let textBubble: HTMLElement;
