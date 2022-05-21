@@ -1,10 +1,11 @@
 <script lang="ts">
 	import 'normalize.css';
 	import '../app.css';
-	import Header from '$lib/header/Header.svelte';
+
+	import HeaderNavBar from '$lib/header/HeaderNavBar.svelte';
 </script>
 
-<header />
+<HeaderNavBar />
 
 <main>
 	<slot />

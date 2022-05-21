@@ -2,13 +2,13 @@
 
 @font-face {
 	font-family: Archive;
-	src: url(fonts/Archive/Archive-Regular.otf);
-	src: url(fonts/Archive/Archive-Regular.ttf);
+	src: url(/fonts/Archive/Archive-Regular.otf) format('opentype');
+	src: url(/fonts/Archive/Archive-Regular.ttf) format('truetype');
 }
 
 @font-face {
 	font-family: 'Bebas Neue';
-	src: url(fonts/BebasNeue/BebasNeue-Book.otf);
+	src: url(/fonts/BebasNeue/BebasNeue-Book.otf) format('opentype');
 }
 
 :root {
@@ -31,7 +31,7 @@
 
 body {
 	background-color: rgb(var(--secondary-color));
-	background-image: url('background.png');
+	background-image: url('/background.png');
 	color: rgb(var(--text-color));
 }
 
