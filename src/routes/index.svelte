@@ -105,7 +105,7 @@
 	}
 
 	div.text-bubble {
-		--background: white;
+		--background: rgb(var(--background-base));
 		position: relative;
 		background-color: var(--background);
 		height: fit-content;
@@ -124,19 +124,19 @@
 	}
 
 	strong {
-		color: var(--accent-color);
+		color: rgb(var(--accent-color));
 	}
 
 	a.btn {
 		display: inline-block;
 		padding: 0.5em 1em;
 		position: absolute;
-		color: var(--secondary-text);
-		background: var(--secondary-accent);
+		color: rgb(var(--secondary-text));
+		background: rgb(var(--secondary-accent));
 		border-radius: 1em;
 		font-size: 1.2em;
 		vertical-align: bottom;
-		text-shadow: 0.03em 0.03em var(--text-shadow);
+		text-shadow: 0.03em 0.03em rgba(var(--text-color), 50%);
 		left: 0;
 		right: 0;
 		width: fit-content;

@@ -19,32 +19,67 @@
 	const repo = project.repo;
 	const description = project.description;
     const imageFile = `projects/assets/${project.imageFile}`;
+
+	let isCardForward = true;
+    let faceDirection: string;
+	$: faceDirection = isCardForward ? 'front': 'back';
 </script>
 
-<div class="project-tile" style='background-image: url("{imageFile}")'>
+<div class="project-tile {faceDirection}" style='background-image: url("{imageFile}")' on:click={() => isCardForward = !isCardForward} >
 	<div class="background-box">
 		<img src={logo} alt={partner} width="300" />
 	</div>
+	<div class="tile-back">
+        <p class="project-description">{project.description}</p>
+    </div>
 </div>
 
 <style>
 	div.project-tile {
+		position: relative;
 		background-size: cover;
-		width: min(30em, 100%);
-		height: 20em;
-		margin: auto;
+		--width: 30em;
+		width: var(--width);
+		--height: 20em;
+		height: var(--height);
+		margin: 0 auto;
 		display: flex;
 		justify-content: center;
 		align-items: flex-end;
 		border-style: solid;
 		border-width: 0.25em;
-		border-color: white;
+		border-color: rgb(var(--background-base));
+		transition: all 150ms, transform 400ms ease-in-out;
+		transform-style: preserve-3d;
+	}
+
+	div.tile-back {
+        transform: rotateY(180deg);
+        background-color: white;
+        backface-visibility: hidden;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+
+	div.back {
+        transform: rotateY(180deg);
 	}
 
 	div.background-box {
-		background-color: var(--image-overlay-background);
+		background-color: rgba(var(--background-base), 0.85);
 		width: 100%;
 		height: 6em;
+	}
+
+	div.project-tile:hover {
+		--grow-amt: 1em;
+		width: calc(var(--grow-amt) + var(--width));
+		height: calc(var(--grow-amt) + var(--height));
+		margin: calc(var(--grow-amt) * -1) auto;
+		cursor: pointer;
 	}
 
 	img {

@@ -41,7 +41,7 @@
 
 <style>
 	header {
-		background-color: var(--header-background);
+		background-color: rgba(var(--background-base), 0.52);
 		--height: 10em;
 		height: var(--height);
 		display: grid;
@@ -82,7 +82,7 @@
 	}
 
 	h1::first-line {
-		color: var(--primary-color);
+		color: rgb(var(--primary-color));
 		letter-spacing: 0.27em;
 		font-size: 0.66em;
 		line-height: 0.9em;
@@ -90,7 +90,7 @@
 
 	h1 {
 		font-weight: 100;
-		color: var(--text-color);
+		color: rgb(var(--text-color));
 		font-size: 4em;
 		line-height: 0.9em;
 		padding-bottom: 0.25em;
@@ -121,7 +121,7 @@
 		--translate-amount: calc(var(--line-spacing) + var(--line-height));
 		height: var(--line-height);
 		position: relative;
-		background-color: var(--text-color);
+		background-color: rgb(var(--text-color));
 		/* transform-origin: left; */
 		transform-origin: center;
 		transition: transform 250ms;
@@ -161,7 +161,7 @@
 	li {
 		font-size: 2em;
 		font-weight: lighter;
-		text-shadow: 0.03em 0.03em var(--text-shadow);
+		text-shadow: 0.03em 0.03em rgba(var(--text-shadow), 50%);
 		padding: 0.3em 0.5em;
 	}
 
@@ -172,20 +172,17 @@
 	}
 
 	li a {
-		color: var(--text-color);
+		color: rgb(var(--text-color));
 	}
 
 	@media screen and (max-width: 810px) {
         header {
-            background-color: #ffffffBB;
+            background-color: rgba(var(--background-base), 0.733);
         }
 
 		button.hamburger {
 			display: flex;
 		}
-		nav.not-active {
-		}
-
         nav {
             z-index: 1;
             overflow: hidden;

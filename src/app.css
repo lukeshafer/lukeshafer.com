@@ -13,33 +13,34 @@
     font-family: Arimo, sans-serif;
     --heading-font: Archive;
     --link-font: "Bebas Neue";
-    --primary-color: #278094;
-    --secondary-color: #7d82b8;
-    --tertiary-color: #254d56;
-    --accent-color: #e65f5c;
-    --secondary-accent: #cc7974;
-    --tertiary-accent: #ffc4bf;
+    --primary-color: 39, 128, 148;
+    --secondary-color: 125, 130, 184;
+    --tertiary-color: 37, 77, 86;
+    --accent-color: 230, 95, 92;
+    --secondary-accent: 204, 121, 116;
+    --tertiary-accent: 255, 196, 191;
     --text-color: var(--tertiary-color);
-    --text-shadow: #254d5680;
-    --secondary-text: #fffaea;
-    --header-background: hsla(0, 0%, 100%, 52%);
-    --image-overlay-background: hsla(0, 0%, 100%, 85%);
+    --highlight: 203, 213, 255;
+    --secondary-text: 255, 250, 234;
+    --tertiary-text: 116, 58, 55;
+    --background-base: 255, 255, 255;
     font-size: 100%;
 }
 
 body {
-    background-color: var(--secondary-color);
+    background-color: rgb(var(--secondary-color));
     background-image: url('background.png');
-    color: var(--text-color);
+    color: rgb(var(--text-color));
 }
 
 h1,
-h2 {
+h2,
+h3 {
     font-family: var(--heading-font), "Arial Black", sans-serif;
     text-transform: uppercase;
 }
 
-h2 {
+h2,h3 {
     font-weight: 1;
     letter-spacing: 0.01em;
     text-align: center;

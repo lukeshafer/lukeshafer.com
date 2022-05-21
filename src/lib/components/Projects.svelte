@@ -13,8 +13,9 @@
 <style>
     div.project-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
-        grid-auto-rows: auto;
-        grid-gap: 5px;
+        grid-template-columns: repeat(auto-fit, minmax(30em, 1fr));
+        grid-auto-rows: 20em;
+        grid-gap: 2em;
+        align-items: center;
     }
 </style>
