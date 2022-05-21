@@ -54,3 +54,18 @@ a {
 	text-decoration: none;
 	text-transform: uppercase;
 }
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+.visibly-hidden {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}

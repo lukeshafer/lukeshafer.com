@@ -148,14 +148,11 @@
     }
 
 	ul {
-		list-style: none;
 		display: flex;
 		justify-content: space-between;
 		flex-flow: row nowrap;
 		font-size: 1em;
 		gap: 1em;
-		margin: 0;
-        padding-left: 0;
 	}
 
 	li {
