@@ -40,7 +40,8 @@
     <h2>Contact Info</h2>
     <a id="email" href="mailto:hello@lukeshafer.com"
       ><b>hello</b>@lukeshafer.com</a>
-    <a id="phone" href="tel:+16145853382">614-<b>LUKE-ETC</b></a>
+    <a id="phone" href="tel:+16145853382"
+      >614-<b>LUKE-ETC</b><br />614-585-3382</a>
     <ul id="links">
       {#each socials as social}
         <li class="link">
@@ -49,7 +50,10 @@
             href={social.href}
             class="social-icon"
             target="_blank">
-            <span class="icon-wrapper">
+            <span
+              class="icon-wrapper"
+              style:align-self={social.bottom ? 'stretch' : 'center'}
+              style:top={social.bottom ? '0.1em' : '0'}>
               <svelte:component
                 this={social.component}
                 size="{social.bottom ? 1 : 0.7}em"
@@ -84,14 +88,16 @@
     font-style: normal;
   }
 
+  address > * {
+    margin: 1em;
+  }
+
   h2 {
-    margin: 0;
     text-align: center;
   }
 
   a {
     display: block;
-    margin: 0;
     font-family: inherit;
     text-transform: inherit;
     font-size: 0.8em;
@@ -102,26 +108,33 @@
     color: rgb(var(--accent-color));
   }
 
+  a#phone::first-line {
+    font-size: calc(0.8em / 0.65);
+  }
+
+  a#phone {
+    font-size: 0.65em;
+    letter-spacing: 0.15em;
+  }
+
   ul {
     display: flex;
     justify-content: space-between;
   }
 
-  li {
-  }
-
   li a {
-    display: relative;
+    display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgb(var(--primary-color));
-    font-size: 1.8em;
+    font-size: 1.5em;
     width: 1em;
     height: 1em;
     border-radius: 100%;
   }
 
   .icon-wrapper {
-    position: absolute;
+    position: relative;
+    align-self: stretch;
   }
 </style>
