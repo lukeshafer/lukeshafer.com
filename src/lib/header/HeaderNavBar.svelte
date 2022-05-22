@@ -99,11 +99,12 @@
 
   button.hamburger {
     flex-direction: column;
+    justify-content: center;
     border-style: none;
     --line-spacing: 0.5em;
     gap: var(--line-spacing);
     padding: var(--line-spacing);
-    background-color: inherit;
+    background-color: transparent;
     margin-left: auto;
   }
 
@@ -112,17 +113,18 @@
   }
   button.hamburger:hover span {
     filter: brightness(150%);
+    /* font-size: 2em; */
   }
 
   button.hamburger span {
     display: block;
     width: 3.2em;
+    text-align: center;
     --line-height: 0.3em;
     --translate-amount: calc(var(--line-spacing) + var(--line-height));
     height: var(--line-height);
     position: relative;
     background-color: rgb(var(--text-color));
-    /* transform-origin: left; */
     transform-origin: center;
     transition: transform 250ms;
   }
@@ -173,6 +175,9 @@
   }
 
   @media screen and (max-width: 810px) {
+    :root {
+      overflow: hidden;
+    }
     header {
       background-color: rgba(var(--background-base), 0.733);
     }
@@ -182,22 +187,25 @@
     }
     nav {
       z-index: 1;
-      overflow: hidden;
       --font-size: 2;
       font-size: calc(var(--font-size) * 1em);
       position: absolute;
       --width: 15em;
-      width: 0;
-      right: calc(-1 * var(--width));
+      /* width: 0; */
+      width: var(--width);
+      right: 0;
+      transform: translateX(15em);
+      /* right: calc(-1 * var(--width)); */
       top: calc(var(--height) / var(--font-size));
       background: inherit;
       height: calc(100vh - (var(--height) / var(--font-size)));
       transition: transform 400ms, width 400ms;
+      padding: 0;
     }
 
     nav.active {
-      width: var(--width);
-      transform: translateX(-15em);
+      /* width: var(--width); */
+      transform: translateX(0);
     }
     nav ul {
       overflow: inherit;
