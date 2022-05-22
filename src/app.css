@@ -1,71 +1,93 @@
 /* Write your global styles here, in PostCSS syntax */
 
 @font-face {
-	font-family: Archive;
-	src: url(/fonts/Archive/Archive-Regular.otf) format('opentype');
-	src: url(/fonts/Archive/Archive-Regular.ttf) format('truetype');
+  font-family: Archive;
+  src: url(/fonts/Archive/Archive-Regular.otf) format('opentype');
+  src: url(/fonts/Archive/Archive-Regular.ttf) format('truetype');
 }
 
 @font-face {
-	font-family: 'Bebas Neue';
-	src: url(/fonts/BebasNeue/BebasNeue-Book.otf) format('opentype');
+  font-family: 'Bebas Neue';
+  src: url(/fonts/BebasNeue/BebasNeue-Book.otf) format('opentype');
 }
 
 :root {
-	font-family: Arimo, sans-serif;
-	--heading-font: Archive;
-	--link-font: 'Bebas Neue';
-	--primary-color: 39, 128, 148;
-	--secondary-color: 125, 130, 184;
-	--tertiary-color: 37, 77, 86;
-	--accent-color: 230, 95, 92;
-	--secondary-accent: 204, 121, 116;
-	--tertiary-accent: 255, 196, 191;
-	--text-color: var(--tertiary-color);
-	--highlight: 203, 213, 255;
-	--secondary-text: 255, 250, 234;
-	--tertiary-text: 116, 58, 55;
-	--background-base: 255, 255, 255;
-	font-size: 100%;
+  font-family: Arimo, sans-serif;
+  --heading-font: Archive;
+  --link-font: 'Bebas Neue';
+  --primary-color: 39, 128, 148;
+  --secondary-color: 125, 130, 184;
+  --tertiary-color: 37, 77, 86;
+  --accent-color: 230, 95, 92;
+  --secondary-accent: 204, 121, 116;
+  --tertiary-accent: 255, 196, 191;
+  --text-color: var(--tertiary-color);
+  --highlight: 203, 213, 255;
+  --secondary-text: 255, 250, 234;
+  --tertiary-text: 116, 58, 55;
+  --background-base: 255, 255, 255;
+  font-size: 100%;
 }
 
 body {
-	background-color: rgb(var(--secondary-color));
-	background-image: url('/background.png');
-	color: rgb(var(--text-color));
+  background-color: rgb(var(--secondary-color));
+  background-image: url('/background.png');
+  color: rgb(var(--text-color));
 }
 
 h1,
 h2,
 h3 {
-	font-family: var(--heading-font), 'Arial Black', sans-serif;
-	text-transform: uppercase;
+  font-family: var(--heading-font), 'Arial Black', sans-serif;
+  text-transform: uppercase;
 }
 
 h2,
 h3 {
-	font-weight: 1;
-	letter-spacing: 0.01em;
-	text-align: center;
+  font-weight: 1;
+  letter-spacing: 0.01em;
+  text-align: center;
 }
 
 a {
-	font-family: var(--link-font), Arial, sans-serif;
-	text-decoration: none;
-	text-transform: uppercase;
+  font-family: var(--link-font), Arial, sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 ul {
-	list-style: none;
-	margin: 0;
-	padding-left: 0;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
 }
 
 .visibly-hidden {
-    clip: rect(1px, 1px, 1px, 1px);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.btn {
+  font-family: var(--link-font), Arial, sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.5em 1em;
+  color: rgb(var(--secondary-text));
+  background: rgb(var(--secondary-accent));
+  border-radius: 1em;
+  vertical-align: bottom;
+  text-shadow: 0.03em 0.03em rgba(var(--text-color), 50%);
+  left: 0;
+  right: 0;
+  width: fit-content;
+  margin: auto;
+  border: none;
+  font-size: 1.2em;
+}
+
+.btn:hover {
+  font-size: 1.4em;
 }

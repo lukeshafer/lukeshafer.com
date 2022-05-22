@@ -39,9 +39,19 @@
   <address>
     <h2>Contact Info</h2>
     <a id="email" href="mailto:hello@lukeshafer.com"
-      ><b>hello</b>@lukeshafer.com</a>
+      ><span class="main-icon">
+        <Mail
+          color="rgb(var(--accent-color))"
+          fill="rgb(var(--background-base))" />
+      </span><span><b>hello</b>@lukeshafer.com</span></a>
     <a id="phone" href="tel:+16145853382"
-      >614-<b>LUKE-ETC</b><br />614-585-3382</a>
+      ><span class="main-icon">
+        <Phone
+          color="rgb(var(--accent-color))"
+          fill="rgb(var(--background-base))" />
+      </span><span class="phone-number"
+        >614-<b>LUKE-ETC</b><br />614-585-3382</span
+      ></a>
     <ul id="links">
       {#each socials as social}
         <li class="link">
@@ -67,7 +77,27 @@
       {/each}
     </ul>
   </address>
-  <section class="form" />
+  <form action="">
+    <h3>Want to collaborate or get a quote for your project?</h3>
+    <label for="input-name" class="visibly-hidden">Name</label>
+    <input type="text" name="Name" placeholder="Name" id="input-name" />
+    <label for="input-email" class="visibly-hidden">Email</label>
+    <input type="email" name="Email" placeholder="Email" id="input-email" />
+    <label for="input-phone" class="visibly-hidden">Phone</label>
+    <input
+      type="tel"
+      id="input-phone"
+      name="Phone"
+      placeholder="Phone"
+      pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" />
+    <label for="input-message" class="visibly-hidden">Message</label>
+    <textarea
+      name="Message"
+      placeholder="Message"
+      id="input-message"
+      rows="6" />
+    <button class="btn" type="submit">Submit</button>
+  </form>
 </div>
 
 <style>
@@ -83,9 +113,10 @@
 
   address {
     background-color: rgb(var(--background-base));
-    padding: 1em 1.5em;
+    padding: 0em 1.5em;
     font-size: 2em;
     font-style: normal;
+    white-space: nowrap;
   }
 
   address > * {
@@ -94,6 +125,10 @@
 
   h2 {
     text-align: center;
+  }
+
+  h3 {
+    font-size: 2em;
   }
 
   a {
@@ -108,12 +143,20 @@
     color: rgb(var(--accent-color));
   }
 
-  a#phone::first-line {
-    font-size: calc(0.8em / 0.65);
+  #email,
+  #phone {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1em;
   }
 
-  a#phone {
-    font-size: 0.65em;
+  .phone-number::first-line {
+    font-size: calc(1em / 0.8);
+  }
+
+  .phone-number {
+    font-size: 0.8em;
     letter-spacing: 0.15em;
   }
 
@@ -136,5 +179,36 @@
   .icon-wrapper {
     position: relative;
     align-self: stretch;
+  }
+
+  .main-icon {
+    background-color: rgb(var(--accent-color));
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3em;
+    border-radius: 1em;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.5em;
+    gap: 0.7em;
+  }
+
+  input,
+  textarea {
+    border-radius: 0;
+    width: 20em;
+    padding: 0.5em 1em;
+    border: none;
+  }
+
+  .btn {
+    font-size: 1.2em;
+    font-weight: lighter;
   }
 </style>
