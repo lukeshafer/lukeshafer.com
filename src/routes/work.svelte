@@ -1,48 +1,42 @@
 <script lang="ts">
-    import Projects from "$lib/components/Projects.svelte";
-    import { projects } from "$data/projects.json";
-    import Jobs from "$lib/components/Jobs.svelte";
-    import { jobs } from "$data/jobs.json";
+  import Projects from '$lib/components/Projects.svelte';
+  import { projects } from '$data/projects.json';
+  import Jobs from '$lib/components/Jobs.svelte';
+  import { jobs } from '$data/jobs.json';
 </script>
 
 <section class="work">
-    <div class="text-container">
-        <h2>My Work</h2>
-        <p>Here, you can find some of my past projects and companies I've worked with:</p>
-    </div>
-    <Projects {projects}/>
-    <div class="text-container">
-        <h2>My Experience</h2>
-    </div>
-    <Jobs {jobs}/>
+  <div class="card">
+    <h3>My Work</h3>
+    <p>
+      Here, you can find some of my past projects and companies I've worked
+      with:
+    </p>
+  </div>
+  <Projects {projects} />
+  <div class="card">
+    <h3>My Experience</h3>
+  </div>
+  <Jobs {jobs} />
 </section>
 
 <style>
-    section.work {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-content: center;
-        padding: 3em;
-        gap: 2em;
-        font-size: min(1rem,3.3vw);
-    }
+  section.work {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    gap: 2em;
+    font-size: min(1rem, 3.3vw);
+  }
 
-    h2 {
-        margin: 0.5em;
-    }
+  p {
+    margin: 1em;
+  }
 
-    p {
-        margin: 1em;
-    }
-    
-    div.text-container {
-        background-color: white;
-        font-size: 1.5em;
-        padding: 0em 1.5em;
-        max-width: 25em;
-        text-align: center;
-        align-self: center;
-    }
-
+  .card {
+    max-width: 25em;
+    text-align: center;
+    align-self: center;
+  }
 </style>

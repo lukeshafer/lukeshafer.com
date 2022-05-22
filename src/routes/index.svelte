@@ -29,10 +29,14 @@
   });
 </script>
 
-<div class="flex-wrapper" bind:this={flexWrapper}>
-  <img src="images/headshot.png" alt="Luke's Headshot" bind:this={headshot} />
+<section bind:this={flexWrapper}>
+  <img
+    src="images/headshot.png"
+    alt="Luke's Headshot"
+    width="300"
+    bind:this={headshot} />
 
-  <div class="text-bubble {wrapped}" bind:this={textBubble}>
+  <article class="card {wrapped}" bind:this={textBubble}>
     <h2>Hi! I'm Luke!</h2>
 
     <p>
@@ -49,22 +53,17 @@
     </p>
 
     <a class="btn" href="/">Learn more</a>
-  </div>
-</div>
+  </article>
+</section>
 
 <style>
-  div.flex-wrapper {
-    /* margin: 3rem auto; */
+  section {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    height: 30em;
     gap: 5em;
-    margin: 2em 2em;
-
-    font-size: min(1rem, 3.3vw);
   }
 
   img {
@@ -72,8 +71,12 @@
     border-radius: 50%;
   }
 
+  .card {
+    width: 25em;
+  }
+
   /* Chat bubble arrow */
-  div.text-bubble::before {
+  article::before {
     content: '';
     position: absolute;
     width: 0;
@@ -84,10 +87,11 @@
     --triangle-top-position: calc(-1 * var(--triangle-height) + 1px);
     /* above +1px prevents visible gaps due to rounding  */
     --triangle-base-half: var(--triangle-width) solid transparent;
-    --triangle-main-shape: var(--triangle-height) solid var(--background);
+    --triangle-main-shape: var(--triangle-height) solid
+      rgb(var(--background-base));
   }
 
-  div.text-bubble.not-wrapped::before {
+  article.not-wrapped::before {
     /* Arrow on left when not wrapped */
     top: var(--triangle-center-position);
     left: var(--triangle-top-position);
@@ -96,28 +100,13 @@
     border-right: var(--triangle-main-shape);
   }
 
-  div.text-bubble.wrapped::before {
+  article.wrapped::before {
     /* Arrow on top when wrapped */
     left: var(--triangle-center-position);
     top: var(--triangle-top-position);
     border-left: var(--triangle-base-half);
     border-right: var(--triangle-base-half);
     border-bottom: var(--triangle-main-shape);
-  }
-
-  div.text-bubble {
-    --background: rgb(var(--background-base));
-    position: relative;
-    background-color: var(--background);
-    height: fit-content;
-    width: 25em;
-    padding: 1em 1.5em;
-    font-size: 1.3em;
-  }
-
-  h2 {
-    margin: 0;
-    font-size: 2em;
   }
 
   p {
@@ -131,6 +120,6 @@
   .btn {
     display: inline-block;
     position: absolute;
-	font-size: 1.2em;
+    font-size: 1.2em;
   }
 </style>

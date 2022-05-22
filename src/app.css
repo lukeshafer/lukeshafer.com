@@ -26,13 +26,17 @@
   --secondary-text: 255, 250, 234;
   --tertiary-text: 116, 58, 55;
   --background-base: 255, 255, 255;
-  font-size: 100%;
+  font-size: min(1rem, 3.3vw);
 }
 
 body {
   background-color: rgb(var(--secondary-color));
   background-image: url('/background.png');
   color: rgb(var(--text-color));
+}
+
+main {
+  margin: 4em 2em;
 }
 
 h1,
@@ -88,6 +92,30 @@ ul {
   font-size: 1.2em;
 }
 
+b, strong {
+  color: rgb(var(--accent-color));
+}
+
 .btn:hover {
   font-size: 1.4em;
 }
+
+.card {
+  position: relative;
+  background-color: rgb(var(--background-base));
+  height: fit-content;
+  padding: 1em 1.5em;
+  font-size: 1.3em;
+}
+
+.card h3,.card h2 {
+  margin: 0;
+  font-size: 2em;
+}
+
+.card h4 {
+  font-size: 1.5em;
+  font-weight: inherit;
+  margin: 0;
+}
+

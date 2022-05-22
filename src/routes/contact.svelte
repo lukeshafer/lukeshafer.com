@@ -33,26 +33,34 @@
       bottom: true,
     },
   ];
+
+  const noTypeCheck = (x: any) => x;
 </script>
 
-<div class="page-wrapper">
-  <address>
-    <h2>Contact Info</h2>
+<section>
+  <address class="card">
+    <h3>Contact Info</h3>
     <a id="email" href="mailto:hello@lukeshafer.com"
       ><span class="main-icon">
         <Mail
           color="rgb(var(--accent-color))"
-          fill="rgb(var(--background-base))" />
-      </span><span><b>hello</b>@lukeshafer.com</span></a>
+          fill="rgb(var(--background-base))"
+          {...noTypeCheck({
+            size: '0.7em',
+          })} />
+      </span><span class="link-text"><b>hello</b>@lukeshafer.com</span></a>
     <a id="phone" href="tel:+16145853382"
       ><span class="main-icon">
         <Phone
           color="rgb(var(--accent-color))"
-          fill="rgb(var(--background-base))" />
-      </span><span class="phone-number"
+          fill="rgb(var(--background-base))"
+          {...noTypeCheck({
+            size: '0.7em',
+          })} />
+      </span><span class="link-text phone-number"
         >614-<b>LUKE-ETC</b><br />614-585-3382</span
       ></a>
-    <ul id="links">
+    <ul id="social-links">
       {#each socials as social}
         <li class="link">
           <a
@@ -98,57 +106,53 @@
       rows="6" />
     <button class="btn" type="submit">Submit</button>
   </form>
-</div>
+</section>
 
 <style>
-  div.page-wrapper {
+  section {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     gap: 1em 4em;
-    margin: 3em;
   }
 
   address {
-    background-color: rgb(var(--background-base));
-    padding: 0em 1.5em;
-    font-size: 2em;
     font-style: normal;
     white-space: nowrap;
+    gap: 1em;
   }
 
   address > * {
-    margin: 1em;
+    margin: 0.5em;
   }
 
-  h2 {
-    text-align: center;
+  address > a {
+    display: grid;
+    grid-template-columns: 2em 10em;
+    grid-template-rows: 2em;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    font-size: 1.3em;
+    color: rgb(var(--text-color));
   }
 
   h3 {
-    font-size: 2em;
+    text-align: center;
+  }
+
+  form h3 {
+    font-size: 1.6em;
   }
 
   a {
-    display: block;
     font-family: inherit;
     text-transform: inherit;
-    font-size: 0.8em;
-    color: rgb(var(--text-color));
   }
 
   a b {
     color: rgb(var(--accent-color));
-  }
-
-  #email,
-  #phone {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 1em;
   }
 
   .phone-number::first-line {
@@ -161,8 +165,13 @@
   }
 
   ul {
-    display: flex;
-    justify-content: space-between;
+    margin-top: 0.9em;
+    font-size: 1.3em;
+    display: grid;
+    grid: 1.4em / auto-flow 2em;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 1.4em;
   }
 
   li a {
@@ -174,23 +183,34 @@
     width: 1em;
     height: 1em;
     border-radius: 100%;
+    margin: auto;
+    transition: font-size 100ms ease-out;
+  }
+
+  li a:hover,
+  address > a:hover .main-icon {
+    font-size: 1.7em;
   }
 
   .icon-wrapper {
     position: relative;
-    align-self: stretch;
   }
 
   .main-icon {
     background-color: rgb(var(--accent-color));
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.3em;
     border-radius: 1em;
+    font-size: 1.5em;
+    width: 1em;
+    height: 1em;
+    margin: auto;
+    transition: font-size 100ms ease-out;
   }
 
   form {
+    max-width: 25em;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -202,7 +222,7 @@
   input,
   textarea {
     border-radius: 0;
-    width: 20em;
+    width: 80%;
     padding: 0.5em 1em;
     border: none;
   }
