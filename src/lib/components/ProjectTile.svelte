@@ -15,7 +15,7 @@
   const title = project.title;
   const partner = project.partner;
   const url = project.url;
-  const logo = `projects/assets/${project.logo}`;
+  const logo = `https://luke-shafer-web-design.mo.cloudinary.net/projects/assets/${project.logo}`;
   const repo = project.repo;
   const description = project.description;
   const imageFile = `https://luke-shafer-web-design.mo.cloudinary.net/projects/assets/${project.imageFile}`;
