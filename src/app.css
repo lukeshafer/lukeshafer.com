@@ -27,13 +27,17 @@
   --tertiary-text: 116, 58, 55;
   --background-base: 255, 255, 255;
   font-size: min(1rem, 3.3vw);
-  overflow-x: hidden;
 }
 
 body {
   background-color: rgb(var(--secondary-color));
   background-image: url('/background.png');
   color: rgb(var(--text-color));
+}
+
+body > div {
+  overflow-x: hidden;
+  position: relative;
 }
 
 main {
