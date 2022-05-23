@@ -1,11 +1,11 @@
 ---
-    # Project Name 
-    # Business/Partner Name
-    # Logo Link
-    # Link to project/website
-    # Link to repo
-    # Description (short)
-    # Page body (markdown)
+# Project Name
+# Business/Partner Name
+# Logo Link
+# Link to project/website
+# Link to repo
+# Description (short)
+# Page body (markdown)
 title: Guardians of Heart Website
 partner: Guardians of Heart
 logo: 123

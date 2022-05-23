@@ -1,16 +1,23 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import logo from './logo.svg';
+  import Logo from '$lib/assets/Logo.svelte';
 
   let menuButtonActive = false;
   let hidden: boolean;
+
+  let backgroundImage = ``;
 
   // const handleClick = () => isClicked = !isClicked;
 </script>
 
 <header>
   <a class="logo-container" sveltekit:prefetch href="/">
-    <img class="logo" src={logo} width="200" alt="" />
+    <Logo
+      width="10em"
+      height="10em"
+      lColor="rgb(var(--primary-color)"
+      sColor="rgb(var(--secondary-color)" />
     <h1>LukeShafer<br />Web Design</h1>
   </a>
 
@@ -68,8 +75,18 @@
     font-size: clamp(min(2.6vw, 0.7rem), 1.4vw, 1rem);
   }
 
+  /* .logo-bg {
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    z-index: -1;
+  } */
+
   a.logo-container {
     display: flex;
+    position: relative;
     flex-flow: row nowrap;
     align-items: center;
     text-align: center;
@@ -84,6 +101,10 @@
     --brightness: 100%;
     filter: brightness(var(--brightness));
     font-size: 0.6em;
+  }
+
+  a.logo-container > * {
+    z-index: 1;
   }
 
   a.logo-container:hover {

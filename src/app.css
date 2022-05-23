@@ -93,7 +93,8 @@ ul {
   font-size: 1.2em;
 }
 
-b, strong {
+b,
+strong {
   color: rgb(var(--accent-color));
 }
 
@@ -109,7 +110,8 @@ b, strong {
   font-size: 1.3em;
 }
 
-.card h3,.card h2 {
+.card h3,
+.card h2 {
   margin: 0;
   font-size: 2em;
 }
@@ -119,4 +121,3 @@ b, strong {
   font-weight: inherit;
   margin: 0;
 }
-

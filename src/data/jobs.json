@@ -1,54 +1,44 @@
 {
-    "jobs" : [
-        {
-            "title" : "Implementation Specialist",
-            "employer" : "TrueCommerce, Inc",
-            "website": "https://truecommerce.com",
-            "dates" : "Jan 2021 - Present",
-            "description" : "I was responsible for implementing things for customers",
-            "skills" : [
-                "EDI","Microsoft Dynamics"
-            ]
-        },
-        {
-            "title" : "Director of Information Technology",
-            "employer" : "Guardians of Heart",
-            "website": "https://guardiansofheart.org",
-            "dates" : "Aug 2020 - Present",
-            "description" : "I was responsible for implementing things for customers",
-            "skills" : [
-                "EDI","Microsoft Dynamics"
-            ]
-        },
-        {
-            "title" : "Online Coding Instructor",
-            "employer" : "CodeWizardsHQ",
-            "website": "https://codewizardshq.com",
-            "dates" : "Sept 2020 - Feb 2021",
-            "description" : "I was responsible for implementing things for customers",
-            "skills" : [
-                "EDI","Microsoft Dynamics"
-            ]
-        },
-        {
-            "title" : "Technical Specialist",
-            "employer" : "Apple, Inc",
-            "website": "https://apple.com",
-            "dates" : "Aug 2019 - Dec 2019",
-            "description" : "I was responsible for implementing things for customers",
-            "skills" : [
-                "EDI","Microsoft Dynamics"
-            ]
-        },
-        {
-            "title" : "Product Support Specialist",
-            "employer" : "LCS",
-            "website": "https://lcs.com",
-            "dates" : "May 2018 - June 2019",
-            "description" : "I was responsible for implementing things for customers",
-            "skills" : [
-                "EDI","Microsoft Dynamics"
-            ]
-        }
-    ]
+  "jobs": [
+    {
+      "title": "Implementation Specialist",
+      "employer": "TrueCommerce, Inc",
+      "website": "https://truecommerce.com",
+      "dates": "Jan 2021 - Present",
+      "description": "I was responsible for implementing things for customers",
+      "skills": ["EDI", "Microsoft Dynamics"]
+    },
+    {
+      "title": "Director of Information Technology",
+      "employer": "Guardians of Heart",
+      "website": "https://guardiansofheart.org",
+      "dates": "Aug 2020 - Present",
+      "description": "I was responsible for implementing things for customers",
+      "skills": ["EDI", "Microsoft Dynamics"]
+    },
+    {
+      "title": "Online Coding Instructor",
+      "employer": "CodeWizardsHQ",
+      "website": "https://codewizardshq.com",
+      "dates": "Sept 2020 - Feb 2021",
+      "description": "I was responsible for implementing things for customers",
+      "skills": ["EDI", "Microsoft Dynamics"]
+    },
+    {
+      "title": "Technical Specialist",
+      "employer": "Apple, Inc",
+      "website": "https://apple.com",
+      "dates": "Aug 2019 - Dec 2019",
+      "description": "I was responsible for implementing things for customers",
+      "skills": ["EDI", "Microsoft Dynamics"]
+    },
+    {
+      "title": "Product Support Specialist",
+      "employer": "LCS",
+      "website": "https://lcs.com",
+      "dates": "May 2018 - June 2019",
+      "description": "I was responsible for implementing things for customers",
+      "skills": ["EDI", "Microsoft Dynamics"]
+    }
+  ]
 }
