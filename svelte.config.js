@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-static';
+import adapter from '@sveltejs/adapter-auto';
 import preprocess from 'svelte-preprocess';
 import { resolve } from 'path';
 
@@ -14,6 +14,9 @@ const config = {
 
   kit: {
     adapter: adapter(),
+    prerender: {
+      default: true,
+    },
     trailingSlash: 'always',
     vite: {
       resolve: {
