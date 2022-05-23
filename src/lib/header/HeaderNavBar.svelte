@@ -202,7 +202,7 @@
 
   @media screen and (max-width: 810px) {
     header {
-      background-color: rgba(var(--background-base), 0.733);
+      background-color: rgba(var(--background-base), 0.8);
     }
 
     button.hamburger {
@@ -210,10 +210,10 @@
     }
     nav {
       z-index: 1;
-      --font-size: 2;
+      --font-size: 3;
       font-size: calc(var(--font-size) * 1em);
       position: absolute;
-      --width: 15em;
+      --width: 10em;
       /* width: 0; */
       width: var(--width);
       right: 0;
@@ -221,13 +221,11 @@
       /* right: calc(-1 * var(--width)); */
       top: calc(var(--height) / var(--font-size));
       background: inherit;
-      height: calc(100vh - (var(--height) / var(--font-size)));
+      height: calc(100% - (var(--height) / var(--font-size)));
       transition: transform 400ms, width 400ms;
       padding: 0;
     }
-
     nav.active {
-      /* width: var(--width); */
       transform: translateX(0);
     }
     nav ul {
@@ -237,7 +235,7 @@
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-end;
-      width: var(--width);
+      width: 100%;
       height: 100%;
     }
   }
