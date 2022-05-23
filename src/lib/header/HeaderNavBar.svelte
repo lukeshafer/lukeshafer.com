@@ -26,13 +26,28 @@
   <nav class={menuButtonActive ? 'active' : 'not-active'}>
     <ul>
       <li class:active={$page.url.pathname === '/work'}>
-        <a sveltekit:prefetch href="/work">Work</a>
+        <a
+          sveltekit:prefetch
+          href="/work"
+          on:click={() => {
+            menuButtonActive = false;
+          }}>Work</a>
       </li>
       <li class:active={$page.url.pathname === '/contact'}>
-        <a sveltekit:prefetch href="/contact">Contact</a>
+        <a
+          sveltekit:prefetch
+          href="/contact"
+          on:click={() => {
+            menuButtonActive = false;
+          }}>Contact</a>
       </li>
       <li class:active={$page.url.pathname === '/about'}>
-        <a sveltekit:prefetch href="/about">About</a>
+        <a
+          sveltekit:prefetch
+          href="/about"
+          on:click={() => {
+            menuButtonActive = false;
+          }}>About</a>
       </li>
     </ul>
   </nav>
@@ -158,10 +173,12 @@
   }
 
   li {
+    display: block;
     font-size: 2em;
     font-weight: lighter;
     text-shadow: 0.03em 0.03em rgba(var(--text-shadow), 50%);
-    padding: 0.3em 0.5em;
+    width: 3.5em;
+    height: 1.3em;
   }
 
   li:hover {
@@ -171,13 +188,14 @@
   }
 
   li a {
+    display: inline-block;
     color: rgb(var(--text-color));
+    width: 100%;
+    height: 100%;
+    text-align: center;
   }
 
   @media screen and (max-width: 810px) {
-    :root {
-      overflow: hidden;
-    }
     header {
       background-color: rgba(var(--background-base), 0.733);
     }
