@@ -69,6 +69,9 @@
 
   div.back {
     transform: rotateY(180deg);
+    -webkit-transform: rotateZ(
+      360deg
+    ); /* FIXME: figure out what's wrong in webkit land until then disable rotations */
   }
 
   div.background-box {

@@ -91,6 +91,7 @@ ul {
   margin: auto;
   border: none;
   font-size: 1.2em;
+  transition: font-size 70ms;
 }
 
 b,
@@ -99,7 +100,7 @@ strong {
 }
 
 .btn:hover {
-  font-size: 1.4em;
+  font-size: 1.3em;
 }
 
 .card {

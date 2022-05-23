@@ -85,7 +85,7 @@
       {/each}
     </ul>
   </address>
-  <form action="">
+  <form method="POST" action="/submit">
     <h3>Want to collaborate or get a quote for your project?</h3>
     <label for="input-name" class="visibly-hidden">Name</label>
     <input type="text" name="Name" placeholder="Name" id="input-name" />
@@ -104,7 +104,9 @@
       placeholder="Message"
       id="input-message"
       rows="6" />
-    <button class="btn" type="submit">Submit</button>
+    <span class="btn-wrapper">
+      <button class="btn" type="submit">Submit</button>
+    </span>
   </form>
 </section>
 
@@ -211,6 +213,7 @@
 
   form {
     max-width: 25em;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -227,8 +230,12 @@
     border: none;
   }
 
+  .btn-wrapper {
+    height: 0;
+  }
+
   .btn {
-    font-size: 1.2em;
     font-weight: lighter;
+    cursor: pointer;
   }
 </style>

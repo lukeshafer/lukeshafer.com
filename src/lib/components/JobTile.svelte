@@ -113,6 +113,8 @@
 
   div.back {
     transform: rotateY(180deg);
+    -webkit-transform: rotate(360deg);
+    /* FIXME: above, rotate doesn't work right in safari */
   }
 
   div.tile-back {

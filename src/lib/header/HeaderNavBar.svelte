@@ -75,15 +75,6 @@
     font-size: clamp(min(2.6vw, 0.7rem), 1.4vw, 1rem);
   }
 
-  /* .logo-bg {
-    width: 100%;
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100%;
-    z-index: -1;
-  } */
-
   a.logo-container {
     display: flex;
     position: relative;
@@ -110,11 +101,6 @@
   a.logo-container:hover {
     --brightness: 110%;
     transition: --brightness 1s;
-  }
-
-  img.logo {
-    height: 10em;
-    width: auto;
   }
 
   h1::first-line {
@@ -176,10 +162,6 @@
   button.hamburger.active span {
     transform: scale(0, 1);
   }
-
-  /* button.hamburger span:last-child {
-        
-    } */
 
   nav {
     padding-left: 10vw;

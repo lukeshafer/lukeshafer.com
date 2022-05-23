@@ -52,7 +52,7 @@
       </i>
     </p>
 
-    <a class="btn" href="/">Learn more</a>
+    <a class="btn" href="/contact">Get in Touch!</a>
   </article>
 </section>
 
@@ -120,6 +120,6 @@
   .btn {
     display: inline-block;
     position: absolute;
-    font-size: 1.2em;
+    /* font-size: 1.2em; */
   }
 </style>
