@@ -3,7 +3,6 @@
   export let color = 'white';
   export let width = '300';
   export let height = '300';
-  export let zIndex = -1;
 </script>
 
 <div style:position="absolute">

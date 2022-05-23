@@ -14,6 +14,7 @@
 <header>
   <a class="logo-container" sveltekit:prefetch href="/">
     <Logo
+      title="Logo"
       width="10em"
       height="10em"
       lColor="rgb(var(--primary-color)"
@@ -27,6 +28,7 @@
     hidden>
     <span />
     <span />
+    <div class="visibly-hidden">Navigation Menu</div>
     <span />
   </button>
 

@@ -2,12 +2,14 @@
 
 @font-face {
   font-family: Archive;
+  font-display: swap;
   src: url(/fonts/Archive/Archive-Regular.otf) format('opentype');
   src: url(/fonts/Archive/Archive-Regular.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'Bebas Neue';
+  font-display: swap;
   src: url(/fonts/BebasNeue/BebasNeue-Book.otf) format('opentype');
 }
 

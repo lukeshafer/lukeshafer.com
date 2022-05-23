@@ -3,6 +3,7 @@
   export let sColor = 'green';
   export let width = '200';
   export let height = '200';
+  export let title = 'Logo';
 </script>
 
 <svg
@@ -14,6 +15,7 @@
   {height}
   preserveAspectRatio="xMidYMid meet"
   version="1.0">
+  <title>{title}</title>
   <defs>
     <g />
   </defs>
