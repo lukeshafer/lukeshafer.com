@@ -97,7 +97,7 @@
       id="input-phone"
       name="Phone"
       placeholder="Phone"
-      pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" />
+      pattern="((\+|00)?[1-9]{2}|0)[1-9]([0-9]){8}" />
     <label for="input-message" class="visibly-hidden">Message</label>
     <textarea
       name="Message"
