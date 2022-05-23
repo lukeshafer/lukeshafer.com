@@ -85,22 +85,17 @@
       {/each}
     </ul>
   </address>
-  <form method="POST" action="/submit">
+  <form action="https://formspree.io/f/mvollorl" method="POST">
     <h3>Want to collaborate or get a quote for your project?</h3>
     <label for="input-name" class="visibly-hidden">Name</label>
-    <input type="text" name="Name" placeholder="Name" id="input-name" />
+    <input type="text" name="name" placeholder="Name" id="input-name" />
     <label for="input-email" class="visibly-hidden">Email</label>
-    <input type="email" name="Email" placeholder="Email" id="input-email" />
+    <input type="email" name="email" placeholder="Email" id="input-email" />
     <label for="input-phone" class="visibly-hidden">Phone</label>
-    <input
-      type="tel"
-      id="input-phone"
-      name="Phone"
-      placeholder="Phone"
-      pattern="((\+|00)?[1-9]{2}|0)[1-9]([0-9]){8}" />
+    <input type="tel" id="input-phone" name="phone" placeholder="Phone" />
     <label for="input-message" class="visibly-hidden">Message</label>
     <textarea
-      name="Message"
+      name="message"
       placeholder="Message"
       id="input-message"
       rows="6" />
