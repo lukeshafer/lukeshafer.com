@@ -18,7 +18,7 @@
   const logo = `projects/assets/${project.logo}`;
   const repo = project.repo;
   const description = project.description;
-  const imageFile = `projects/assets/${project.imageFile}`;
+  const imageFile = `https://luke-shafer-web-design.mo.cloudinary.net/projects/assets/${project.imageFile}`;
 
   let isCardForward = true;
   let faceDirection: string;

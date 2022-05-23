@@ -33,7 +33,7 @@
 
 body {
   background-color: rgb(var(--secondary-color));
-  background-image: url('/background.png');
+  background-image: url('https://luke-shafer-web-design.mo.cloudinary.net/background.png');
   color: rgb(var(--text-color));
 }
 

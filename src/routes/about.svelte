@@ -10,7 +10,7 @@
   </article>
 
   <img
-    src="images/about-me-portrait.png"
+    src="https://luke-shafer-web-design.mo.cloudinary.net/images/about-me-portrait.png"
     alt="Luke sitting at his desk with a cup of coffee. He is programming and smiling at the camera."
     width="300" />
 </section>

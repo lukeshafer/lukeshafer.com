@@ -31,7 +31,7 @@
 
 <section bind:this={flexWrapper}>
   <img
-    src="images/headshot.png"
+    src="https://luke-shafer-web-design.mo.cloudinary.net/images/headshot.png"
     alt="Luke's Headshot"
     width="300"
     bind:this={headshot} />
