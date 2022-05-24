@@ -7,8 +7,6 @@
   let hidden: boolean;
 
   let backgroundImage = ``;
-
-  // const handleClick = () => isClicked = !isClicked;
 </script>
 
 <header>
@@ -90,10 +88,11 @@
     background-image: url(./brush-stroke.svg);
     background-size: auto 10.5em;
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: 105% 50%;
     --brightness: 100%;
     filter: brightness(var(--brightness));
     font-size: 0.6em;
+    transition: background-size 100ms, background-position 100ms;
   }
 
   a.logo-container > * {
@@ -101,8 +100,9 @@
   }
 
   a.logo-container:hover {
-    --brightness: 110%;
-    transition: --brightness 1s;
+    --brightness: 105%;
+    background-size: auto 11em;
+    background-position: 100% 50%;
   }
 
   h1::first-line {
