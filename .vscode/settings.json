@@ -1,4 +1,4 @@
 {
   "svg.preview.background": "transparent",
-  "conventionalCommits.scopes": ["Structure"]
+  "conventionalCommits.scopes": ["Structure", "Configs"]
 }
