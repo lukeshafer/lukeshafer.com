@@ -97,7 +97,7 @@ ul {
   margin: auto;
   border: none;
   font-size: 1.2em;
-  transition: font-size 70ms;
+  transition: transform 70ms;
 }
 
 b,
@@ -106,7 +106,7 @@ strong {
 }
 
 .btn:hover {
-  font-size: 1.3em;
+  transform: scale(1.1);
 }
 
 .card {
@@ -127,4 +127,14 @@ strong {
   font-size: 1.5em;
   font-weight: inherit;
   margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body * {
+    /* ONLY PLACE WHERE IMPORTANT IS ALLOWED */
+    /*  removes transitions and animations for all 
+        elements when user prefers reduced motion */
+    transition: none !important;
+    animation: none !important;
+  }
 }

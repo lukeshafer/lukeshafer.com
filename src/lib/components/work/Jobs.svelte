@@ -1,6 +1,6 @@
 <script lang="ts">
-  import JobTile from '$lib/components/JobTile.svelte';
-  import type { Job } from '$lib/components/JobTile.svelte';
+  import JobTile from '$lib/components/work/JobTile.svelte';
+  import type { Job } from '$lib/components/work/JobTile.svelte';
   import { onMount } from 'svelte';
   // import { CSSColorProperties } from "$lib/components/CSSColorProperties.js"
   export let jobs: Job[];

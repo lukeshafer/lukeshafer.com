@@ -1,7 +1,7 @@
 <script lang="ts">
-  import Projects from '$lib/components/Projects.svelte';
+  import Projects from '$lib/components/work/Projects.svelte';
   import { projects } from '$data/projects.json';
-  import Jobs from '$lib/components/Jobs.svelte';
+  import Jobs from '$lib/components/work/Jobs.svelte';
   import { jobs } from '$data/jobs.json';
 </script>
 

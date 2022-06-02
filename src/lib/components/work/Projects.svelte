@@ -1,6 +1,6 @@
 <script lang="ts">
-  import ProjectTile from '$lib/components/ProjectTile.svelte';
-  import type { Project } from '$lib/components/ProjectTile.svelte';
+  import ProjectTile from '$lib/components/work/ProjectTile.svelte';
+  import type { Project } from '$lib/components/work/ProjectTile.svelte';
   export let projects: Project[];
 </script>
 
