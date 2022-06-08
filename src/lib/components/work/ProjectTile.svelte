@@ -1,44 +1,30 @@
-<script lang="ts" context="module">
-  export type Project = {
-    title: string;
-    partner: string;
-    url: string;
-    logo: string;
-    imageFile: string;
-    repo: string;
-    description: string;
-  };
-</script>
-
 <script lang="ts">
-  export let project: Project;
-  const title = project.title;
-  const partner = project.partner;
-  const url = project.url;
-  const logo = `https://luke-shafer-web-design.mo.cloudinary.net/projects/assets/${project.logo}`;
-  const repo = project.repo;
-  const description = project.description;
-  const imageFile = `https://luke-shafer-web-design.mo.cloudinary.net/projects/assets/${project.imageFile}`;
+  import Modal from '../Modal.svelte';
+  import type { Project, ProjectComponent } from '$data/projects/_projects';
+  export let project: ProjectComponent;
+  const metadata = project.metadata;
+  const logo = `https://luke-shafer-web-design.mo.cloudinary.net/projects/assets/${metadata.logo}`;
+  const imageFile = `https://luke-shafer-web-design.mo.cloudinary.net/projects/assets/${metadata.imageFile}`;
 
-  let isCardForward = true;
-  let faceDirection: string;
-  $: faceDirection = isCardForward ? 'front' : 'back';
+  let openModal: () => any;
 </script>
 
-<div
-  class="project-tile {faceDirection}"
+<article
+  class="project-tile"
   style="background-image: url({imageFile})"
-  on:click={() => (isCardForward = !isCardForward)}>
+  on:click={openModal}>
   <div class="background-box">
-    <img src={logo} alt={partner} width="300" />
+    <img src={logo} alt={metadata.partner} width="300" />
   </div>
-  <div class="tile-back">
-    <p class="project-description">{project.description}</p>
-  </div>
-</div>
+</article>
+
+<Modal bind:show={openModal}>
+  <h1 slot="title">{project.metadata.title}</h1>
+  <svelte:component this={project.component} />
+</Modal>
 
 <style>
-  div.project-tile {
+  article {
     position: relative;
     background-size: cover;
     --width: 30em;
@@ -53,25 +39,6 @@
     border-width: 0.25em;
     border-color: rgb(var(--background-base));
     transition: all 150ms, transform 400ms ease-in-out;
-    transform-style: preserve-3d;
-  }
-
-  div.tile-back {
-    transform: rotateY(180deg);
-    background-color: white;
-    backface-visibility: hidden;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
-  }
-
-  div.back {
-    transform: rotateY(180deg);
-    -webkit-transform: rotateZ(
-      360deg
-    ); /* FIXME: figure out what's wrong in webkit land until then disable rotations */
   }
 
   div.background-box {
@@ -80,7 +47,7 @@
     height: 6em;
   }
 
-  div.project-tile:hover {
+  article:hover {
     --grow-amt: 1em;
     width: calc(var(--grow-amt) + var(--width));
     height: calc(var(--grow-amt) + var(--height));

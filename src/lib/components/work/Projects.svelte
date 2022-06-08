@@ -1,11 +1,11 @@
 <script lang="ts">
   import ProjectTile from '$lib/components/work/ProjectTile.svelte';
-  import type { Project } from '$lib/components/work/ProjectTile.svelte';
-  export let projects: Project[];
+  import type { ProjectComponent } from '$data/projects/_projects';
+  export let projects: ProjectComponent[];
 </script>
 
 <div class="project-grid">
-  {#each projects as project}
+  {#each projects as project, index}
     <ProjectTile {project} />
   {/each}
 </div>

@@ -6,21 +6,20 @@
 # Link to repo
 # Description (short)
 # Page body (markdown)
-title: Guardians of Heart Website
-partner: Guardians of Heart
-logo: 123
-url: https://guardiansofheart.org
-repo: n/a
+title: 'Guardians of Heart'
+partner: 'Guardians of Heart'
+url: 'https://guardiansofheart.org'
+logo: 'guardiansofheart.png'
+imageFile: 'goh.org.png'
 description: I built the website for my nonprofit, Guardians of Heart!
+repo: ''
 ---
-
-# Guardians of Heart
 
 ## guardiansofheart.org
 
 Guardians of Heart is a nonprofit organization dedicated to giving children the opportunity to meet their heroes. Volunteers dress as famous characters from fairy tales and comic books and visit families in need in the Central Ohio region.
 
-![guardiansofheart-group.JPG](./assets/guardiansofheart-group.jpg)
+![guardiansofheart-group.JPG](https://luke-shafer-web-design.mo.cloudinary.net/projects/assets/guardiansofheart-group.jpg?tx=c_scale,w_500)
 
 ### Origins
 
@@ -28,7 +27,7 @@ I helped found Guardians of Heart after a similar character volunteer organizati
 
 A group of former members, myself included, formed Guardians of Heart with a focus on inclusiveness and justice. We made a group which would speak out against injustice, especially as a group serving lower-income families or children of color in the Columbus region.
 
-![guardiansofheart-thor.JPG](./assets/guardiansofheart-thor.jpg)
+![guardiansofheart-thor.JPG](https://luke-shafer-web-design.mo.cloudinary.net/projects/assets/guardiansofheart-thor.jpg?tx=c_scale,w_500)
 
 ### Website Technology
 

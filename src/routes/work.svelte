@@ -1,6 +1,6 @@
 <script lang="ts">
   import Projects from '$lib/components/work/Projects.svelte';
-  import { projects } from '$data/projects.json';
+  import projects from '$data/projects/_projects.js';
   import Jobs from '$lib/components/work/Jobs.svelte';
   import { jobs } from '$data/jobs.json';
 </script>
