@@ -12,7 +12,7 @@ repo: 'https://github.com/lukeshafer/onoTuroTuro'
 
 Ono Turo-Turo is a Hawaiian-Filipino fusion food truck in Gahanna, Ohio. They were my first client project for my freelancing business.
 
-![I'm standing in front of the truck, which says Ono Turo-Turo and is decorated with tropical flowers](https://luke-shafer-web-design.mo.cloudinary.net/projects/assets/onoturoturo-withtruck.jpeg?tx=c_scale,w_500)
+![I'm standing in front of the truck, which says Ono Turo-Turo and is decorated with tropical flowers](https://luke-shafer-web-design.mo.cloudinary.net/projects/assets/onoturoturo-withtruck.jpeg?tx=w_500)
 
 ### Website Technology
 

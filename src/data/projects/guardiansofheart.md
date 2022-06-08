@@ -19,7 +19,7 @@ repo: ''
 
 Guardians of Heart is a nonprofit organization dedicated to giving children the opportunity to meet their heroes. Volunteers dress as famous characters from fairy tales and comic books and visit families in need in the Central Ohio region.
 
-![A group of volunteers in costume. From left to right: Anna from Frozen, Tinkerbell, Cinderella, Thor, Spider-Man, Superman, Captain America, and Belle.](https://luke-shafer-web-design.mo.cloudinary.net/projects/assets/guardiansofheart-groupphoto.jpg?tx=c_scale,w_500)
+![A group of volunteers in costume. From left to right: Anna from Frozen, Tinkerbell, Cinderella, Thor, Spider-Man, Superman, Captain America, and Belle.](https://luke-shafer-web-design.mo.cloudinary.net/projects/assets/guardiansofheart-groupphoto.jpg?tx=w_500)
 
 ### Origins
 
@@ -27,7 +27,7 @@ I helped found Guardians of Heart after a similar character volunteer organizati
 
 A group of former members, myself included, formed Guardians of Heart with a focus on inclusiveness and justice. We made a group which would speak out against injustice, especially as a group serving lower-income families or children of color in the Columbus region.
 
-![guardiansofheart-thor.JPG](https://luke-shafer-web-design.mo.cloudinary.net/projects/assets/guardiansofheart-thor.jpg?tx=c_scale,w_500)
+![guardiansofheart-thor.JPG](https://luke-shafer-web-design.mo.cloudinary.net/projects/assets/guardiansofheart-thor.jpg?tx=cw_500)
 
 ### Website Technology
 
