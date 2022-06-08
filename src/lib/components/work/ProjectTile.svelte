@@ -1,6 +1,6 @@
 <script lang="ts">
   import Modal from '../Modal.svelte';
-  import type { Project, ProjectComponent } from '$data/projects/_projects';
+  import type { ProjectComponent } from '$data/projects/_projects';
   export let project: ProjectComponent;
   const metadata = project.metadata;
   const logo = `https://luke-shafer-web-design.mo.cloudinary.net/projects/assets/${metadata.logo}`;
