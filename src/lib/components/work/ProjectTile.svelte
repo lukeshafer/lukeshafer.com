@@ -2,11 +2,12 @@
   import Modal from '../Modal.svelte';
   import type { ProjectComponent } from '$data/projects/_projects';
   import type A11yDialog from 'a11y-dialog';
+  import { Github } from 'lucide-svelte';
 
   export let project: ProjectComponent;
   const metadata = project.metadata;
-  const logo = `https://luke-shafer-web-design.mo.cloudinary.net/projects/assets/${metadata.logo}`;
-  const imageFile = `https://luke-shafer-web-design.mo.cloudinary.net/projects/assets/${metadata.imageFile}`;
+  const logo = `/projects/assets/${metadata.logo}`;
+  const imageFile = `/projects/assets/${metadata.imageFile}`;
 
   let openModal: () => A11yDialog;
 </script>
@@ -23,6 +24,13 @@
 <Modal bind:show={openModal}>
   <h1 slot="title">{project.metadata.title}</h1>
   <svelte:component this={project.component} />
+  {#if project.metadata.repo !== ''}
+    <a
+      href={project.metadata.repo}
+      target="_blank"
+      style="display:block;margin:1em;">
+      GitHub Repository</a>
+  {/if}
 </Modal>
 
 <style>

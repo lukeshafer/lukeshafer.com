@@ -1,6 +1,6 @@
 ---
 title: 'Luke Shafer Web Design'
-partner: 'N/A'
+partner: ''
 url: 'https://lukeshafer.com'
 logo: 'lukeshafer-logo.png'
 imageFile: 'lukeshafer.com.png'

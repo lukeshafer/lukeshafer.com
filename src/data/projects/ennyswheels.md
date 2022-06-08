@@ -1,17 +1,10 @@
 ---
-# Project Name
-# Business/Partner Name
-# Logo Link
-# Link to project/website
-# Link to repo
-# Description (short)
-# Page body (markdown)
-title: 'Enny's Wheels'
+title: "Enny's Wheels"
 partner: 'N/A'
 url: 'https://enny.fund'
 logo: 'ennyswheels-logo.png'
 imageFile: 'enny.fund.png'
-description: I built a site to promote a fundraiser for our friend, Enny.
+description: 'I built a site to promote a fundraiser for our friend, Enny.'
 repo: 'https://github.com/lukeshafer/enny-fundraiser'
 ---
 
