@@ -1,0 +1,62 @@
+﻿
+
+Luke Shafer
+
+hello@lukeshafer.com
+937 – 232 – 7453
+1262 Grove Drive
+Gahanna, Ohio 43230
+
+Hi! I’m a web developer with over 5 years of professional experience, focused on accessible, modern, and concise design. I’m experienced in modern front-end web technologies, and am able to learn any system or language.
+
+Experience:
+
+Implementation Specialist | TrueCommerce, Inc.
+01 / 2021 – Present  •  Columbus, Ohio
+• Designed specialized software integrations in accordance with customer and vendor requirements
+• Tested EDI scripting and XML mapping to ensure it met customer standards
+• Managed up to 40 projects and cases simultaneously
+Co-Founder, Director of Information Technology | Guardians of Heart
+08 / 2020 – Present  •  Columbus, Ohio
+• Built and managed the non-profit’s website, guardiansofheart.org
+• Managed organization in G Suite and Slack, and supported users and volunteers
+Online Coding Instructor | CodeWizardsHQ
+09 / 2020 – 02 / 2021  •  Remote
+• Led curriculum-based 1-hour classes with students in grades 3-12
+• Introduced students to HTML, Javascript, Python, and Scratch
+Product Support Specialist | London Computer Systems
+05 / 2018 – 06 / 2019  •  Cincinnati, Ohio
+• Re-developed internal software tools for support specialists
+• Provided over-the-phone support for customers, resolving over 4100 technical issues
+• Volunteered to provide on-call emergency support on nights and weekends
+
+Proficiencies
+    • Node.js
+    • CSS
+    • Javascript
+    • HTML5
+
+    • Python
+    • API
+    • Responsive Design
+    • Semantic HTML
+Skills
+    • React
+    • Angular
+    • SEO
+    • SQL
+
+    • Bootstrap
+    • Web Components
+    • Web Hosting
+    • Sass
+
+    • Git
+    • Wordpress
+    • Gatsby
+    • Netlify
+
+Education:
+
+Bachelor of Science, Computer Science | University of Cincinnati
+Graduated 2018  •  Cincinnati, Ohio

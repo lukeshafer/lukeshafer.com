@@ -1,5 +1,10 @@
 import type { SvelteComponentTyped } from 'svelte';
-import GuardiansofHeart, { metadata } from './guardiansofheart.md';
+import * as OnoTuroTuro from './onoturoturo.md';
+import * as GuardiansofHeart from './guardiansofheart.md';
+
+/* To add additional .md files, just import above, and put into the below array 
+    in the desired order for the website */
+const projects = [OnoTuroTuro, GuardiansofHeart];
 
 export interface ProjectComponent {
   component: SvelteComponentTyped;
@@ -16,9 +21,10 @@ export interface Project {
   description: string;
 }
 
-export default [
-  {
-    component: GuardiansofHeart,
-    metadata: metadata,
-  },
-] as ProjectComponent[];
+// Only exports the parts of the object we need, does so dynamically
+export default projects.map((p) => {
+  return {
+    component: p.default,
+    metadata: p.metadata,
+  };
+}) as ProjectComponent[];

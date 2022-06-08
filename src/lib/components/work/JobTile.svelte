@@ -1,17 +1,8 @@
-<script lang="ts" context="module">
-  export type Job = {
-    title: string;
-    employer: string;
-    website: string;
-    dates: string;
-    description: string;
-    skills: string[];
-  };
-</script>
-
 <script lang="ts">
-  import Logo from '$lib/assets/Logo.svelte';
-  import { afterUpdate, onMount, tick } from 'svelte';
+  import Modal from '../Modal.svelte';
+  import type { JobComponent } from '$data/jobs/_jobs';
+  import type A11yDialog from 'a11y-dialog';
+  import { onMount, tick } from 'svelte';
 
   interface JobColorScheme {
     background: string;
@@ -20,10 +11,9 @@
     date: string;
   }
 
-  export let job: Job;
+  export let job: JobComponent;
   export let colorScheme: JobColorScheme;
 
-  let jobTileElement: HTMLElement;
   let employerTextElement: HTMLElement;
   let jobTitleElement: HTMLElement;
   let isCardForward = true;
@@ -33,6 +23,9 @@
   let jobTitleFont = 0.7;
   let visibility = 'hidden';
 
+  let openModal: () => A11yDialog;
+
+  // TODO: finish this function
   const fitFontToContainer = async (element: HTMLElement) => {
     let count = 0;
     let style = window.getComputedStyle(element);
@@ -66,29 +59,35 @@
 
 <div
   class="job-tile {faceDirection}"
-  bind:this={jobTileElement}
-  on:click={() => (isCardForward = !isCardForward)}
+  on:click={openModal}
   style:--job-background="var({colorScheme.background})"
   style:--job-border="var({colorScheme.border})"
   style:--job-text="var({colorScheme.text})"
   style:--job-date="var({colorScheme.date})">
   <div bind:this={employerTextElement} class="employer-wrapper">
     <h3 class="employer" style:font-size={`${employerFont}em`} style:visibility>
-      {job.employer}
+      {job.metadata.employer}
     </h3>
   </div>
   <p
     class="job-title"
     bind:this={jobTitleElement}
     style:font-size={`${jobTitleFont}em`}>
-    {job.title}
+    {job.metadata.title}
   </p>
-  <p class="dates"><time>{job.dates}</time></p>
-  <span>i</span>
-  <div class="tile-back">
-    <p class="job-description">{job.description}</p>
-  </div>
+  <p class="dates"><time>{job.metadata.dates}</time></p>
 </div>
+
+<Modal bind:show={openModal}>
+  <h1 slot="title">
+    <a href={job.metadata.website} target="_blank">{job.metadata.employer}</a>
+  </h1>
+  <h2><strong>{job.metadata.title}</strong></h2>
+  <p style="font-size: 0.9em;text-align: center;color:rgb(var(--accent-color))">
+    {job.metadata.dates}
+  </p>
+  <svelte:component this={job.component} />
+</Modal>
 
 <style>
   div.job-tile {
@@ -98,63 +97,20 @@
     background-color: rgba(var(--job-background), 70%);
     color: rgb(var(--job-text));
     text-align: center;
-    --width: 8em;
-    width: var(--width);
+    width: 8em;
     margin: 0 auto;
     box-sizing: border-box;
     font-size: 2.25em;
     white-space: nowrap;
-    --padding: 0.2em;
-    padding: var(--padding);
+    padding: 0.2em;
     text-shadow: 1px 1px 0.1em rgba(70, 70, 70, 70%);
-    transition: all 100ms ease-out, transform 400ms ease-in-out;
+    transition: transform 100ms ease-out;
     transform-style: preserve-3d;
   }
 
-  div.back {
-    transform: rotateY(180deg);
-    -webkit-transform: rotate(360deg);
-    /* FIXME: above, rotate doesn't work right in safari */
-  }
-
-  div.tile-back {
-    transform: rotateY(180deg);
-    background-color: rgb(var(--job-border));
-    backface-visibility: hidden;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
-  }
-
   div.job-tile:hover {
-    --grow-amt: 0.1em;
-    font-size: 2.35em;
-    margin: calc(var(--grow-amt) * -1) auto;
+    transform: scale(1.05);
     cursor: pointer;
-  }
-
-  div.job-tile:hover span {
-    filter: contrast(100%);
-  }
-
-  div.job-tile span {
-    /* visibility: hidden; */
-    position: absolute;
-    right: 0.1em;
-    bottom: 0.1em;
-    font-size: 0.3em;
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    color: rgb(var(--job-text));
-    border: 1px solid rgb(var(--job-text));
-    border-radius: 50%;
-    filter: contrast(20%);
   }
 
   div.employer-wrapper {
@@ -182,12 +138,5 @@
   p.dates {
     color: rgb(var(--job-date));
     font-size: 0.6em;
-  }
-
-  div.tile-back p {
-    font-family: var(--body-font);
-    font-size: 0.5em;
-    color: rgb(var(--secondary-text));
-    white-space: normal;
   }
 </style>

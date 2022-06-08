@@ -1,12 +1,14 @@
 <script lang="ts">
   import Modal from '../Modal.svelte';
   import type { ProjectComponent } from '$data/projects/_projects';
+  import type A11yDialog from 'a11y-dialog';
+
   export let project: ProjectComponent;
   const metadata = project.metadata;
   const logo = `https://luke-shafer-web-design.mo.cloudinary.net/projects/assets/${metadata.logo}`;
   const imageFile = `https://luke-shafer-web-design.mo.cloudinary.net/projects/assets/${metadata.imageFile}`;
 
-  let openModal: () => any;
+  let openModal: () => A11yDialog;
 </script>
 
 <article
