@@ -9,10 +9,10 @@
 title: 'Enny's Wheels'
 partner: 'N/A'
 url: 'https://enny.fund'
-logo: ''
-imageFile: ''
+logo: 'ennyswheels-logo.png'
+imageFile: 'enny.fund.png'
 description: I built a site to promote a fundraiser for our friend, Enny.
-repo: ''
+repo: 'https://github.com/lukeshafer/enny-fundraiser'
 ---
 
 ## [enny.fund](https://enny.fund/)
@@ -21,7 +21,7 @@ I participated in a fundraiser to raise a goal of $2500 for our friend Enny, who
 
 ### Website Technology
 
-I knew the main purpose of this site would be to direct people to the Chuffed.org fundraiser page, so I wanted to bring a unique visual design along with various options for donating, all in a single page. For this reason, I chose SvelteKit as I'd used it for a few projects at this point, and I knew I could throw a site together in a day or two. 
+I knew the main purpose of this site would be to direct people to the Chuffed.org fundraiser page, so I wanted to bring a unique visual design along with various options for donating, all in a single page. For this reason, I chose SvelteKit as I'd used it for a few projects at this point, and I knew I could throw a site together in a day or two.
 
 Svelte also allowed me to easily and quickly add animations to the clouds as the user scrolled down the page. I wanted to bring a touch of professionalism and artistry, as this fundraiser was just run by an online community of people, and not a major organization.
 

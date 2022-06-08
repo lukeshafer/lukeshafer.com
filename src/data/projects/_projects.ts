@@ -1,10 +1,19 @@
 import type { SvelteComponentTyped } from 'svelte';
 import * as OnoTuroTuro from './onoturoturo.md';
 import * as GuardiansofHeart from './guardiansofheart.md';
+import * as LukeShaferCom from './lukeshafercom.md';
+import * as EnnysWheels from './ennyswheels.md';
+import * as DoGoodCollective from './DoGoodCollective.md';
 
 /* To add additional .md files, just import above, and put into the below array 
     in the desired order for the website */
-const projects = [OnoTuroTuro, GuardiansofHeart];
+const projects = [
+  OnoTuroTuro,
+  // LukeShaferCom,
+  // EnnysWheels,
+  // DoGoodCollective,
+  GuardiansofHeart,
+];
 
 export interface ProjectComponent {
   component: SvelteComponentTyped;
