@@ -1,4 +1,3 @@
-<!-- TODO: move the brush-stroke.svg file here so the color is dynamic -->
 <script lang="ts">
   export let color = 'white';
   export let width = '300';
