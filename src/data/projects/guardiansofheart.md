@@ -27,7 +27,7 @@ I helped found Guardians of Heart after a similar character volunteer organizati
 
 A group of former members, myself included, formed Guardians of Heart with a focus on inclusiveness and justice. We made a group which would speak out against injustice, especially as a group serving lower-income families or children of color in the Columbus region.
 
-![guardiansofheart-thor.JPG](https://luke-shafer-web-design.mo.cloudinary.net/projects/assets/guardiansofheart-thor.jpg?tx=w_500)
+![Me dressed as Thor, holding Thor's hammer over my shoulder](https://luke-shafer-web-design.mo.cloudinary.net/projects/assets/guardiansofheart-thor.jpg?tx=w_500)
 
 ### Website Technology
 
