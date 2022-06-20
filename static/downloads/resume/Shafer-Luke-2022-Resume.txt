@@ -1,62 +1,107 @@
-﻿
+# Luke Shafer, Front-end Web Developer
 
-Luke Shafer
+[hello@lukeshafer.com](mailto:hello@lukeshafer.com)
+614–585–3382
+Columbus, Ohio
 
-hello@lukeshafer.com
-937 – 232 – 7453
-1262 Grove Drive
-Gahanna, Ohio 43230
+## Professional Summary
 
-Hi! I’m a web developer with over 5 years of professional experience, focused on accessible, modern, and concise design. I’m experienced in modern front-end web technologies, and am able to learn any system or language.
+Hi! I’m a web developer with over 5 years of professional experience, focused on accessible, modern, and concise design. I’m experienced in modern front-end web technologies, including React and Svelte, and can quickly learn any stack or technology introduced to me.
 
-Experience:
+## Experience
 
-Implementation Specialist | TrueCommerce, Inc.
-01 / 2021 – Present  •  Columbus, Ohio
-• Designed specialized software integrations in accordance with customer and vendor requirements
-• Tested EDI scripting and XML mapping to ensure it met customer standards
-• Managed up to 40 projects and cases simultaneously
-Co-Founder, Director of Information Technology | Guardians of Heart
-08 / 2020 – Present  •  Columbus, Ohio
-• Built and managed the non-profit’s website, guardiansofheart.org
-• Managed organization in G Suite and Slack, and supported users and volunteers
-Online Coding Instructor | CodeWizardsHQ
-09 / 2020 – 02 / 2021  •  Remote
-• Led curriculum-based 1-hour classes with students in grades 3-12
-• Introduced students to HTML, Javascript, Python, and Scratch
-Product Support Specialist | London Computer Systems
-05 / 2018 – 06 / 2019  •  Cincinnati, Ohio
-• Re-developed internal software tools for support specialists
-• Provided over-the-phone support for customers, resolving over 4100 technical issues
-• Volunteered to provide on-call emergency support on nights and weekends
+### Freelance Web Developer
 
-Proficiencies
-    • Node.js
-    • CSS
-    • Javascript
-    • HTML5
+**Columbus, Ohio  •  Mar 2022 - Present**
 
-    • Python
-    • API
-    • Responsive Design
-    • Semantic HTML
-Skills
-    • React
-    • Angular
-    • SEO
-    • SQL
+- Designed client websites using modern web frameworks and tools
+- Collaborated with clients to build the unique site for their business needs
 
-    • Bootstrap
-    • Web Components
-    • Web Hosting
-    • Sass
+### Implementation Specialist
 
-    • Git
-    • Wordpress
-    • Gatsby
-    • Netlify
+**TrueCommerce  •  Columbus, Ohio  •  Jan 2021 - Present**
 
-Education:
+Designed software integrations in accordance with customer requirements
+Implemented EDI scripting and XML mapping to meet customer standards
 
-Bachelor of Science, Computer Science | University of Cincinnati
-Graduated 2018  •  Cincinnati, Ohio
+### Co-Founder | Director of Information Technology
+
+**Guardians of Heart  •  Columbus, Ohio  •  Aug 2020 - Present**
+
+- Built and managed the non-profit’s website, [guardiansofheart.org](http://guardiansofheart.org/)
+- Managed organization in G Suite and Slack, and supported users and volunteers
+
+### Online Coding Instructor
+
+**CodeWizardsHQ  •  Remote  •  Sep 2020 - Feb 2021**
+
+- Led curriculum-based 1-hour classes with students in grades 3-12
+- Introduced students to HTML, Javascript, Python, and Scratch
+
+### Technical Specialist
+
+**Apple, Inc  •  Columbus, Ohio  •  Aug 2019 - Dec 2019**
+
+- Provided hardware and software support for Apple mobile customers
+- Trained and certified in Apple Service Fundamentals
+
+### Product Support Specialist
+
+**London Computer Systems  •  Cincinnati, Ohio  •  May 2018 - Jun 2019**
+
+- Re-developed internal software for support specialists
+- Provided over-the-phone support for ERP customers, resolving over 4100 technical issues
+- Volunteered to provide on-call emergency support on nights and weekends.
+
+## Projects
+
+### Do Good Collective
+
+**[dogoodcollective.net](http://dogoodcollective.net) | https://github.com/lukeshafer/do-good**
+
+- Do Good Collective is a mutual aid collective formed by members of several online and local communities, including myself.
+- I volunteered to lead the website project, and work with one other developer and a handful of artists and designers to create the site.
+- The front-end is built in SvelteKit, and the back-end is a Strapi CMS server with a PostgreSQL database.
+
+### Luke Shafer Web Design
+
+**[lukeshafer.com](http://lukeshafer.com) | https://github.com/lukeshafer/lukeshafer.com**
+
+- [lukeshafer.com](http://lukeshafer.com) is my personal portfolio and a place for prospective clients or employers to contact me about my work.
+- The site is built entirely in SvelteKit and hosted on CloudFlare Pages.
+
+**You can find more of my projects at [lukeshafer.com/work](http://lukeshafer.com/work)** 
+
+## Education
+
+**Bachelor’s, Computer Science, 2018**
+University of Cincinnati, Cincinnati, Ohio
+
+## Skills
+
+- Languages
+    - JavaScript
+    - TypeScript
+    - CSS
+    - SCSS
+    - PostCSS
+    - HTML
+    - Python
+- Libraries
+    - React
+    - Svelte
+    - Angular
+- Web Frameworks
+    - SvelteKit
+    - Strapi
+    - NextJS
+- Practices
+    - Modern accessibility standards (A11y)
+    - Semantic HTML
+    - Component-based design
+    - Building for scalability
+- Soft skills
+    - Project management
+    - Team communication
+    - Friendly customer service
+    - Patience and adaptability

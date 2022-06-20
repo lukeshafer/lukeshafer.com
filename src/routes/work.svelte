@@ -24,25 +24,15 @@
       <h3>Download Resume</h3>
       <div class="downloads">
         <a
-          href="/downloads/resume/Shafer-Luke-2022-Resume.docx"
-          class="btn"
-          download>
-          .docx</a>
-        <a
-          href="/downloads/resume/Shafer-Luke-2022-Resume.odt"
-          class="btn"
-          download>
-          .odt</a>
-        <a
           href="/downloads/resume/Shafer-Luke-2022-Resume.pdf"
           class="btn"
           download>
-          .pdf</a>
+          PDF</a>
         <a
           href="/downloads/resume/Shafer-Luke-2022-Resume.txt"
           class="btn"
           download>
-          .txt</a>
+          Text/Markdown</a>
       </div>
     </Card>
   </div>
