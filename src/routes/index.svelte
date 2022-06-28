@@ -2,12 +2,15 @@
   import Card from '$lib/components/Card.svelte';
   import type { CardEdge } from '$lib/components/Card.svelte';
   import Headshot from '$lib/components/Headshot.svelte';
-
+  import { fly } from 'svelte/transition';
   import { onMount } from 'svelte';
+  import PageTransition from '$lib/components/PageTransition.svelte';
 
   let flexWrapper: HTMLElement;
   let arrowPos: CardEdge = 'left';
   let isWrapped = false;
+
+  let ready = false;
 
   const setWrappedClass = (elements: HTMLElement[]) => {
     return elements.reduce((accum, curEl, index, arr) => {
@@ -19,6 +22,7 @@
   };
 
   onMount(() => {
+    ready = true;
     const myObserver = new ResizeObserver((entries) => {
       entries.forEach((entry) => {
         let children: HTMLElement[] = Array.from(
@@ -32,26 +36,35 @@
 </script>
 
 <section bind:this={flexWrapper}>
-  <Headshot />
-
-  <Card arrowPos={isWrapped ? 'top' : 'left'}>
-    <h2>Hi! I'm Luke!</h2>
-
-    <p>
-      I'm a web designer based in Columbus, Ohio. I provide a personal,
-      friendly, and communicative website design service for small businesses.
-    </p>
-
-    <p>
-      <i>
-        I believe in a <strong>personalized experience</strong> merging
-        <strong>functional design</strong>
-        with an <strong>artistic touch</strong>.
-      </i>
-    </p>
-
-    <a class="btn" href="/contact">Get in Touch!</a>
-  </Card>
+  {#if ready}
+    <PageTransition url="/">
+      <Headshot />
+    </PageTransition>
+    <div
+      class="fly"
+      in:fly={{
+        x: -200,
+        duration: 300,
+        delay: 700,
+      }}>
+      <Card arrowPos={isWrapped ? 'top' : 'left'}>
+        <h2>Hi! I'm Luke!</h2>
+        <p>
+          I'm a web designer based in Columbus, Ohio. I provide a personal,
+          friendly, and communicative website design service for small
+          businesses.
+        </p>
+        <p>
+          <i>
+            I believe in a <strong>personalized experience</strong> merging
+            <strong>functional design</strong>
+            with an <strong>artistic touch</strong>.
+          </i>
+        </p>
+        <a class="btn" href="/contact">Get in Touch!</a>
+      </Card>
+    </div>
+  {/if}
 </section>
 
 <style>
