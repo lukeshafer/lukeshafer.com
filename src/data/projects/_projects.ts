@@ -4,12 +4,14 @@ import * as GuardiansofHeart from './guardiansofheart.md';
 import * as LukeShaferCom from './lukeshafercom.md';
 import * as EnnysWheels from './ennyswheels.md';
 import * as DoGoodCollective from './dogoodcollective.md';
+import * as WordGame from './wordgame.md';
 
 /* To add additional .md files, just import above, and put into the below array 
     in the desired order for the website */
 const projects = [
   OnoTuroTuro,
   LukeShaferCom,
+  WordGame,
   EnnysWheels,
   DoGoodCollective,
   GuardiansofHeart,
