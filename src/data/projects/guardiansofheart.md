@@ -29,8 +29,9 @@ A group of former members, myself included, formed Guardians of Heart with a foc
 
 ![Me dressed as Thor, holding Thor's hammer over my shoulder](https://luke-shafer-web-design.mo.cloudinary.net/projects/assets/guardiansofheart-thor.jpg?tx=w_500)
 
-### Website Technology
+Last year, my wife bought the game [Ransom Notes](https://www.veryspecialgames.com/products/ransom-notes-the-ridiculous-word-magnet-game), but most of our friends are internet friends so we haven't been able to play it much! So I decided to take it into my own hands and make my own version to play with friends! For legal purposes, I wanted to give it its own name, and thus **Fridge Magnets** was born!
 
-Guardians of Heart’s website, [guardiansofheart.org](https://www.guardiansofheart.org/), is built on Squarespace. There’s not a whole lot going on in terms of the technology used, aside from a few instances of CSS and HTML blocks for customizing the content beyond what the editor would allow.
+I've never made an online multiplayer game, so learning how to manage game state between players and keep it synchronized was a challenge. Luckily, I found [Colyseus](https://www.colyseus.io/), a Node.js-based game server! The frontend is Sveltekit, which you could have probably guessed if you've read about my past projects!
 
 We chose Squarespace primarily because we wanted to focus our time and energy on building the business and organization, and because I am the only developer on the team and had a limited amount of time to work on the site.
+###WTyGdin fH’be,[guadnofertrggardianofheartrgisuilt on Squrspc.Th’snot a wollot gig ontrms of htenlogyse,sidfm fw intancsoCSSnHTML lcks for csoizing the content beondwhthe dior wouldallow.
