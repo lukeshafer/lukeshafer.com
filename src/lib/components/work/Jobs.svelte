@@ -1,6 +1,6 @@
 <script lang="ts">
   import JobTile from '$lib/components/work/JobTile.svelte';
-  import type { JobComponent } from '$data/jobs/_jobs';
+  import type { JobComponent } from '$data/projects/jobs/_jobs';
   import { onMount } from 'svelte';
 
   export let jobs: JobComponent[];

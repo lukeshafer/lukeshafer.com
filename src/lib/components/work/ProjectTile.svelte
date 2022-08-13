@@ -2,7 +2,7 @@
   import Modal from '../Modal.svelte';
   import type { ProjectComponent } from '$data/projects/_projects';
   import type A11yDialog from 'a11y-dialog';
-  import { Github } from 'lucide-svelte';
+  import { Globe, Info, Github } from 'lucide-svelte';
 
   export let project: ProjectComponent;
   const metadata = project.metadata;
@@ -10,12 +10,26 @@
   const imageFile = `/projects/assets/${metadata.imageFile}`;
 
   let openModal: () => A11yDialog;
+
+  const iconSettings = {
+    size: 54,
+    color: 'rgb(var(--text-color))',
+    fill: 'rgba(var(--background-base), .75)',
+  };
 </script>
 
-<article
-  class="project-tile"
-  style="background-image: url({imageFile})"
-  on:click={openModal}>
+<article class="project-tile" style="background-image: url({imageFile})">
+  <div class="overlay">
+    <a href={project.metadata.url} target="_blank">
+      <Globe {...iconSettings} />
+    </a>
+    <button class="modal" on:click={openModal}>
+      <Info {...iconSettings} />
+    </button>
+    <a href={project.metadata.repo} target="_blank">
+      <Github {...iconSettings} />
+    </a>
+  </div>
   <div class="background-box">
     <img src={logo} alt={metadata.partner} width="300" />
   </div>
@@ -48,7 +62,42 @@
     border-style: solid;
     border-width: 0.25em;
     border-color: rgb(var(--background-base));
-    transition: all 150ms, transform 400ms ease-in-out;
+
+    transform: scale(1, 1);
+    transition: transform 150ms cubic-bezier(0, 1, 0.5, 1);
+  }
+
+  .overlay {
+    width: 100%;
+    height: calc(100% - 6em);
+    top: 0;
+    position: absolute;
+
+    background: #00000044;
+    opacity: 0;
+    transition: opacity 100ms cubic-bezier(0, 1, 0.5, 1);
+
+    display: flex; /* flex when visible */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+  }
+
+  .overlay > * {
+    background-color: rgb(var(--background-base));
+    padding: 0.5em;
+    border-radius: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    border: none;
+  }
+
+  .overlay > :hover {
+    filter: brightness(0.9);
   }
 
   div.background-box {
@@ -58,11 +107,16 @@
   }
 
   article:hover {
-    --grow-amt: 1em;
+    /* --grow-amt: 0.4em;
     width: calc(var(--grow-amt) + var(--width));
     height: calc(var(--grow-amt) + var(--height));
     margin: calc(var(--grow-amt) * -1) auto;
-    cursor: pointer;
+    cursor: pointer; */
+    transform: scale(1.05);
+  }
+
+  article:hover > .overlay {
+    opacity: 1;
   }
 
   img {

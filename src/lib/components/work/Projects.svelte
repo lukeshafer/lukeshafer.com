@@ -2,7 +2,6 @@
   import ProjectTile from '$lib/components/work/ProjectTile.svelte';
   import type { ProjectComponent } from '$data/projects/_projects';
   export let projects: ProjectComponent[];
-  console.log(projects);
 </script>
 
 <div class="project-grid">

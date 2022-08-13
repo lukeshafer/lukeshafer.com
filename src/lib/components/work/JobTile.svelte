@@ -1,8 +1,7 @@
 <script lang="ts">
   import Modal from '../Modal.svelte';
-  import type { JobComponent } from '$data/jobs/_jobs';
+  import type { JobComponent } from '$data/projects/jobs/_jobs';
   import type A11yDialog from 'a11y-dialog';
-  import { onMount, tick } from 'svelte';
 
   interface JobColorScheme {
     background: string;
@@ -14,47 +13,28 @@
   export let job: JobComponent;
   export let colorScheme: JobColorScheme;
 
-  let employerTextElement: HTMLElement;
-  let jobTitleElement: HTMLElement;
   let isCardForward = true;
   let faceDirection: string;
   $: faceDirection = isCardForward ? 'front' : 'back';
-  let employerFont = 1;
-  let jobTitleFont = 0.7;
-  let visibility = 'hidden';
 
   let openModal: () => A11yDialog;
 
-  // TODO: finish this function
-  const fitFontToContainer = async (element: HTMLElement) => {
-    let count = 0;
-    let style = window.getComputedStyle(element);
-    let fontSize = style.getPropertyValue('font-size');
-
-    while (element.scrollWidth > element.clientWidth) {}
+  const fitFont = (
+    str: string,
+    maxChar: number,
+    preferredSize: number,
+    fontRatio: number
+  ) => {
+    let size: number;
+    if (str.length <= maxChar) {
+      size = preferredSize;
+    } else {
+      let ratio = maxChar / str.length;
+      if (ratio / fontRatio < 1) ratio /= fontRatio;
+      size = preferredSize * ratio;
+    }
+    return size;
   };
-
-  onMount(async () => {
-    let count = 0;
-    while (
-      employerTextElement.scrollWidth > employerTextElement.clientWidth &&
-      count < 100
-    ) {
-      employerFont -= 0.02;
-      await tick();
-      count++;
-    }
-    // TODO: make while loop above a function that takes in the element and font
-    while (
-      jobTitleElement.scrollWidth > jobTitleElement.clientWidth &&
-      count < 100
-    ) {
-      jobTitleFont -= 0.02;
-      await tick();
-      count++;
-    }
-    visibility = 'visible';
-  });
 </script>
 
 <div
@@ -64,15 +44,16 @@
   style:--job-border="var({colorScheme.border})"
   style:--job-text="var({colorScheme.text})"
   style:--job-date="var({colorScheme.date})">
-  <div bind:this={employerTextElement} class="employer-wrapper">
-    <h3 class="employer" style:font-size={`${employerFont}em`} style:visibility>
+  <div class="employer-wrapper">
+    <h3
+      class="employer"
+      style:font-size={`${fitFont(job.metadata.employer, 9, 1, 0.85)}em`}>
       {job.metadata.employer}
     </h3>
   </div>
   <p
     class="job-title"
-    bind:this={jobTitleElement}
-    style:font-size={`${jobTitleFont}em`}>
+    style:font-size={`${fitFont(job.metadata.title, 25, 0.7, 0.5)}em`}>
     {job.metadata.title}
   </p>
   <p class="dates"><time>{job.metadata.dates}</time></p>
@@ -101,7 +82,7 @@
     margin: 0 auto;
     box-sizing: border-box;
     font-size: 2.25em;
-    white-space: nowrap;
+    /* white-space: nowrap; */
     padding: 0.2em;
     text-shadow: 1px 1px 0.1em rgba(70, 70, 70, 70%);
     transition: transform 100ms ease-out;

@@ -8,15 +8,14 @@
 
 <section class="work">
   <div class="card">
-    <h3>My Work</h3>
+    <h3>Projects</h3>
     <p>
-      Here, you can find some of my past projects and companies I've worked
-      with:
+      Here, you can find websites I've made in the past!
     </p>
   </div>
   <Projects {projects} />
   <div class="card">
-    <h3>My Experience</h3>
+    <h3>Work Experience</h3>
   </div>
   <Jobs {jobs} />
   <div class="card-wrapper">
