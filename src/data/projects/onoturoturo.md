@@ -5,7 +5,7 @@ url: 'https://onoturoturo.com'
 logo: 'onoturoturologo.png'
 imageFile: 'onoturoturo.com.jpeg'
 description: I partnered with a local food truck to build their website!
-repo: 'https://github.com/lukeshafer/onoTuroTuro'
+repo: ''
 ---
 
 ## onoturoturo.com

@@ -1,22 +1,14 @@
-<script context="module" lang="ts">
-  import Card from '$lib/components/Card.svelte';
-  export function load({ error, status }: any) {
-    return {
-      props: {
-        title: `${status}: ${error.message}`,
-      },
-    };
-  }
-</script>
-
 <script lang="ts">
-  export let title: any;
+  import { page } from '$app/stores';
+  import Card from '$lib/components/Card.svelte';
+  const status = $page.status;
+  const message = $page.error?.message;
 </script>
 
 <div class="card-wrapper">
   <Card>
     <h2>Uh oh!!</h2>
-    <pre><b>{title}</b></pre>
+    <pre><b>{status}</b>: {message}</pre>
     <p>Click one of the menu buttons above to get back to safety!</p>
   </Card>
 </div>

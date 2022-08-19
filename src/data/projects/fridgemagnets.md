@@ -1,7 +1,7 @@
 ---
 title: 'Fridge Magnets (Name In Progress)'
 partner: ''
-url: 'https://fridge.dev.lukeshafer.com/'
+url: 'https://fridgemagnets.dev.lukeshafer.com/'
 logo: 'fridgemagnets.logo.png'
 imageFile: 'fridgemagnets.com.png'
 description: A quick, easy to play version of the party game Ransom Notes (not affiliated, I

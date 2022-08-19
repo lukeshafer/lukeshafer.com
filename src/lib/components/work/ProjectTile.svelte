@@ -20,15 +20,19 @@
 
 <article class="project-tile" style="background-image: url({imageFile})">
   <div class="overlay">
-    <a href={project.metadata.url} target="_blank">
-      <Globe {...iconSettings} />
-    </a>
+    {#if project.metadata.url}
+      <a href={project.metadata.url} target="_blank">
+        <Globe {...iconSettings} />
+      </a>
+    {/if}
     <button class="modal" on:click={openModal}>
       <Info {...iconSettings} />
     </button>
-    <a href={project.metadata.repo} target="_blank">
-      <Github {...iconSettings} />
-    </a>
+    {#if project.metadata.repo}
+      <a href={project.metadata.repo} target="_blank">
+        <Github {...iconSettings} />
+      </a>
+    {/if}
   </div>
   <div class="background-box">
     <img src={logo} alt={metadata.partner} width="300" />
