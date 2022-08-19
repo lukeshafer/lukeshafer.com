@@ -5,10 +5,9 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
-    "package": "vite package",
+    "package": "svelte-kit package",
     "preview": "vite preview",
     "preview-changes": "npm run build && npm run preview",
-    "prepare": "vite sync",
     "test": "playwright test",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
