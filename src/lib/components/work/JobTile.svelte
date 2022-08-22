@@ -77,7 +77,6 @@
     border: 0.25em solid rgb(var(--job-border));
     outline: 2px solid rgba(var(--job-background), 70%);
     background-color: rgba(var(--job-background), 70%);
-    background: rgba(var(--job-background), 70%);
     color: rgb(var(--job-text));
     text-align: center;
     width: 8em;
@@ -92,7 +91,6 @@
   }
 
   .job-tile:focus {
-    outline: 2px solid #0099ff;
     transform: scale(1.05);
   }
 

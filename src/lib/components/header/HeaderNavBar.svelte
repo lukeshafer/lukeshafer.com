@@ -2,6 +2,7 @@
   import { page } from '$app/stores';
   import logo from './logo.svg';
   import Logo from '$lib/assets/Logo.svelte';
+  import BrushStroke from '$lib/assets/BrushStroke.svelte';
 
   let menuButtonActive = false;
   let hidden: boolean;
@@ -11,6 +12,9 @@
 
 <header>
   <a class="logo-container" sveltekit:prefetch href="/">
+    <div class="brush-stroke">
+      <BrushStroke color="rgb(var(--secondary-text))" />
+    </div>
     <Logo
       title="Logo"
       width="10em"
@@ -85,7 +89,7 @@
     gap: 2em;
     --padding-y: 1em;
     padding: var(--padding-y) var(--padding-x);
-    background-image: url(./brush-stroke.svg);
+    /* background-image: url(./brush-stroke.svg); */
     background-size: auto 10.5em;
     background-repeat: no-repeat;
     background-position: 105% 50%;
@@ -95,7 +99,16 @@
     transition: background-size 100ms, background-position 100ms;
   }
 
-  a.logo-container > * {
+  .brush-stroke {
+    position: absolute;
+    height: 100%;
+    width: 32rem;
+
+    top: 0;
+    right: 0;
+  }
+
+  a.logo-container > :global(*) {
     z-index: 1;
   }
 

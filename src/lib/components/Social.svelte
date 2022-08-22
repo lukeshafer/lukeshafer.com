@@ -37,6 +37,7 @@
   li {
     overflow: hidden;
     transition: transform var(--link-transition);
+    padding: 5px;
   }
   li a {
     display: flex;

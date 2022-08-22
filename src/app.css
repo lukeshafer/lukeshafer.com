@@ -26,21 +26,42 @@
   --highlight: 203, 213, 255;
   --secondary-text: 255, 250, 234;
   --tertiary-text: 116, 58, 55;
-  --test: rgb(4, 44, 56);
-  --test2: rgb(248, 250, 252);
   --background-base: 253, 254, 255;
   --background-contrast: 2, 24, 29;
 
   --link-transition: 70ms;
 
   --text-color: var(--tertiary-color);
+  --site-background: var(--highlight);
   font-size: min(1rem, 3.3vw);
 }
 
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background-base: 2, 24, 29;
+    --background-contrast: 253, 254, 255;
+    --site-background: 0, 0, 0;
+
+    --primary-color: 255, 196, 191;
+    --secondary-color: 204, 121, 116;
+    --tertiary-color: 230, 95, 92;
+
+    --accent-color: 37, 77, 86;
+    --secondary-accent: 125, 130, 184;
+    --tertiary-accent: 39, 128, 148;
+
+    --text-color: var(--tertiary-color);
+    --highlight: 116, 58, 55;
+    --secondary-text: var(--accent-color);
+    --tertiary-text: 116, 58, 55;
+  }
+} */
+
 body {
-  background-color: rgb(var(--secondary-color));
-  background-image: url('https://luke-shafer-web-design.mo.cloudinary.net/background.png');
+  background-color: rgb(var(--site-background));
+  background-image: url('/background.png');
   color: rgb(var(--tertiary-color));
+  scroll-behavior: smooth;
 }
 
 body > div {
@@ -149,4 +170,8 @@ strong {
     transition: none !important;
     animation: none !important;
   }
+}
+
+*:focus-visible {
+  outline: 7px solid #60b9ff !important;
 }
