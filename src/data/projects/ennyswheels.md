@@ -8,11 +8,11 @@ description: 'I built a site to promote a fundraiser for our friend, Enny.'
 repo: 'https://github.com/lukeshafer/enny-fundraiser'
 ---
 
-## [enny.fund](https://enny.fund/)
+# [enny.fund](https://enny.fund/)
 
 I participated in a fundraiser to raise a goal of $2500 for our friend Enny, who is waiting on the transplant list for a new liver. I volunteered to make the website for the donation drive, as I felt having a dedicated website for the cause would be valuable and easy to share.
 
-### Website Technology
+## Website Technology
 
 I knew the main purpose of this site would be to direct people to the Chuffed.org fundraiser page, so I wanted to bring a unique visual design along with various options for donating, all in a single page. For this reason, I chose SvelteKit as I'd used it for a few projects at this point, and I knew I could throw a site together in a day or two.
 

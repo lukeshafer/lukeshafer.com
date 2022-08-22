@@ -23,18 +23,22 @@
   --accent-color: 230, 95, 92;
   --secondary-accent: 204, 121, 116;
   --tertiary-accent: 255, 196, 191;
-  --text-color: var(--tertiary-color);
   --highlight: 203, 213, 255;
   --secondary-text: 255, 250, 234;
   --tertiary-text: 116, 58, 55;
-  --background-base: 255, 255, 255;
+  --test: rgb(4, 44, 56);
+  --test2: rgb(248, 250, 252);
+  --background-base: 253, 254, 255;
+  --background-contrast: 2, 24, 29;
+
+  --text-color: var(--tertiary-color);
   font-size: min(1rem, 3.3vw);
 }
 
 body {
   background-color: rgb(var(--secondary-color));
   background-image: url('https://luke-shafer-web-design.mo.cloudinary.net/background.png');
-  color: rgb(var(--text-color));
+  color: rgb(var(--tertiary-color));
 }
 
 body > div {
@@ -70,6 +74,11 @@ ul {
   list-style: none;
   margin: 0;
   padding-left: 0;
+}
+
+p {
+  color: rgb(var(--background-contrast));
+  font-size: 1.2rem;
 }
 
 .visibly-hidden {

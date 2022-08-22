@@ -8,6 +8,7 @@
   $: ({ url } = data)
 
   import HeaderNavBar from '$lib/components/header/HeaderNavBar.svelte';
+  import Footer from '$lib/components/footer/Footer.svelte';
 </script>
 
 <svelte:head>
@@ -23,3 +24,7 @@
     <slot />
   </PageTransition>
 </main>
+
+<Footer>
+</Footer>
+

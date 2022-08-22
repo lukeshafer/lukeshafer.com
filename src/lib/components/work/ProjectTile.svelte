@@ -16,42 +16,56 @@
     color: 'rgb(var(--text-color))',
     fill: 'rgba(var(--background-base), .75)',
   };
+
+  let focus = false;
+
+  const handleFocus = () => {
+    focus = true;
+  };
 </script>
 
-<article class="project-tile" style="background-image: url({imageFile})">
+<article
+  class="project-tile"
+  style="background-image: url({imageFile})"
+  tabindex="0"
+  on:focus={() => (focus = false)}
+  class:focus>
   <div class="overlay">
     {#if project.metadata.url}
-      <a href={project.metadata.url} target="_blank">
+      <a
+        on:focus={() => (focus = true)}
+        href={project.metadata.url}
+        target="_blank">
         <Globe {...iconSettings} />
       </a>
     {/if}
-    <button class="modal" on:click={openModal}>
+    <button on:focus={() => (focus = true)} class="modal" on:click={openModal}>
       <Info {...iconSettings} />
     </button>
     {#if project.metadata.repo}
-      <a href={project.metadata.repo} target="_blank">
+      <a
+        on:focus={() => (focus = true)}
+        href={project.metadata.repo}
+        target="_blank">
         <Github {...iconSettings} />
       </a>
     {/if}
   </div>
   <div class="background-box">
-    <img src={logo} alt={metadata.partner} width="300" />
+    <img
+      src={logo}
+      alt={metadata.partner}
+      tabindex="0"
+      on:focus={() => (focus = false)}
+      width="300" />
   </div>
 </article>
 
 <Modal bind:show={openModal}>
-  <h1 slot="title">{project.metadata.title}</h1>
   <svelte:component this={project.component} />
-  {#if project.metadata.repo !== ''}
-    <a
-      href={project.metadata.repo}
-      target="_blank"
-      style="display:block;margin:1em;">
-      GitHub Repository</a>
-  {/if}
 </Modal>
 
-<style>
+<style lang="postcss">
   article {
     position: relative;
     background-size: cover;
@@ -110,16 +124,16 @@
     height: 6em;
   }
 
+  article.focus,
   article:hover {
-    /* --grow-amt: 0.4em;
-    width: calc(var(--grow-amt) + var(--width));
-    height: calc(var(--grow-amt) + var(--height));
-    margin: calc(var(--grow-amt) * -1) auto;
-    cursor: pointer; */
     transform: scale(1.05);
   }
 
-  article:hover > .overlay {
+  :where(article:hover, article.focus) > .overlay {
+    opacity: 1;
+  }
+
+  .overlay:has(a) {
     opacity: 1;
   }
 

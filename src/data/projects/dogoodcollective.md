@@ -8,11 +8,13 @@ description: ''
 repo: 'https://github.com/lukeshafer/do-good'
 ---
 
-## [dcg.fund](https://dogoodcollective.net/) _a work in progress_
+# [dcg.fund](https://dogoodcollective.net/)
+
+## _a work in progress_
 
 After our successful fundraiser for Enny's wheelchair, we felt we had momentum and could build a collective of people who provided support for each other and our community. With this momentum, we formed Do Good Collective, with the goal of providing mutual aid for our communities.
 
-### The Website
+## The Website
 
 Like other recent projects, I decided to use SvelteKit for this project. While the site is fully static right now, I wanted something that could scale with the organization. I also wanted to use something opinionated as I knew multiple people would be contributing to this project.
 

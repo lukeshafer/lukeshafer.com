@@ -1,5 +1,6 @@
 <script lang="ts">
-  import {
+  import Social from '$lib/components/Social.svelte';
+import {
     Mail,
     Phone,
     Github,
@@ -7,8 +8,15 @@
     Instagram,
     Facebook,
   } from 'lucide-svelte';
+  import type { Icon } from 'lucide-svelte';
 
-  const socials = [
+  const socials: {
+      name: string,
+      component: Icon,
+      href: string,
+      bottom?: boolean,
+      invert?: boolean,
+    }[] = [
     {
       name: 'GitHub',
       component: Github,

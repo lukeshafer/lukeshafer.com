@@ -8,7 +8,9 @@ description: A quick, easy to play version of the party game Ransom Notes (not a
 repo: 'https://github.com/lukeshafer/fridgemagnets'
 ---
 
-## [Fridge Magnets (name in progress)](https://fridge.dev.lukeshafer.com/)
+# [Fridge Magnets](https://fridge.dev.lukeshafer.com/)
+
+## (name in progress)
 
 Last year, my wife bought the game [Ransom Notes](https://www.veryspecialgames.com/products/ransom-notes-the-ridiculous-word-magnet-game), but most of our friends are internet friends so we haven't been able to play it much! So I decided to take it into my own hands and make my own version to play with friends! For legal purposes, I wanted to give it its own name, and thus **Fridge Magnets** was born!
 

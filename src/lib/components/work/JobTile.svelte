@@ -37,13 +37,14 @@
   };
 </script>
 
-<div
+<button
   class="job-tile {faceDirection}"
   on:click={openModal}
   style:--job-background="var({colorScheme.background})"
   style:--job-border="var({colorScheme.border})"
   style:--job-text="var({colorScheme.text})"
-  style:--job-date="var({colorScheme.date})">
+  style:--job-date="var({colorScheme.date})"
+  tabindex="0">
   <div class="employer-wrapper">
     <h3
       class="employer"
@@ -57,7 +58,7 @@
     {job.metadata.title}
   </p>
   <p class="dates"><time>{job.metadata.dates}</time></p>
-</div>
+</button>
 
 <Modal bind:show={openModal}>
   <h1 slot="title">
@@ -71,7 +72,7 @@
 </Modal>
 
 <style>
-  div.job-tile {
+  .job-tile {
     position: relative;
     border: 0.25em solid rgb(var(--job-border));
     outline: 2px solid rgba(var(--job-background), 70%);
@@ -89,7 +90,12 @@
     transform-style: preserve-3d;
   }
 
-  div.job-tile:hover {
+  .job-tile:focus {
+    outline: 2px solid #0099ff;
+    transform: scale(1.05);
+  }
+
+  .job-tile:hover {
     transform: scale(1.05);
     cursor: pointer;
   }
@@ -114,6 +120,7 @@
     font-family: var(--link-font);
     font-size: 0.7em;
     margin: 0;
+    color: rgb(var(--job-text));
   }
 
   p.dates {
