@@ -163,6 +163,8 @@
     text-align: left;
     width: 100%;
     max-width: 40rem;
+    white-space: normal;
+    /* word-break: break-all; */
     color: rgb(var(--secondary-accent));
   }
 

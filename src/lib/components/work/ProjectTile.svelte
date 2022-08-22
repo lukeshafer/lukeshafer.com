@@ -133,7 +133,7 @@
     opacity: 1;
   }
 
-  .overlay:has(a) {
+  .overlay:has(a:focus) {
     opacity: 1;
   }
 

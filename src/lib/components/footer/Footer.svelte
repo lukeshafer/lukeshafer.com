@@ -1,8 +1,61 @@
 <script lang="ts">
-  //
+  import Social from '$lib/components/Social.svelte';
+  import {
+    Mail,
+    Phone,
+    Github,
+    Linkedin,
+    Instagram,
+    Facebook,
+  } from 'lucide-svelte';
+  import type { Icon } from 'lucide-svelte';
+
+  const socials: {
+    name: string;
+    component: Icon;
+    href: string;
+    bottom?: boolean;
+    invert?: boolean;
+  }[] = [
+    {
+      name: 'GitHub',
+      // @ts-ignore
+      component: Github,
+      href: 'https://github.com/lukeshafer/',
+      bottom: true,
+    },
+    {
+      name: 'LinkedIn',
+      // @ts-ignore
+      component: Linkedin,
+      href: 'https://www.linkedin.com/in/lukealanshafer/',
+    },
+    {
+      name: 'Instagram',
+      // @ts-ignore
+      component: Instagram,
+      href: 'https://www.instagram.com/luke.web.design/',
+      invert: true,
+    },
+    {
+      name: 'FaceBook',
+      // @ts-ignore
+      component: Facebook,
+      href: 'https://www.facebook.com/lukeshaferwebdesign/',
+      bottom: true,
+    },
+  ];
 </script>
 
 <footer>
+  <ul>
+    {#each socials as social}
+      <Social
+        {social}
+        backgroundColor={'rgb(var(--background-base))'}
+        iconColor={'rgb(var(--secondary-color))'} />
+    {/each}
+  </ul>
   <p>
     © Luke Shafer 2022. Built with ♥ using <a
       target="_blank"
@@ -37,6 +90,15 @@
     color: rgb(var(--highlight));
     text-decoration: underline;
     text-transform: none;
+  }
+
+  ul {
+    font-size: 2rem;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    place-content: center;
+    grid-template-columns: repeat(auto-fit, 100px);
   }
 
   a:hover {

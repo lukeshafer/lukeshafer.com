@@ -15,7 +15,7 @@ description: I built the website for my nonprofit, Guardians of Heart!
 repo: ''
 ---
 
-# guardiansofheart.org
+# guardians<wbr>of<wbr>heart<wbr>.org
 
 Guardians of Heart is a nonprofit organization dedicated to giving children the opportunity to meet their heroes. Volunteers dress as famous characters from fairy tales and comic books and visit families in need in the Central Ohio region.
 

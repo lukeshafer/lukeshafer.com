@@ -16,7 +16,6 @@
   article {
     width: 25em;
     max-width: 80vw;
-    /* margin: auto; */
   }
 
   /* Chat bubble arrow */

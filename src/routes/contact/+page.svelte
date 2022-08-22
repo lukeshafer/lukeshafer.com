@@ -1,6 +1,6 @@
 <script lang="ts">
   import Social from '$lib/components/Social.svelte';
-import {
+  import {
     Mail,
     Phone,
     Github,
@@ -11,31 +11,35 @@ import {
   import type { Icon } from 'lucide-svelte';
 
   const socials: {
-      name: string,
-      component: Icon,
-      href: string,
-      bottom?: boolean,
-      invert?: boolean,
-    }[] = [
+    name: string;
+    component: Icon;
+    href: string;
+    bottom?: boolean;
+    invert?: boolean;
+  }[] = [
     {
       name: 'GitHub',
+      // @ts-ignore
       component: Github,
       href: 'https://github.com/lukeshafer/',
       bottom: true,
     },
     {
       name: 'LinkedIn',
+      // @ts-ignore
       component: Linkedin,
       href: 'https://www.linkedin.com/in/lukealanshafer/',
     },
     {
       name: 'Instagram',
+      // @ts-ignore
       component: Instagram,
       href: 'https://www.instagram.com/luke.web.design/',
       invert: true,
     },
     {
       name: 'FaceBook',
+      // @ts-ignore
       component: Facebook,
       href: 'https://www.facebook.com/lukeshaferwebdesign/',
       bottom: true,
@@ -70,26 +74,10 @@ import {
       ></a>
     <ul id="social-links">
       {#each socials as social}
-        <li class="link">
-          <a
-            id={social.name}
-            href={social.href}
-            class="social-icon"
-            target="_blank">
-            <span
-              class="icon-wrapper"
-              style:align-self={social.bottom ? 'stretch' : 'center'}
-              style:top={social.bottom ? '0.1em' : '0'}>
-              <svelte:component
-                this={social.component}
-                size="{social.bottom ? 1 : 0.7}em"
-                color={social.invert ? 'rgb(var(--background-base))' : 'none'}
-                strokeWidth="2"
-                fill={social.invert ? 'none' : 'rgb(var(--background-base))'} />
-            </span>
-            <span class="visibly-hidden">{social.name}</span>
-          </a>
-        </li>
+        <Social
+          {social}
+          backgroundColor="rgb(var(--primary-color))"
+          iconColor="rgb(var(--background-base))" />
       {/each}
     </ul>
   </address>
@@ -179,26 +167,8 @@ import {
     height: 1.4em;
   }
 
-  li a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(var(--primary-color));
-    font-size: 1.5em;
-    width: 1em;
-    height: 1em;
-    border-radius: 100%;
-    margin: auto;
-    transition: font-size 100ms ease-out;
-  }
-
-  li a:hover,
   address > a:hover .main-icon {
     font-size: 1.7em;
-  }
-
-  .icon-wrapper {
-    position: relative;
   }
 
   .main-icon {
@@ -231,10 +201,6 @@ import {
     width: 80%;
     padding: 0.5em 1em;
     border: none;
-  }
-
-  .btn-wrapper {
-    height: 0;
   }
 
   .btn {

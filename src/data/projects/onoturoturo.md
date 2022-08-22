@@ -8,7 +8,7 @@ description: I partnered with a local food truck to build their website!
 repo: ''
 ---
 
-# onoturoturo.com
+# ono<wbr>turo<wbr>turo<wbr>.com
 
 Ono Turo-Turo is a Hawaiian-Filipino fusion food truck in Gahanna, Ohio. They were my first client project for my freelancing business.
 
