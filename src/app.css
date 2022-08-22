@@ -58,13 +58,14 @@
 } */
 
 body {
-  background-color: rgb(var(--site-background));
-  background-image: url('/background.png');
+  background-color: rgb(var(--secondary-color));
   color: rgb(var(--tertiary-color));
   scroll-behavior: smooth;
 }
 
 body > div {
+  background-color: rgb(var(--site-background));
+  background-image: url('https://luke-shafer-web-design.mo.cloudinary.net/background.png');
   overflow-x: hidden;
   position: relative;
 }

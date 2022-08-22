@@ -2,10 +2,10 @@
   import 'normalize.css';
   import '../app.css';
   import PageTransition from '$lib/components/PageTransition.svelte';
-  import type { LayoutData } from './$types'
+  import type { LayoutData } from './$types';
 
   export let data: LayoutData;
-  $: ({ url } = data)
+  $: ({ url } = data);
 
   import HeaderNavBar from '$lib/components/header/HeaderNavBar.svelte';
   import Footer from '$lib/components/footer/Footer.svelte';
@@ -25,6 +25,4 @@
   </PageTransition>
 </main>
 
-<Footer>
-</Footer>
-
+<Footer />
