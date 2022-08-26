@@ -36,11 +36,14 @@
 </script>
 
 <section bind:this={flexWrapper}>
-  {#if ready}
+  {#key ready}
     <PageTransition url="/">
-      <Headshot />
+      <div style:visibility={ready ? 'visible' : 'hidden'}>
+        <Headshot />
+      </div>
     </PageTransition>
     <div
+      style:visibility={ready ? 'visible' : 'hidden'}
       class="fly"
       in:fly={{
         x: -200,
@@ -64,7 +67,7 @@
         <a class="btn" href="/contact">Get in Touch!</a>
       </Card>
     </div>
-  {/if}
+  {/key}
 </section>
 
 <style>
@@ -73,6 +76,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    height: 100%;
     align-items: center;
     gap: 5em;
   }

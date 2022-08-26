@@ -70,7 +70,6 @@
   footer {
     box-sizing: border-box;
     width: 100%;
-    height: 10rem;
 
     background-color: rgb(var(--secondary-color));
 
@@ -98,7 +97,8 @@
     display: grid;
     place-items: center;
     place-content: center;
-    grid-template-columns: repeat(auto-fit, 100px);
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, 3rem);
   }
 
   a:hover {
