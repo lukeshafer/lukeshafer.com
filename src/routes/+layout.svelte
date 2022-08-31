@@ -9,17 +9,26 @@
 
 	$: urlString = url.toString();
 
-	import HeaderNavBar from '$lib/components/header/HeaderNavBar.svelte';
+	import Header from '$lib/components/header/Header.svelte';
+	import NavItem from '$lib/components/header/NavItem.svelte';
 	import Footer from '$lib/components/footer/Footer.svelte';
+
+	const pages = [
+		{ name: 'Work', path: 'work' },
+		{ name: 'Contact', path: 'contact' },
+		{ name: 'About', path: 'about' },
+	];
 </script>
 
 <svelte:head>
 	<meta name="theme-color" content="rgb(var(--primary-color))" />
 </svelte:head>
 
-<HeaderNavBar>
-	<!-- TODO: use slots for this -->
-</HeaderNavBar>
+<Header>
+	{#each pages as { name, path }}
+		<NavItem {path}>{name}</NavItem>
+	{/each}
+</Header>
 
 <main>
 	<PageTransition url={urlString}>
