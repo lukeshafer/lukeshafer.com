@@ -36,14 +36,13 @@
 </script>
 
 <section bind:this={flexWrapper}>
-	{#key ready}
+	{#if ready}
 		<PageTransition url={'/'}>
-			<div style:visibility={ready ? 'visible' : 'hidden'}>
-				<Headshot />
-			</div>
+			<!-- <div style:visibility={ready ? 'visible' : 'hidden'}> -->
+			<Headshot />
+			<!-- </div> -->
 		</PageTransition>
 		<div
-			style:visibility={ready ? 'visible' : 'hidden'}
 			class="fly"
 			in:fly={{
 				x: -200,
@@ -53,8 +52,8 @@
 			<Card arrowPos={isWrapped ? 'top' : 'left'}>
 				<h2>Hi! I'm Luke!</h2>
 				<p>
-					I'm a web designer and developer based in Columbus, Ohio. I provide a personal,
-					friendly, and communicative website design service for small
+					I'm a web designer and developer based in Columbus, Ohio. I provide a
+					personal, friendly, and communicative website design service for small
 					businesses.
 				</p>
 				<p>
@@ -67,7 +66,7 @@
 				<a class="btn" href="/contact">Get in Touch!</a>
 			</Card>
 		</div>
-	{/key}
+	{/if}
 </section>
 
 <style>

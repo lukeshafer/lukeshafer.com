@@ -3,7 +3,7 @@
 	import { isSidebarOpen } from '$lib/stores';
 
 	export let path: string;
-	$: console.log($page.url.pathname);
+	// $: console.log($page.url.pathname);
 </script>
 
 <li class:active={$page.url.pathname === `/${path}/`}>
