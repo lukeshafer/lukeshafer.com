@@ -53,7 +53,7 @@
 			<Card arrowPos={isWrapped ? 'top' : 'left'}>
 				<h2>Hi! I'm Luke!</h2>
 				<p>
-					I'm a web developer based in Columbus, Ohio. I provide a personal,
+					I'm a web designer and developer based in Columbus, Ohio. I provide a personal,
 					friendly, and communicative website design service for small
 					businesses.
 				</p>
