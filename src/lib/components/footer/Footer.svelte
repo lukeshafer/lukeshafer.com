@@ -61,8 +61,8 @@
       target="_blank"
       href="https://kit.svelte.dev/">SvelteKit</a
     >. Hosted on
-    <a target="_blank" href="https://pages.cloudflare.com/"
-      >Cloudflare Pages.</a>
+    <a target="_blank" href="https://vercel.com/"
+      >Vercel</a>. <a target="_blank" href="https://www.vice.com/en/article/wxnxmb/cloudflare-wont-cut-off-kiwi-farms-stalking-forum">No longer using Cloudflare Pages</a>.
   </p>
 </footer>
 
