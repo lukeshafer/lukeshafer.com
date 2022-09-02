@@ -9,33 +9,33 @@ import * as MartinAndAssoc from './martinandassoc.md';
 /* To add additional .md files, just import above, and put into the below array 
     in the desired order for the website */
 const jobs = [
-  TrueCommerce,
-  GuardiansOfHeart,
-  CodeWizardsHQ,
-  Apple,
-  LCS,
-  MartinAndAssoc,
+	GuardiansOfHeart,
+	TrueCommerce,
+	CodeWizardsHQ,
+	Apple,
+	LCS,
+	MartinAndAssoc,
 ];
 
 export interface JobComponent {
-  component: SvelteComponentTyped;
-  metadata: Job;
+	component: SvelteComponentTyped;
+	metadata: Job;
 }
 
 export interface Job {
-  title: string;
-  filename: string;
-  employer: string;
-  website: string;
-  dates: string;
-  description: string;
-  skills: string[];
+	title: string;
+	filename: string;
+	employer: string;
+	website: string;
+	dates: string;
+	description: string;
+	skills: string[];
 }
 
 // Only exports the parts of the object we need, does so dynamically
 export default jobs.map((j) => {
-  return {
-    component: j.default,
-    metadata: j.metadata,
-  };
+	return {
+		component: j.default,
+		metadata: j.metadata,
+	};
 }) as JobComponent[];

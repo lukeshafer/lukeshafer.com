@@ -6,8 +6,9 @@ website: https://lcs.com
 dates: May 2018 - June 2019
 description: ''
 skills:
-  - EDI
-  - Microsoft Dynamics
+  - Rent Manager
+  - VB.NET
+  - Ticketing Software
 ---
 
 - Provided over-the-phone guidance and support for customers using Rent Manager, a property management accounting software.

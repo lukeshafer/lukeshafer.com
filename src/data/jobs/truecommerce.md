@@ -3,12 +3,11 @@ title: 'Implementation Specialist'
 filename: truecommerce
 employer: 'TrueCommerce, Inc'
 website: 'https://truecommerce.com'
-dates: 'Jan 2021 - Present'
+dates: 'Jan 2021 - Aug 2022'
 description: 'I was responsible for implementing and customizing software for customers.'
 skills:
-  - Rent Manager
-  - VB.NET
-  - Ticketing Software
+  - EDI
+  - Microsoft Dynamics
 ---
 
 - Designed specialized software integrations in accordance with customer and vendor requirements
