@@ -7,7 +7,6 @@
 	import PageTransition from '$lib/components/PageTransition.svelte';
 
 	let flexWrapper: HTMLElement;
-	let arrowPos: CardEdge = 'left';
 	let isWrapped = false;
 
 	let ready = false;
