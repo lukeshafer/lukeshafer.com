@@ -1,4 +1,4 @@
-# Luke Shafer, Front-end Web Developer
+# Luke Shafer, Full-Stack Web Developer
 
 [hello@lukeshafer.com](mailto:hello@lukeshafer.com)
 614–585–3382
@@ -8,54 +8,61 @@ Columbus, Ohio
 
 Hi! I’m a web developer with over 5 years of professional experience, focused on accessible, modern, and concise design. I’m experienced in modern front-end web technologies, including React and Svelte, and can quickly learn any stack or technology introduced to me.
 
+---
+
 ## Experience
 
 ### Freelance Web Developer
 
-**Columbus, Ohio  •  Mar 2022 - Present**
+_Columbus, Ohio • Mar 2022 - Present_
 
 - Designed client websites using modern web frameworks and tools
 - Collaborated with clients to build the unique site for their business needs
 
 ### Implementation Specialist
 
-**TrueCommerce  •  Columbus, Ohio  •  Jan 2021 - Present**
+_TrueCommerce • Columbus, Ohio • Jan 2021 - Present_
 
 Designed software integrations in accordance with customer requirements
 Implemented EDI scripting and XML mapping to meet customer standards
 
 ### Co-Founder | Director of Information Technology
 
-**Guardians of Heart  •  Columbus, Ohio  •  Aug 2020 - Present**
+_Guardians of Heart • Columbus, Ohio • Aug 2020 - Present_
 
 - Built and managed the non-profit’s website, [guardiansofheart.org](http://guardiansofheart.org/)
 - Managed organization in G Suite and Slack, and supported users and volunteers
 
 ### Online Coding Instructor
 
-**CodeWizardsHQ  •  Remote  •  Sep 2020 - Feb 2021**
+_CodeWizardsHQ • Remote • Sep 2020 - Feb 2021_
 
 - Led curriculum-based 1-hour classes with students in grades 3-12
 - Introduced students to HTML, Javascript, Python, and Scratch
 
 ### Technical Specialist
 
-**Apple, Inc  •  Columbus, Ohio  •  Aug 2019 - Dec 2019**
+_Apple, Inc • Columbus, Ohio • Aug 2019 - Dec 2019_
 
 - Provided hardware and software support for Apple mobile customers
 - Trained and certified in Apple Service Fundamentals
 
 ### Product Support Specialist
 
-**London Computer Systems  •  Cincinnati, Ohio  •  May 2018 - Jun 2019**
+_London Computer Systems • Cincinnati, Ohio • May 2018 - Jun 2019_
 
 - Re-developed internal software for support specialists
 - Provided over-the-phone support for ERP customers, resolving over 4100 technical issues
 - Volunteered to provide on-call emergency support on nights and weekends.
 
+---
+
 ## Projects
 
 ### Do Good Collective
+
+**[Fridge Magnets](fridgemagnets.dev.lukeshafer.com)** | [github.com/lukeshafer/fridgemagnets](github.com/lukeshafer/fridgemagnets)
+Online multiplayer word game; an implementation of the card game Ransom Notes. Built with colyseus.io for the game server, and SvelteKit for the front-end game UI, using TypeScript to power the full stack.
 
 **[dogoodcollective.net](http://dogoodcollective.net) | https://github.com/lukeshafer/do-good**
 
@@ -70,38 +77,42 @@ Implemented EDI scripting and XML mapping to meet customer standards
 - [lukeshafer.com](http://lukeshafer.com) is my personal portfolio and a place for prospective clients or employers to contact me about my work.
 - The site is built entirely in SvelteKit and hosted on CloudFlare Pages.
 
-**You can find more of my projects at [lukeshafer.com/work](http://lukeshafer.com/work)** 
+**You can find more of my projects at [lukeshafer.com/work](http://lukeshafer.com/work)**
+
+---
 
 ## Education
 
 **Bachelor’s, Computer Science, 2018**
 University of Cincinnati, Cincinnati, Ohio
 
+---
+
 ## Skills
 
 - Languages
-    - JavaScript
-    - TypeScript
-    - CSS
-    - SCSS
-    - PostCSS
-    - HTML
-    - Python
+  - JavaScript
+  - TypeScript
+  - CSS
+  - SCSS
+  - PostCSS
+  - HTML
+  - Python
 - Libraries
-    - React
-    - Svelte
-    - Angular
+  - React
+  - Svelte
+  - Angular
 - Web Frameworks
-    - SvelteKit
-    - Strapi
-    - NextJS
+  - SvelteKit
+  - Strapi
+  - NextJS
 - Practices
-    - Modern accessibility standards (A11y)
-    - Semantic HTML
-    - Component-based design
-    - Building for scalability
+  - Modern accessibility standards (A11y)
+  - Semantic HTML
+  - Component-based design
+  - Building for scalability
 - Soft skills
-    - Project management
-    - Team communication
-    - Friendly customer service
-    - Patience and adaptability
+  - Project management
+  - Team communication
+  - Friendly customer service
+  - Patience and adaptability
