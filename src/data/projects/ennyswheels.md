@@ -3,6 +3,7 @@ title: "Enny's Wheels"
 partner: 'N/A'
 url: 'https://enny.fund'
 logo: 'ennyswheels-logo.png'
+logoAlt: '"Ennys wheels" in a light purple, bubbly font.'
 imageFile: 'enny.fund.png'
 description: 'I built a site to promote a fundraiser for our friend, Enny.'
 repo: 'https://github.com/lukeshafer/enny-fundraiser'

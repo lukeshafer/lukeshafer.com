@@ -1,5 +1,9 @@
 <script lang="ts">
 	import 'normalize.css';
+	import '@fontsource/jetbrains-mono/variable.css';
+	import '@fontsource/nunito-sans/400.css';
+	import '@fontsource/assistant/variable.css';
+
 	import '../app.css';
 	import PageTransition from '$lib/components/PageTransition.svelte';
 	import type { LayoutData } from './$types';
@@ -10,11 +14,15 @@
 	$: urlString = url.toString();
 
 	import Header from '$lib/components/header/Header.svelte';
+	import SiteName from '$lib/components/header/SiteName.svelte';
+	import Hamburger from '$lib/components/header/Hamburger.svelte';
+	import NavBar from '$lib/components/header/NavBar.svelte';
 	import NavItem from '$lib/components/header/NavItem.svelte';
 	import Footer from '$lib/components/footer/Footer.svelte';
 
 	const pages = [
-		{ name: 'Work', path: 'work' },
+		{ name: 'Services', path: 'services' },
+		{ name: 'Portfolio', path: 'work' },
 		{ name: 'Contact', path: 'contact' },
 		{ name: 'About', path: 'about' },
 	];
@@ -24,22 +32,31 @@
 	<meta name="theme-color" content="rgb(var(--primary-color))" />
 </svelte:head>
 
-<Header>
-	{#each pages as { name, path }}
-		<NavItem {path}>{name}</NavItem>
-	{/each}
-</Header>
+<div class="site-wrapper">
+	<Header>
+		<SiteName />
+		<Hamburger />
+		<NavBar>
+			{#each pages as { name, path }}
+				<NavItem {path}>{name}</NavItem>
+			{/each}
+		</NavBar>
+	</Header>
 
-<main>
-	<PageTransition url={urlString}>
-		<slot />
-	</PageTransition>
-</main>
+	<main>
+		<PageTransition url={urlString}>
+			<slot />
+		</PageTransition>
+	</main>
 
-<Footer />
+	<Footer />
+</div>
 
 <style>
-	main {
-		min-height: 50vh;
+	.site-wrapper {
+		display: grid;
+		min-height: 100vh;
+		grid-template-rows: min-content 1fr min-content;
+		align-items: center;
 	}
 </style>

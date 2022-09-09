@@ -12,6 +12,7 @@
 
 <style>
 	div.project-grid {
+		/* grid layout */
 		display: grid;
 		grid-template-columns: repeat(auto-fit, 30em);
 		grid-auto-rows: 20em;
@@ -20,6 +21,6 @@
 		align-items: center;
 		font-size: min(1em, 2.7vw);
 		width: 100%;
-		max-width: 100em;
+		max-width: 100vw;
 	}
 </style>

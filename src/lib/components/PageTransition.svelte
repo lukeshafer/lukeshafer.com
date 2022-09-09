@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { fly, slide } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 	export let url: string;
 	const pageTransitionDuration = 300;
 </script>

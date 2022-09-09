@@ -3,6 +3,7 @@ title: 'Do Good Collective'
 partner: 'Do Good Collective'
 url: 'https://dogoodcollective.net'
 logo: 'dogood-logo.png'
+logoAlt: Two hands holding a moon in the night sky. The words "Do Good" wrap around the moon.
 imageFile: 'dcg.fund.png'
 description: ''
 repo: 'https://github.com/lukeshafer/do-good'

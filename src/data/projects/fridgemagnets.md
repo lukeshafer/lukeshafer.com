@@ -3,6 +3,7 @@ title: 'Fridge Magnets (Name In Progress)'
 partner: ''
 url: 'https://fridgemagnets.dev.lukeshafer.com/'
 logo: 'fridgemagnets.logo.png'
+logoAlt: 'the words "Fridge magnets", each in a white rectangle, like a word magnet on a fridge.'
 imageFile: 'fridgemagnets.com.png'
 description: A quick, easy to play version of the party game Ransom Notes (not affiliated, I
 repo: 'https://github.com/lukeshafer/fridgemagnets'

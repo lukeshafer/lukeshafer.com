@@ -10,6 +10,7 @@ title: 'Guardians of Heart'
 partner: 'Guardians of Heart'
 url: 'https://guardiansofheart.org'
 logo: 'guardiansofheart.png'
+logoAlt: 'a blue shield with a crown and a sword, next to the name "Guardians of Heart".'
 imageFile: 'goh.org.png'
 description: I built the website for my nonprofit, Guardians of Heart!
 repo: ''

@@ -3,6 +3,7 @@ title: 'Luke Shafer Web Design'
 partner: ''
 url: 'https://lukeshafer.com'
 logo: 'lukeshafer-logo.png'
+logoAlt: 'My initials, L.S., next to "Luke Shafer Web Design"'
 imageFile: 'lukeshafer.com.png'
 description: I built my personal website (you're on it now!)
 repo: 'https://github.com/lukeshafer/lukeshafer.com'

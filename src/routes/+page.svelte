@@ -1,6 +1,6 @@
 <script lang="ts">
+	import Button from './../lib/components/Button.svelte';
 	import Card from '$lib/components/Card.svelte';
-	import type { CardEdge } from '$lib/components/Card.svelte';
 	import Headshot from '$lib/components/Headshot.svelte';
 	import { fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
@@ -37,9 +37,7 @@
 <section bind:this={flexWrapper}>
 	{#if ready}
 		<PageTransition url={'/'}>
-			<!-- <div style:visibility={ready ? 'visible' : 'hidden'}> -->
 			<Headshot />
-			<!-- </div> -->
 		</PageTransition>
 		<div
 			class="fly"
@@ -48,21 +46,26 @@
 				duration: 300,
 				delay: 700,
 			}}>
-			<Card arrowPos={isWrapped ? 'top' : 'left'}>
-				<h2>Hi! I'm Luke!</h2>
-				<p>
-					I'm a web designer and developer based in Columbus, Ohio. I provide a
-					personal, friendly, and communicative website design service for small
-					businesses.
-				</p>
-				<p>
-					<i>
+			<Card arrowPos={isWrapped ? 'top' : 'left'} width="30rem">
+				<div class="card-wrapper">
+					<h2 class="main-heading">Hi! I'm <span class="name">Luke</span></h2>
+					<p>
+						I'm a web developer based in Columbus, Ohio.<br />
+						I provide a personal, friendly, and communicative website design service
+						for small businesses.
+					</p>
+					<p>
 						I believe in a <strong>personalized experience</strong> merging
 						<strong>functional design</strong>
 						with an <strong>artistic touch</strong>.
-					</i>
-				</p>
-				<a class="btn" href="/contact">Get in Touch!</a>
+					</p>
+					<span class="buttons">
+						<Button href="/contact" title="Contact" theme="default"
+							>Services</Button>
+						<Button href="/contact" title="Contact" theme="outline"
+							>Get in Touch</Button>
+					</span>
+				</div>
 			</Card>
 		</div>
 	{/if}
@@ -70,21 +73,37 @@
 
 <style>
 	section {
+		/* page layout */
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: center;
-		height: 100%;
 		align-items: center;
-		gap: 5em;
-	}
-	p {
-		font-size: 1em;
+		gap: 6rem;
+
+		/* sizing */
+		padding: 2rem;
+		height: 100%;
+
+		/* text formatting */
+		text-align: center;
+		font-size: 1.1rem;
 	}
 
-	.btn {
-		display: inline-block;
-		position: absolute;
-		font-size: 1.6em;
+	.name {
+		color: rgb(var(--primary-color));
+	}
+
+	.card-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1.4rem;
+	}
+
+	.buttons {
+		display: flex;
+		gap: 1rem;
+		font-size: 1.04rem;
 	}
 </style>

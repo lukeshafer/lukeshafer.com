@@ -1,9 +1,11 @@
 <script lang="ts">
 	import Card from '$lib/components/Card.svelte';
+
+	let width = '25em';
 </script>
 
 <section>
-	<h2 class="visibly-hidden">About Me</h2>
+	<h1 class="visibly-hidden">About Me</h1>
 
 	<img
 		src="/images/new-headshot.jpeg"
@@ -11,8 +13,8 @@
 		width="300" />
 
 	<div class="paragraph">
-		<Card>
-			<h3>Hi, I'm Luke!</h3>
+		<Card {width}>
+			<h2>Hi, I'm Luke!</h2>
 			<p>
 				I am a web developer in Columbus, Ohio. I take a focus on user-friendly
 				design, accessibility, site performance, and professional presentation.
@@ -28,7 +30,7 @@
 		width="300" />
 
 	<div class="paragraph">
-		<Card>
+		<Card {width}>
 			<p>
 				I'm a visual and curiosity-driven person, and that drew me to web
 				development early in my career. I started coding even earlier than that,
@@ -45,7 +47,7 @@
 		width="300" />
 
 	<div class="paragraph">
-		<Card>
+		<Card {width}>
 			<p>
 				I have a lot of creative hobbies outside of programming, like
 				embroidering, making digital art, producing music, 3D printing,

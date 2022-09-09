@@ -1,178 +1,140 @@
 /* Write your global styles here, in PostCSS syntax */
 
-@font-face {
-  font-family: Archive;
-  font-display: swap;
-  src: url(/fonts/Archive/Archive-Regular.otf) format('opentype');
-  src: url(/fonts/Archive/Archive-Regular.ttf) format('truetype');
-}
+/* @import url('https://fonts.googleapis.com/css2?family=Assistant&family=JetBrains+Mono&family=Nunito+Sans&display=swap'); */
 
 @font-face {
-  font-family: 'Bebas Neue';
-  font-display: swap;
-  src: url(/fonts/BebasNeue/BebasNeue-Book.otf) format('opentype');
+	font-family: Archive;
+	font-display: swap;
+	src: url(/fonts/Archive/Archive-Regular.otf) format('opentype');
+	src: url(/fonts/Archive/Archive-Regular.ttf) format('truetype');
 }
 
 :root {
-  font-family: Arimo, sans-serif;
-  --heading-font: Archive;
-  --link-font: 'Bebas Neue';
-  --primary-color: 39, 128, 148;
-  --secondary-color: 125, 130, 184;
-  --tertiary-color: 37, 77, 86;
-  --accent-color: 230, 95, 92;
-  --secondary-accent: 204, 121, 116;
-  --tertiary-accent: 255, 196, 191;
-  --highlight: 203, 213, 255;
-  --secondary-text: 255, 250, 234;
-  --tertiary-text: 116, 58, 55;
-  --background-base: 253, 254, 255;
-  --background-contrast: 2, 24, 29;
+	--title-font: Archive, 'Arial Black', sans-serif;
 
-  --link-transition: 70ms;
+	/* Used for most headings */
+	--heading-font: 'AssistantVariable';
+	--heading-weight: 700;
 
-  --text-color: var(--tertiary-color);
-  --site-background: var(--highlight);
-  font-size: min(1rem, 3.3vw);
+	/** Used for links and buttons */
+	--link-font: 'JetBrains MonoVariable';
+	--link-weight: 500;
+
+	/* Default font */
+	--body-font: 'Nunito Sans', system-ui, -apple-system, BlinkMacSystemFont,
+		'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+		'Droid Sans', 'Helvetica Neue', Arial, sans-serif;
+
+	--primary-color: 39, 128, 148;
+	--secondary-color: 125, 130, 184;
+	--tertiary-color: 37, 77, 86;
+
+	--accent-color: 230, 95, 92;
+	--secondary-accent: 204, 121, 116;
+	--secondary-accent: 133, 21, 16;
+	--tertiary-accent: 255, 196, 191;
+
+	--highlight: 203, 213, 255;
+	--secondary-text: 255, 250, 234;
+	--tertiary-text: 116, 58, 55;
+	--background-base: 253, 254, 255;
+	--background-contrast: 2, 24, 29;
+
+	/** DEPRECATED */
+	--link-transition: 70ms;
+	--link-transition-time: 70ms;
+
+	--text-color: var(--tertiary-color);
+	--site-background: var(--highlight);
+	font-size: clamp(0.8rem, 3.5vw, 1.2rem);
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background-base: 2, 24, 29;
-    --background-contrast: 253, 254, 255;
-    --site-background: 0, 0, 0;
-
-    --primary-color: 255, 196, 191;
-    --secondary-color: 204, 121, 116;
-    --tertiary-color: 230, 95, 92;
-
-    --accent-color: 37, 77, 86;
-    --secondary-accent: 125, 130, 184;
-    --tertiary-accent: 39, 128, 148;
-
-    --text-color: var(--tertiary-color);
-    --highlight: 116, 58, 55;
-    --secondary-text: var(--accent-color);
-    --tertiary-text: 116, 58, 55;
-  }
-} */
-
 body {
-  background-color: rgb(var(--secondary-color));
-  color: rgb(var(--tertiary-color));
-  scroll-behavior: smooth;
+	background-color: rgb(var(--secondary-color));
+	color: rgb(var(--tertiary-color));
+	scroll-behavior: smooth;
+	font-family: var(--body-font);
 }
 
 body > div {
-  background-color: rgb(var(--site-background));
-  background-image: url('https://luke-shafer-web-design.mo.cloudinary.net/background.png');
-  overflow-x: hidden;
-  position: relative;
+	background-color: rgb(var(--site-background));
+	background-image: url('https://luke-shafer-web-design.mo.cloudinary.net/background.png');
+	overflow-x: hidden;
+	position: relative;
 }
 
-main {
-  margin: 4em 2em;
+.page {
+	padding: 2rem;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+/********* FONT STYLES *********/
+/* Defaults */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
 }
 
 h1,
 h2,
 h3 {
-  font-family: var(--heading-font), 'Arial Black', sans-serif;
-  text-transform: uppercase;
-}
-
-h2,
-h3 {
-  font-weight: 1;
-  letter-spacing: 0.01em;
-  text-align: center;
-}
-
-a {
-  font-family: var(--link-font), Arial, sans-serif;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
+	font-family: var(--heading-font);
+	letter-spacing: 0.01em;
+	text-align: center;
+	font-weight: var(--heading-weight);
 }
 
 p {
-  color: rgb(var(--background-contrast));
-  font-size: 1.2rem;
-}
-
-.visibly-hidden {
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
-.btn {
-  font-family: var(--link-font), Arial, sans-serif;
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 0.5em 1em;
-  color: rgb(var(--secondary-text));
-  background: rgb(var(--secondary-accent));
-  border-radius: 1em;
-  vertical-align: bottom;
-  text-shadow: 0.03em 0.03em rgba(var(--text-color), 50%);
-  left: 0;
-  right: 0;
-  width: fit-content;
-  margin: auto;
-  border: none;
-  font-size: 1.2em;
-  transition: transform var(--link-transition);
+	color: rgb(var(--background-contrast));
 }
 
 b,
 strong {
-  color: rgb(var(--accent-color));
+	color: rgb(var(--accent-color));
 }
 
-.btn:hover {
-  transform: scale(1.1);
-  cursor: pointer;
+/* Applied styles */
+.main-heading {
+	font-size: 2.2rem;
 }
 
-.card {
-  position: relative;
-  background-color: rgb(var(--background-base));
-  height: fit-content;
-  padding: 1em 1.5em;
-  font-size: 1.3em;
+.styled-link {
+	font-family: var(--link-font);
+	font-weight: var(--link-weight);
+	text-decoration: none;
 }
 
-.card h3,
-.card h2 {
-  margin: 0;
-  font-size: 2em;
+ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
 }
 
-.card h4 {
-  font-size: 1.5em;
-  font-weight: inherit;
-  margin: 0;
+.visibly-hidden {
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  body * {
-    /* ONLY PLACE WHERE IMPORTANT IS ALLOWED */
-    /*  removes transitions and animations for all 
+	body * {
+		/* ONLY PLACE WHERE IMPORTANT IS ALLOWED */
+		/*  removes transitions and animations for all 
         elements when user prefers reduced motion */
-    transition: none !important;
-    animation: none !important;
-  }
+		transition: none !important;
+		animation: none !important;
+	}
 }
 
 *:focus-visible {
-  outline: 7px solid #60b9ff !important;
+	outline: 7px solid #60b9ff !important;
 }

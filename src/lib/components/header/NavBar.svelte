@@ -1,5 +1,4 @@
 <script lang="ts">
-	import SiteName from './SiteName.svelte';
 	import { isSidebarOpen } from '$lib/stores';
 </script>
 
@@ -8,48 +7,81 @@
 		<slot />
 	</ul>
 </nav>
+<div class="overlay" on:click={() => ($isSidebarOpen = false)} />
 
 <style>
 	nav {
-		padding-left: 10vw;
+		font-size: clamp(0.8rem, 1.3vw, 1rem);
 	}
 
 	ul {
 		display: flex;
-		justify-content: space-between;
+		justify-content: flex-start;
 		flex-flow: row nowrap;
-		font-size: 1em;
-		gap: 1em;
+		gap: clamp(1rem, 2vw, 2rem);
+	}
+
+	.overlay {
+		display: none;
 	}
 
 	@media screen and (max-width: 810px) {
 		nav {
-			z-index: 1;
-			--font-size: 3;
-			font-size: calc(var(--font-size) * 1em);
+			/* Nav sizing */
+			font-size: 1.8rem;
+			--nav-width: 20rem;
+			width: var(--nav-width);
+
+			/* internal layout */
+			padding: 6rem 1rem;
+			height: 100%;
+			box-sizing: border-box;
+
+			/* Nav sidebar position */
+			z-index: 2;
 			position: absolute;
-			--width: 10em;
-			/* width: 0; */
-			width: var(--width);
-			right: 0;
-			transform: translateX(15em);
-			/* right: calc(-1 * var(--width)); */
-			top: calc(var(--height) / var(--font-size));
-			background: inherit;
-			height: calc(100% - (var(--height) / var(--font-size)));
+			top: 0;
+			right: calc(var(--nav-width) * -1); /* negative width */
+
+			/* Initial off-screen position */
+			/* transform: translateX(15em); */
 			transition: transform 400ms, width 400ms;
-			padding: 0;
+
+			/* background will match the header */
+			background: inherit;
+
+			/* Internal layout */
+			/* padding: 0; */
 		}
 		nav.active {
-			transform: translateX(0);
+			/* Active nav comes on screen */
+			transform: translateX(calc(var(--nav-width) * -1));
 		}
-		nav ul {
-			overflow: inherit;
+
+		.active + .overlay {
+			display: block;
 			position: absolute;
+			top: 0;
 			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.2);
+			z-index: 1;
+		}
+
+		nav ul {
+			/* positioning */
+			overflow: inherit;
+			/* position: absolute; */
+			left: 0;
+
+			/* flex layout */
 			flex-direction: column;
 			justify-content: flex-start;
 			align-items: flex-end;
+			gap: 1.5rem;
+
+			/* sizing */
 			width: 100%;
 			height: 100%;
 		}

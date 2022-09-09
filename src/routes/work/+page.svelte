@@ -4,65 +4,60 @@
 	import projects from '$data/projects/_projects';
 	import Jobs from '$lib/components/work/Jobs.svelte';
 	import jobs from '$data/jobs/_jobs';
+	import Button from '$lib/components/Button.svelte';
 </script>
 
-<section class="projects">
-	<Card>
-		<h3>Projects</h3>
-		<p>Here, you can find websites I've made in the past!</p>
-	</Card>
-	<Projects {projects} />
-</section>
-<section class="jobs">
-	<Card>
-		<h3>Work Experience</h3>
-	</Card>
-	<Jobs {jobs} />
-</section>
-<section class="card-wrapper">
-	<Card>
-		<h3>Download Resume</h3>
-		<div class="downloads">
-			<a
-				href="/downloads/resume/Shafer-Luke-2022-Resume.pdf"
-				class="btn"
-				download>
-				PDF</a>
-			<a
-				href="/downloads/resume/Shafer-Luke-2022-Resume.txt"
-				class="btn"
-				download>
-				Text/Markdown</a>
-		</div>
-	</Card>
-</section>
+<div class="portfolio page">
+	<h1 class="visibly-hidden">Portfolio</h1>
+	<section class="projects">
+		<!-- <Card><h2 class="main-heading">My Projects</h2></Card> -->
+		<Projects {projects} />
+	</section>
+	<!-- <section class="jobs">
+		<Card>
+			<h2>Work Experience</h2>
+		</Card>
+		<Jobs {jobs} />
+	</section> -->
+	<section class="card-wrapper">
+		<Card>
+			<h2>Download Resume</h2>
+			<div class="downloads">
+				<Button
+					href="/downloads/resume/Shafer-Luke-2022-Resume.pdf"
+					title="Download PDF"
+					theme="accent"
+					download={true}>PDF</Button>
+				<Button
+					href="/downloads/resume/Shafer-Luke-2022-Resume.pdf"
+					title="Download Text/Markdown"
+					theme="accent-outline"
+					download={true}>Text/Markdown</Button>
+			</div>
+		</Card>
+	</section>
+</div>
 
 <style>
+	.portfolio {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 4rem;
+	}
 	section {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		gap: 2em;
 		font-size: min(1rem, 3.3vw);
-	}
-
-	section:not(:last-of-type) {
-		margin-bottom: 5rem;
-	}
-
-	p {
-		margin: 1em;
-	}
-
-	.card {
-		/* max-width: 25em; */
-		text-align: center;
-		align-self: center;
+		width: 100%;
 	}
 
 	.downloads {
 		display: flex;
 		justify-content: space-evenly;
+		gap: 1rem;
 		margin-top: 1em;
 	}
 

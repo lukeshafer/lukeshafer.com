@@ -3,6 +3,7 @@ title: 'Ono Turo-Turo'
 partner: 'Ono Turo-Turo Food Truck'
 url: 'https://onoturoturo.com'
 logo: 'onoturoturologo.png'
+logoAlt: 'Ono Turo-Turo, Hawaiian-Filipino Food Truck.'
 imageFile: 'onoturoturo.com.jpeg'
 description: I partnered with a local food truck to build their website!
 repo: ''
