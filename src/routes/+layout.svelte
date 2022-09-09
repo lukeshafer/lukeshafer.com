@@ -2,16 +2,15 @@
 	import 'normalize.css';
 	import '@fontsource/jetbrains-mono/variable.css';
 	import '@fontsource/nunito-sans/400.css';
+	import '@fontsource/nunito-sans/600.css';
 	import '@fontsource/assistant/variable.css';
+	import '@fontsource/montserrat/variable.css';
 
 	import '../app.css';
 	import PageTransition from '$lib/components/PageTransition.svelte';
 	import type { LayoutData } from './$types';
 
 	export let data: LayoutData;
-	$: ({ url } = data);
-
-	$: urlString = url.toString();
 
 	import Header from '$lib/components/header/Header.svelte';
 	import SiteName from '$lib/components/header/SiteName.svelte';
@@ -44,7 +43,7 @@
 	</Header>
 
 	<main>
-		<PageTransition url={urlString}>
+		<PageTransition url={data.url}>
 			<slot />
 		</PageTransition>
 	</main>

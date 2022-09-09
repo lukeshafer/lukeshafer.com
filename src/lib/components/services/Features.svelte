@@ -7,7 +7,7 @@
 
 <style lang="postcss">
 	.features {
-		box-shadow: 0 0 5px rgb(0, 0, 0, 0.2);
+		box-shadow: 1px 1px 1px 2px rgb(0, 0, 0, 0.2);
 		border-radius: 0.5rem;
 	}
 

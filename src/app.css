@@ -1,7 +1,5 @@
 /* Write your global styles here, in PostCSS syntax */
 
-/* @import url('https://fonts.googleapis.com/css2?family=Assistant&family=JetBrains+Mono&family=Nunito+Sans&display=swap'); */
-
 @font-face {
 	font-family: Archive;
 	font-display: swap;
@@ -13,7 +11,7 @@
 	--title-font: Archive, 'Arial Black', sans-serif;
 
 	/* Used for most headings */
-	--heading-font: 'AssistantVariable';
+	--heading-font: MontserratVariable;
 	--heading-weight: 700;
 
 	/** Used for links and buttons */
@@ -54,6 +52,7 @@ body {
 	color: rgb(var(--tertiary-color));
 	scroll-behavior: smooth;
 	font-family: var(--body-font);
+	font-weight: 400;
 }
 
 body > div {
@@ -85,9 +84,10 @@ h1,
 h2,
 h3 {
 	font-family: var(--heading-font);
-	letter-spacing: 0.01em;
+	letter-spacing: 2px;
 	text-align: center;
 	font-weight: var(--heading-weight);
+	text-transform: uppercase;
 }
 
 p {
@@ -102,6 +102,7 @@ strong {
 /* Applied styles */
 .main-heading {
 	font-size: 2.2rem;
+	padding: 0.5em 2em;
 }
 
 .styled-link {
@@ -128,7 +129,7 @@ ul {
 @media (prefers-reduced-motion: reduce) {
 	body * {
 		/* ONLY PLACE WHERE IMPORTANT IS ALLOWED */
-		/*  removes transitions and animations for all 
+		/*  removes transitions and animations for all
         elements when user prefers reduced motion */
 		transition: none !important;
 		animation: none !important;

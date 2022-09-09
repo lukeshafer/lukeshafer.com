@@ -90,6 +90,11 @@
 		font-size: 1.1rem;
 	}
 
+	h2 {
+		text-transform: capitalize;
+		padding: 0;
+	}
+
 	.name {
 		color: rgb(var(--primary-color));
 	}

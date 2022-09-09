@@ -12,9 +12,15 @@
 </script>
 
 {#if type === 'link'}
-	<a {href} class="btn {theme}" {title} {download}>
-		<slot />
-	</a>
+	{#if download}
+		<a {href} class="btn {theme}" {title} download>
+			<slot />
+		</a>
+	{:else}
+		<a {href} class="btn {theme}" {title}>
+			<slot />
+		</a>
+	{/if}
 {:else if type === 'submit'}
 	<button type="submit" class="btn {theme}"><slot /></button>
 {:else if type === 'button'}

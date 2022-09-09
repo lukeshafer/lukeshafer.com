@@ -8,6 +8,7 @@
 			<slot name="title" />
 		</div>
 		<div class="price">
+			<h3>Pricing</h3>
 			<slot name="price" />
 		</div>
 		<div class="description">
@@ -28,6 +29,16 @@
 		font-size: 1.2rem;
 		text-align: center;
 		color: rgb(var(--accent-color));
+	}
+
+	.price > h3 {
+		font-size: 1rem;
+	}
+
+	.description {
+		height: 3.5rem;
+		display: flex;
+		align-items: center;
 	}
 
 	.description > :global(*) {

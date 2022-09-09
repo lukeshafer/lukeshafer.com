@@ -28,7 +28,7 @@
 		padding: 1rem;
 
 		/* appearance */
-		border-radius: 1.2rem;
+		border-radius: 0.8rem;
 		background-color: rgb(var(--background-base));
 		box-shadow: 1px 1px 10px #00000033;
 	}
