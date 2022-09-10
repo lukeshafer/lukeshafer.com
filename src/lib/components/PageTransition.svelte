@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { fly } from 'svelte/transition';
-	export let url: URL;
+	export let url: string;
 	const pageTransitionDuration = 300;
 </script>
 

@@ -11,6 +11,7 @@
 	import type { LayoutData } from './$types';
 
 	export let data: LayoutData;
+	$: url = data.url.toString();
 
 	import Header from '$lib/components/header/Header.svelte';
 	import SiteName from '$lib/components/header/SiteName.svelte';
@@ -43,7 +44,7 @@
 	</Header>
 
 	<main>
-		<PageTransition url={data.url}>
+		<PageTransition {url}>
 			<slot />
 		</PageTransition>
 	</main>
