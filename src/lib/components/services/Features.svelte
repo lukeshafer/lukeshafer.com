@@ -1,5 +1,9 @@
+<script lang="ts">
+	export let heading = 'Features';
+</script>
+
 <div class="features">
-	<h3 class="styled-link">Features</h3>
+	<h3 class="styled-link">{heading}</h3>
 	<ul>
 		<slot />
 	</ul>

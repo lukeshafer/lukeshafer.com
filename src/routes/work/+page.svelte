@@ -8,7 +8,7 @@
 </script>
 
 <div class="portfolio page">
-	<h1 class="visibly-hidden">Portfolio</h1>
+	<h1 class="main-heading">My Portfolio</h1>
 	<section class="projects">
 		<!-- <Card><h2 class="main-heading">My Projects</h2></Card> -->
 		<Projects {projects} />

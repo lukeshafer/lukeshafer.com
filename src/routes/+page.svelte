@@ -12,7 +12,7 @@
 	let ready = false;
 
 	const setWrappedClass = (elements: HTMLElement[]) => {
-		return elements.reduce((accum, curEl, index, arr) => {
+		return elements.reduce((_accum, curEl, index, arr) => {
 			if (index === 0) return false;
 			let prevEl = arr[index - 1];
 			if (curEl.offsetTop > prevEl.offsetTop + prevEl.clientHeight) return true;
@@ -34,42 +34,44 @@
 	});
 </script>
 
-<section bind:this={flexWrapper}>
-	{#if ready}
-		<PageTransition url={'/'}>
-			<Headshot />
-		</PageTransition>
-		<div
-			class="fly"
-			in:fly={{
-				x: -200,
-				duration: 300,
-				delay: 700,
-			}}>
-			<Card arrowPos={isWrapped ? 'top' : 'left'} width="30rem">
-				<div class="card-wrapper">
-					<h2 class="main-heading">Hi! I'm <span class="name">Luke</span></h2>
-					<p>
-						I'm a web developer based in Columbus, Ohio.<br />
-						I provide a personal, friendly, and communicative website design service
-						for small businesses.
-					</p>
-					<p>
-						I believe in a <strong>personalized experience</strong> merging
-						<strong>functional design</strong>
-						with an <strong>artistic touch</strong>.
-					</p>
-					<span class="buttons">
-						<Button href="/contact" title="Contact" theme="default"
-							>Services</Button>
-						<Button href="/contact" title="Contact" theme="outline"
-							>Get in Touch</Button>
-					</span>
-				</div>
-			</Card>
-		</div>
-	{/if}
-</section>
+<div class="page">
+	<section bind:this={flexWrapper}>
+		{#if ready}
+			<PageTransition url={'/'}>
+				<Headshot />
+			</PageTransition>
+			<div
+				class="fly"
+				in:fly={{
+					x: -200,
+					duration: 300,
+					delay: 700,
+				}}>
+				<Card arrowPos={isWrapped ? 'top' : 'left'} width="30rem">
+					<div class="card-wrapper">
+						<h2 class="main-heading">Hi! I'm <span class="name">Luke</span></h2>
+						<p>
+							I'm a web developer based in Columbus, Ohio.<br />
+							I provide a personal, friendly, and communicative website design service
+							for small businesses.
+						</p>
+						<p>
+							I believe in a <strong>personalized experience</strong> merging
+							<strong>functional design</strong>
+							with an <strong>artistic touch</strong>.
+						</p>
+						<span class="buttons">
+							<Button href="/services" title="Services" theme="default"
+								>Services</Button>
+							<Button href="/contact" title="Contact" theme="outline"
+								>Get in Touch</Button>
+						</span>
+					</div>
+				</Card>
+			</div>
+		{/if}
+	</section>
+</div>
 
 <style>
 	section {

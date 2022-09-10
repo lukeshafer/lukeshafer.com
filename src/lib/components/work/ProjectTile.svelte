@@ -18,10 +18,6 @@
 	};
 
 	let focus = false;
-
-	const handleFocus = () => {
-		focus = true;
-	};
 </script>
 
 <article
@@ -36,14 +32,14 @@
 				on:focus={() => (focus = true)}
 				on:blur={() => (focus = false)}
 				href={metadata.url}
-				title="Project website"
+				title="Website"
 				target="_blank">
 				<span aria-hidden="true">
 					<Globe {...iconSettings} />
 				</span>
 			</a>
 		{/if}
-		<button
+		<!--		<button
 			on:focus={() => (focus = true)}
 			on:blur={() => (focus = false)}
 			class="modal"
@@ -52,7 +48,7 @@
 			<span aria-hidden="true">
 				<Info {...iconSettings} />
 			</span>
-		</button>
+</button>	-->
 		{#if metadata.repo}
 			<a
 				on:focus={() => (focus = true)}
@@ -76,10 +72,9 @@
 	</div>
 </article>
 
-<Modal bind:show={openModal}>
+<!--<Modal bind:show={openModal}>
 	<svelte:component this={project.component} />
-</Modal>
-
+</Modal>-->
 <style lang="postcss">
 	article {
 		position: relative;
@@ -152,5 +147,12 @@
 		height: 100%;
 		object-fit: contain;
 		filter: drop-shadow(2px 2px 10px #555);
+	}
+
+	a > span {
+		width: 60px;
+		height: 60px;
+		display: grid;
+		place-items: center;
 	}
 </style>

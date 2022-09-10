@@ -4,11 +4,13 @@
 	import ContactForm from './ContactForm.svelte';
 </script>
 
-<section>
-	<h1 class="visibly-hidden">Contact Me</h1>
-	<ContactInfo />
-	<ContactForm />
-</section>
+<div class="page">
+	<h1 class="main-heading">Contact Me</h1>
+	<section>
+		<ContactInfo />
+		<ContactForm />
+	</section>
+</div>
 
 <style>
 	section {

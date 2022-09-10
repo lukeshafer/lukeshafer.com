@@ -9,12 +9,12 @@
 		font-weight: 600;
 
 		& > :global(ul) {
-			padding: 0.5em 0em;
+			padding: 1em 0em 0em;
 			font-size: 0.9em;
 			display: flex;
 			flex-flow: column;
 			gap: 0.5em;
-			color: rgba(var(--background-contrast), 0.6);
+			color: rgba(var(--background-contrast), 0.8);
 		}
 	}
 </style>

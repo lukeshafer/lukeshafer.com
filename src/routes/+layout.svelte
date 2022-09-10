@@ -57,6 +57,6 @@
 		display: grid;
 		min-height: 100vh;
 		grid-template-rows: min-content 1fr min-content;
-		align-items: center;
+		/*align-items: ;*/
 	}
 </style>

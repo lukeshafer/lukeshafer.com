@@ -1,6 +1,6 @@
 <img
 	src="https://luke-shafer-web-design.mo.cloudinary.net/images/headshot.png"
-	alt="Luke's Headshot"
+	alt="My Headshot"
 	width="300"
 	height="300" />
 

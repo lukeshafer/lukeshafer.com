@@ -26,5 +26,7 @@
 		justify-content: flex-start;
 		align-items: center;
 		row-gap: 1rem;
+
+		transition: all 300ms;
 	}
 </style>

@@ -3,7 +3,6 @@
 	import Services from '$lib/components/services/Services.svelte';
 	import Features from '$lib/components/services/Features.svelte';
 	import Feature from '$lib/components/services/Feature.svelte';
-	import Card from '$lib/components/Card.svelte';
 </script>
 
 <div class="services page">
@@ -53,7 +52,7 @@
 			<h2 slot="title">Custom</h2>
 			<p slot="price">Contact Me</p>
 			<p slot="description">A site as unique as your business.</p>
-			<Features>
+			<Features heading="Possibilities">
 				<Feature>Multiple pages</Feature>
 				<Feature>Interactive content</Feature>
 				<Feature>Ecommerce</Feature>

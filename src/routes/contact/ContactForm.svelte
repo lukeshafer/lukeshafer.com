@@ -3,7 +3,6 @@
 </script>
 
 <form action="https://formspree.io/f/mvollorl" method="POST">
-	<h2 class="main-heading">Want to get a quote?</h2>
 	<label for="input-name" class="visibly-hidden">Name</label>
 	<input type="text" name="name" placeholder="Name" id="input-name" />
 	<label for="input-email" class="visibly-hidden">Email</label>

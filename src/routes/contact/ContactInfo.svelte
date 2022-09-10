@@ -7,7 +7,6 @@
 </script>
 
 <div class="wrapper">
-	<h2 class="main-heading">My Info</h2>
 	<Card>
 		<address class="card">
 			<a id="email" href="mailto:hello@lukeshafer.com"
