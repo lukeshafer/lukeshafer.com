@@ -4,12 +4,10 @@
 	import Headshot from '$lib/components/Headshot.svelte';
 	import { fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
-	import PageTransition from '$lib/components/PageTransition.svelte';
+	import { loaded } from '$lib/stores';
 
 	let flexWrapper: HTMLElement;
 	let isWrapped = false;
-
-	let ready = false;
 
 	const setWrappedClass = (elements: HTMLElement[]) => {
 		return elements.reduce((_accum, curEl, index, arr) => {
@@ -21,7 +19,7 @@
 	};
 
 	onMount(() => {
-		ready = true;
+		$loaded = true;
 		const myObserver = new ResizeObserver((entries) => {
 			entries.forEach((entry) => {
 				let children: HTMLElement[] = Array.from(
@@ -36,17 +34,16 @@
 
 <div class="page">
 	<section bind:this={flexWrapper}>
-		{#if ready}
-			<PageTransition url={'/'}>
-				<Headshot />
-			</PageTransition>
+		<Headshot />
+		{#key $loaded}
 			<div
 				class="fly"
 				in:fly={{
 					x: -200,
 					duration: 300,
 					delay: 700,
-				}}>
+				}}
+				style:visibility={$loaded ? 'visible' : 'hidden'}>
 				<Card arrowPos={isWrapped ? 'top' : 'left'} width="auto">
 					<div class="card-wrapper">
 						<h2 class="main-heading">Hi! I'm <span class="name">Luke</span></h2>
@@ -69,7 +66,7 @@
 					</div>
 				</Card>
 			</div>
-		{/if}
+		{/key}
 	</section>
 </div>
 
@@ -84,12 +81,16 @@
 		gap: 6rem;
 
 		/* sizing */
-		/*padding: 2rem;*/
+		padding: 2rem 0;
 		height: 100%;
 
 		/* text formatting */
 		text-align: center;
 		font-size: 1.1rem;
+	}
+
+	section :global(img) {
+		transition: all 500ms;
 	}
 
 	h2 {

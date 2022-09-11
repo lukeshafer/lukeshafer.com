@@ -3,10 +3,10 @@
 	import { isSidebarOpen } from '$lib/stores';
 
 	export let path: string;
-	// $: console.log($page.url.pathname);
+	$: active = $page.url.pathname === `/${path}/`;
 </script>
 
-<li class:active={$page.url.pathname === `/${path}/`}>
+<li class:active>
 	<a
 		class="styled-link"
 		data-sveltekit-prefetch
@@ -26,6 +26,7 @@
 	}
 
 	a {
+		z-index: 1;
 		color: inherit;
 		transition: filter var(--link-transition-time);
 	}

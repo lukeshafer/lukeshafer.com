@@ -1,3 +1,6 @@
+<script>
+</script>
+
 <img
 	src="https://luke-shafer-web-design.mo.cloudinary.net/images/headshot.png"
 	alt="My Headshot"

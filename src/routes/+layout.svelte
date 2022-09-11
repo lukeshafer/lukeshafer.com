@@ -6,7 +6,7 @@
 	import '@fontsource/assistant/variable.css';
 	import '@fontsource/montserrat/variable.css';
 
-	/*export const prerender = true;*/
+	export const prerender = true;
 
 	import '../app.css';
 	import PageTransition from '$lib/components/PageTransition.svelte';
@@ -21,6 +21,8 @@
 	import NavBar from '$lib/components/header/NavBar.svelte';
 	import NavItem from '$lib/components/header/NavItem.svelte';
 	import Footer from '$lib/components/footer/Footer.svelte';
+	import { loaded } from '$lib/stores';
+	import { onMount } from 'svelte';
 
 	const pages = [
 		{ name: 'Services', path: 'services' },
@@ -28,6 +30,10 @@
 		{ name: 'Contact', path: 'contact' },
 		{ name: 'About', path: 'about' },
 	];
+
+	onMount(() => {
+		$loaded = true;
+	});
 	/*use svelte transitions for the navbar entrance!!!*/
 </script>
 
