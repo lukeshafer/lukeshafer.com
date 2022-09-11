@@ -6,6 +6,8 @@
 	import '@fontsource/assistant/variable.css';
 	import '@fontsource/montserrat/variable.css';
 
+	export const prerender = true;
+
 	import '../app.css';
 	import PageTransition from '$lib/components/PageTransition.svelte';
 	import type { LayoutData } from './$types';
@@ -26,6 +28,7 @@
 		{ name: 'Contact', path: 'contact' },
 		{ name: 'About', path: 'about' },
 	];
+	/*use svelte transitions for the navbar entrance!!!*/
 </script>
 
 <svelte:head>

@@ -47,7 +47,7 @@
 					duration: 300,
 					delay: 700,
 				}}>
-				<Card arrowPos={isWrapped ? 'top' : 'left'} width="30rem">
+				<Card arrowPos={isWrapped ? 'top' : 'left'} width="auto">
 					<div class="card-wrapper">
 						<h2 class="main-heading">Hi! I'm <span class="name">Luke</span></h2>
 						<p>
@@ -106,6 +106,8 @@
 		flex-direction: column;
 		align-items: center;
 		gap: 1.4rem;
+		max-width: 25rem;
+		box-sizing: border-box;
 	}
 
 	.buttons {

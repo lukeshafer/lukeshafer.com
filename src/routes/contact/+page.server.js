@@ -1,0 +1,54 @@
+export const prerender = false;
+
+import {
+	SMTP_HOST,
+	SMTP_USER,
+	SMTP_PASS,
+	SMTP_FROM,
+} from '$env/static/private';
+
+import { createTransport } from 'nodemailer';
+
+/** @type {import('./$types').Actions} */
+export const actions = {
+	default: async (event) => {
+		const data = await event.request.formData();
+		const name = data.get('name');
+		const email = data.get('email');
+		const phone = data.get('phone');
+		const message = data.get('message');
+
+		// create reusable transporter object using the default SMTP transport
+		let transporter = createTransport({
+			host: SMTP_HOST,
+			port: 587,
+			secure: false, // true for 465, false for other ports
+			auth: {
+				user: SMTP_USER,
+				pass: SMTP_PASS,
+			},
+		});
+
+		// send mail with defined transport object
+		let info = await transporter.sendMail({
+			from: `"${name}" <${SMTP_FROM}>`, // sender address
+			to: 'hello@lukeshafer.com', // list of receivers
+			subject: `Form Submission from ${name}`, // Subject line
+			text: `Name: ${name}, Email: ${email}, Phone: ${phone}, Message: ${message}`, // plain text body
+			html: `
+				<ul>
+					<li>Name: ${name}</li>
+					<li>Email: ${email || 'Not provided'}</li>
+					<li>Phone: ${phone || 'Not provided'}</li>
+					<li>Message: <br>${message}</li>
+				</ul>
+			`, // html body
+		});
+
+		console.log('Message sent: %s', info.messageId);
+		// Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
+
+		if (info.rejected.length > 0) return { success: false };
+		else return { success: true };
+	},
+};

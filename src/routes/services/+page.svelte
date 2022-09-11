@@ -3,6 +3,8 @@
 	import Services from '$lib/components/services/Services.svelte';
 	import Features from '$lib/components/services/Features.svelte';
 	import Feature from '$lib/components/services/Feature.svelte';
+	import Card from '$lib/components/Card.svelte';
+	import Button from '$lib/components/Button.svelte';
 </script>
 
 <div class="services page">
@@ -62,6 +64,11 @@
 			</Features>
 		</Package>
 	</Services>
+	<div class="contact">
+		<h2 class="main-heading">Interested?</h2>
+		<Button href="/contact" theme="accent" title="Contact Me"
+			><span class="btn-text-lg">Let's chat!</span></Button>
+	</div>
 </div>
 
 <style>
@@ -70,5 +77,14 @@
 		place-items: center;
 		gap: 1.5rem;
 		width: 100%;
+	}
+
+	.btn-text-lg {
+		font-size: 1.4rem;
+	}
+
+	.contact {
+		display: grid;
+		place-items: center;
 	}
 </style>

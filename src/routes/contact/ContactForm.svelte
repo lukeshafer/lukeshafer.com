@@ -2,8 +2,8 @@
 	import Button from '$lib/components/Button.svelte';
 </script>
 
-<form action="https://formspree.io/f/mvollorl" method="POST">
-	<label for="input-name" class="visibly-hidden">Name</label>
+<form method="POST">
+	<label for="input-name" class="visibly-hidden" />
 	<input type="text" name="name" placeholder="Name" id="input-name" />
 	<label for="input-email" class="visibly-hidden">Email</label>
 	<input type="email" name="email" placeholder="Email" id="input-email" />
