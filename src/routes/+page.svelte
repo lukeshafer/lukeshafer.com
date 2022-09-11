@@ -84,7 +84,7 @@
 		gap: 6rem;
 
 		/* sizing */
-		padding: 2rem;
+		/*padding: 2rem;*/
 		height: 100%;
 
 		/* text formatting */

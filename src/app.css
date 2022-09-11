@@ -44,7 +44,7 @@
 
 	--text-color: var(--tertiary-color);
 	--site-background: var(--highlight);
-	font-size: 120%;
+	font-size: 110%;
 }
 
 body {
@@ -63,10 +63,10 @@ body > div {
 }
 
 .page {
-	padding: 2rem;
+	padding: 1rem min(2rem, 5vw);
 	box-sizing: border-box;
 	width: 100%;
-	/*min-height: 70vh;*/
+	max-width: 100vw;
 }
 
 /********* FONT STYLES *********/

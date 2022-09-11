@@ -1,7 +1,8 @@
 <p>
-	© Luke Shafer 2022. Built with ♥ using <a
-		target="_blank"
-		href="https://kit.svelte.dev/">SvelteKit.</a>
+	© Luke Shafer 2022. <span class="group">
+		Built with ♥ using <a target="_blank" href="https://kit.svelte.dev/"
+			>SvelteKit.</a>
+	</span>
 	<span class="group">
 		Hosted on
 		<a target="_blank" href="https://vercel.com/">Vercel.</a>

@@ -6,7 +6,7 @@
 	import '@fontsource/assistant/variable.css';
 	import '@fontsource/montserrat/variable.css';
 
-	export const prerender = true;
+	/*export const prerender = true;*/
 
 	import '../app.css';
 	import PageTransition from '$lib/components/PageTransition.svelte';

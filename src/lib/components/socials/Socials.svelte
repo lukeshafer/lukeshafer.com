@@ -19,7 +19,7 @@
 		display: grid;
 		place-items: center;
 		place-content: center;
-		gap: 1em;
+		gap: min(4vw, 1em);
 		grid-template-columns: repeat(auto-fit, 3rem);
 	}
 </style>
