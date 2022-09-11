@@ -1,12 +1,24 @@
 <script lang="ts">
 	import { isSidebarOpen } from '$lib/stores';
+
+	import { fly } from 'svelte/transition';
+	import { backInOut, elasticIn } from 'svelte/easing';
+	import { onMount } from 'svelte';
+
+	let mobileWidth: MediaQueryList;
+
+	onMount(() => (mobileWidth = window.matchMedia('(max-width:810px)')));
 </script>
 
-<nav class={$isSidebarOpen ? 'active' : 'not-active'}>
-	<ul>
-		<slot />
-	</ul>
-</nav>
+{#if !mobileWidth?.matches || $isSidebarOpen}
+	<nav
+		class={$isSidebarOpen ? 'active' : 'not-active'}
+		transition:fly={{ easing: backInOut, x: 50 }}>
+		<ul>
+			<slot />
+		</ul>
+	</nav>
+{/if}
 <div class="overlay" on:click={() => ($isSidebarOpen = false)} />
 
 <style>

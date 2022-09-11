@@ -3,8 +3,9 @@
 
 	import ContactForm from './ContactForm.svelte';
 
-	/** @type {import('./$types').ActionData} */
+	/** @type {any} */
 	export let form;
+	$: console.log(form);
 </script>
 
 <div class="page">
@@ -12,11 +13,6 @@
 	<section>
 		<ContactInfo />
 		<ContactForm />
-		{#if form?.success}
-			<p>
-				Request sent! I will respond to your request within 2 business days.
-			</p>
-		{/if}
 	</section>
 </div>
 
