@@ -27,15 +27,6 @@
 			<Button type="submit" title="submit" theme="accent">Submit</Button>
 		</span>
 	</form>
-	<p>
-		{#if responseStatus === 'success'}
-			Message sent! Please allow 3 business days for me to respond.
-		{:else if responseStatus === 'error'}
-			<span style:color="red">
-				There was an error. Please email hello@lukeshafer.com directly.
-			</span>
-		{/if}
-	</p>
 </div>
 
 <style>

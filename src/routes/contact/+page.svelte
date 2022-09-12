@@ -22,6 +22,15 @@
 		<ContactInfo />
 		<ContactForm {responseStatus} />
 	</section>
+	<p>
+		{#if responseStatus === 'success'}
+			Message sent! Please allow 3 business days for me to respond.
+		{:else if responseStatus === 'error'}
+			<span style:color="red">
+				There was an error. Please email hello@lukeshafer.com directly.
+			</span>
+		{/if}
+	</p>
 </div>
 
 <style>
@@ -31,5 +40,16 @@
 		justify-content: center;
 		align-items: center;
 		gap: 1em 4em;
+	}
+
+	.page {
+		display: grid;
+		place-items: center;
+	}
+
+	p {
+		text-align: center;
+		width: 15rem;
+		height: 3rem;
 	}
 </style>

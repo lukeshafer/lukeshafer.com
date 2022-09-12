@@ -1,25 +1,38 @@
 <script lang="ts">
 	import { isSidebarOpen } from '$lib/stores';
 
-	import { fly } from 'svelte/transition';
-	import { backInOut, elasticIn } from 'svelte/easing';
+	import { fly, fade } from 'svelte/transition';
+	import { cubicIn, cubicOut, backInOut, elasticIn } from 'svelte/easing';
 	import { onMount } from 'svelte';
 
 	let mobileWidth: MediaQueryList;
+	let prefersReducedMotion: boolean = false;
+	let x: number;
 
-	onMount(() => (mobileWidth = window.matchMedia('(max-width:810px)')));
+	onMount(() => {
+		mobileWidth = window.matchMedia('(max-width:810px)');
+		prefersReducedMotion = window.matchMedia(
+			'(prefers-reduced-motion)'
+		).matches;
+	});
+
+	let navTransition = prefersReducedMotion ? fade : fly;
 </script>
 
 {#if !mobileWidth?.matches || $isSidebarOpen}
 	<nav
+		bind:clientWidth={x}
 		class={$isSidebarOpen ? 'active' : 'not-active'}
-		transition:fly={{ easing: backInOut, x: 50 }}>
+		transition:navTransition={{ easing: cubicOut, x: 200, duration: 300 }}>
 		<ul>
 			<slot />
 		</ul>
 	</nav>
 {/if}
-<div class="overlay" on:click={() => ($isSidebarOpen = false)} />
+
+{#if mobileWidth?.matches && $isSidebarOpen}
+	<div class="overlay" on:click={() => ($isSidebarOpen = false)} />
+{/if}
 
 <style>
 	nav {
@@ -31,10 +44,6 @@
 		justify-content: flex-start;
 		flex-flow: row nowrap;
 		gap: clamp(1rem, 2vw, 2rem);
-	}
-
-	.overlay {
-		display: none;
 	}
 
 	@media screen and (max-width: 810px) {
@@ -53,25 +62,13 @@
 			z-index: 2;
 			position: absolute;
 			top: 0;
-			right: calc(var(--nav-width) * -1); /* negative width */
-
-			/* Initial off-screen position */
-			/* transform: translateX(15em); */
-			transition: transform 400ms, width 400ms;
+			right: 0;
 
 			/* background will match the header */
 			background: inherit;
-
-			/* Internal layout */
-			/* padding: 0; */
-		}
-		nav.active {
-			/* Active nav comes on screen */
-			transform: translateX(calc(var(--nav-width) * -1));
 		}
 
-		.active + .overlay {
-			display: block;
+		.overlay {
 			position: absolute;
 			top: 0;
 			left: 0;
