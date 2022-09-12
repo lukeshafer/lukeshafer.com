@@ -90,6 +90,7 @@
 		border-style: solid;
 		border-width: 0.25em;
 		border-color: rgb(var(--background-base));
+		font-size: 0.9em;
 
 		transform: scale(1, 1);
 		transition: transform 150ms cubic-bezier(0, 1, 0.5, 1);
