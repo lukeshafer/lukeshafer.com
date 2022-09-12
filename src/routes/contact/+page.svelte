@@ -1,18 +1,26 @@
 <script>
 	import ContactInfo from './ContactInfo.svelte';
-
 	import ContactForm from './ContactForm.svelte';
 
-	/** @type {any} */
+	/** @type import("./$types").Actions */
 	export let form;
 	$: console.log(form);
+
+	/**
+	 * @type import('./ContactForm.svelte').responseStatus
+	 */
+	let responseStatus = '';
+
+	$: if (form)
+		if (form?.success) responseStatus = 'success';
+		else responseStatus = 'error';
 </script>
 
 <div class="page">
 	<h1 class="main-heading">Contact Me</h1>
 	<section>
 		<ContactInfo />
-		<ContactForm />
+		<ContactForm {responseStatus} />
 	</section>
 </div>
 

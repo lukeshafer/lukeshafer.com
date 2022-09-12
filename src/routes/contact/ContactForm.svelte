@@ -1,25 +1,16 @@
+<script context="module" lang="ts">
+	export type responseStatus = '' | 'error' | 'success';
+</script>
+
 <script lang="ts">
 	import Button from '$lib/components/Button.svelte';
+	import { enhance } from '$app/forms';
 
-	let responseStatus: '' | 'error' | 'success' = '';
-
-	async function handleSubmit(event: SubmitEvent) {
-		const form = event.target as HTMLFormElement;
-		const response = await fetch('/api/contact', {
-			method: 'POST',
-			body: new FormData(form),
-		});
-		const data = await response.json();
-		if (response.status >= 500 || !data?.success) responseStatus = 'error';
-		else responseStatus = 'success';
-	}
+	export let responseStatus: responseStatus = '';
 </script>
 
 <div>
-	<form
-		action="/api/contact"
-		method="POST"
-		on:submit|preventDefault={handleSubmit}>
+	<form method="POST" use:enhance>
 		<label for="input-name" class="visibly-hidden" />
 		<input type="text" name="name" placeholder="Name" id="input-name" />
 		<label for="input-email" class="visibly-hidden">Email</label>
@@ -36,13 +27,15 @@
 			<Button type="submit" title="submit" theme="accent">Submit</Button>
 		</span>
 	</form>
-	{#if responseStatus === 'success'}
-		<p>Message sent! Please allow 3 business days for me to respond.</p>
-	{:else if responseStatus === 'error'}
-		<p style:color="red">
-			There was an error. Please email hello@lukeshafer.com directly.
-		</p>
-	{/if}
+	<p>
+		{#if responseStatus === 'success'}
+			Message sent! Please allow 3 business days for me to respond.
+		{:else if responseStatus === 'error'}
+			<span style:color="red">
+				There was an error. Please email hello@lukeshafer.com directly.
+			</span>
+		{/if}
+	</p>
 </div>
 
 <style>
@@ -74,5 +67,6 @@
 	p {
 		text-align: center;
 		width: 15rem;
+		height: 3rem;
 	}
 </style>
