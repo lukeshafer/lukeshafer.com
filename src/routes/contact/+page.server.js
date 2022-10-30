@@ -15,6 +15,9 @@ export const actions = {
 		const email = data.get('email');
 		const phone = data.get('phone');
 		const message = data.get('message');
+		const agreement = data.get('agreement');
+
+		if (agreement) return { success: true };
 
 		// create reusable transporter object using the default SMTP transport
 		let transporter = createTransport({

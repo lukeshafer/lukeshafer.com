@@ -23,6 +23,9 @@
 			placeholder="Message"
 			id="input-message"
 			rows="6" />
+		<p class="visibly-hidden">The next checkbox, called "agreement" is present to stop spam bots. If you are a person, please don't check it, or I won't receive your message!</p>
+		<input type="checkbox" id="agreement" name="agreement" class="visibly-hidden" />
+		<label for="agreement" class="visibly-hidden">Agreement</label>
 		<span class="btn-wrapper">
 			<Button type="submit" title="submit" theme="accent">Submit</Button>
 		</span>
