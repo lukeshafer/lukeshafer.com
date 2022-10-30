@@ -4,14 +4,12 @@ partner: 'Do Good Collective'
 url: 'https://dogoodcollective.net'
 logo: 'dogood-logo.png'
 logoAlt: Two hands holding a moon in the night sky. The words "Do Good" wrap around the moon.
-imageFile: 'dcg.fund.png'
+imageFile: 'dogood.png'
 description: ''
 repo: 'https://github.com/lukeshafer/do-good'
 ---
 
 # [dcg.fund](https://dogoodcollective.net/)
-
-## _a work in progress_
 
 After our successful fundraiser for Enny's wheelchair, we felt we had momentum and could build a collective of people who provided support for each other and our community. With this momentum, we formed Do Good Collective, with the goal of providing mutual aid for our communities.
 
